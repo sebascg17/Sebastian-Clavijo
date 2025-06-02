@@ -1,0 +1,121 @@
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Consolas', monospace, 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+/* CONTENEDOR GENERAL */
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* TÍTULOS GENERALES */
+h1, h2, h3 {
+  color: #03fa6e;
+  text-shadow: 0 0 8px #03fa6e;
+  margin-top: 0;
+}
+
+/* BOTONES ESTILO GAMEDEV */
+button, .mat-button {
+  background-color: #222;
+  color: #69f0ae;
+  border: 2px solid #69f0ae;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s ease;
+}
+
+button:hover, .mat-button:hover {
+  background-color: #69f0ae;
+  color: #121212;
+  box-shadow: 0 0 12px #69f0ae;
+}
+
+/* FLEXBOX PARA LAYOUTS RESPONSIVE */
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  flex: 1 1 300px; /* crece, se encoge, base mínimo 300px */
+  min-width: 250px;
+}
+
+/* EFECTOS BRILLANTES EN LETRAS ESPECÍFICAS */
+.glow-text :hover, .glow-text:focus {
+  color: #03fa6e;
+  text-shadow: 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 5px #03fa6e;
+  font-weight: bold;
+}
+.glow-text-sub :hover{
+  color: #03fa6e;
+  text-shadow: 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 5px #03fa6e;
+  font-weight: bold;
+}
+
+/* IMÁGENES Y MEDIA */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.mat-mdc-menu-content {
+    margin: 0;
+    padding: 0 0;
+    outline: 0;
+    background: #3f3f3f;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: #69f0ae;
+  border-top: 1px solid #03fa6e;
+}
+
+/* MEDIA QUERIES: ajustes por tamaño */
+
+@media (max-width: 900px) {
+  .app-container {
+    padding: 15px 10px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .col {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+  button, .mat-button {
+    width: 100%;
+    padding: 14px 0;
+  }
+}
+
+
+
+

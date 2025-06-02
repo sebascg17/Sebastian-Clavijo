@@ -1,0 +1,60 @@
+
+<mat-toolbar class="menu-bar" color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()" class="mobile-toggle" aria-label="Abrir menú">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <a class="logo-img" mat-button routerLink="">
+    <img src="assets/LogoPortafolio-removebg-preview.png" alt="Logo Sebas" width="200px" style="margin-right: 10px;" />
+  </a>
+
+  <span class="spacer"></span>
+
+  <!-- Menú de escritorio -->
+   <ng-container>
+    <div class="desktop-menu">
+      <a class="glow-text" mat-button routerLink="">Inicio</a>
+
+      <a class="glow-text" mat-button [matMenuTriggerFor]="portfolioMenu" [class.active-link]="isSubRouteActive()">
+        Portafolio
+      </a>
+      <mat-menu #portfolioMenu="matMenu" class="mat-menu-bg">
+        <a class="glow-text-sub" mat-menu-item routerLink="/portafolio/videojuegos" routerLinkActive="active-link">
+          Videojuegos
+        </a>
+        <a class="glow-text-sub" mat-menu-item routerLink="/portafolio/desarrollo-web" routerLinkActive="active-link">
+          Desarrollo Web
+        </a>
+      </mat-menu>
+      <a class="glow-text" mat-button routerLink="about">Sobre mí</a>
+      <a class="glow-text" mat-button routerLink="contacto">Contacto</a>
+    </div>
+   </ng-container>
+</mat-toolbar>
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" class="sidenav custom-sidenav" [fixedInViewport]="true" [disableClose]="true">
+    <ul>
+      <li>
+        <a class="glow-text" mat-button (click)="navigateAndClose('/')">Inicio</a>
+      </li>
+      <li>
+        <details>
+          <summary class="glow-text" mat-button >Portafolio</summary>
+          <ul>
+            <li><a class="glow-text" mat-button (click)="navigateAndClose('portafolio/videojuegos')">Videojuegos</a></li>
+            <li><a class="glow-text" mat-button (click)="navigateAndClose('portafolio/desarrollo-web')">Desarrollo Web</a></li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <a class="glow-text" mat-button (click)="navigateAndClose('/about')">Sobre mí</a>
+      </li>
+      <li>
+        <a class="glow-text" mat-button (click)="navigateAndClose('/contacto')">Contacto</a>
+      </li>
+    </ul>
+  </mat-sidenav>
+</mat-sidenav-container>
+
+

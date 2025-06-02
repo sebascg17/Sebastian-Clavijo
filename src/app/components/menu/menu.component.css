@@ -1,0 +1,107 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.menu-bar{  
+  background-color: #222;
+  color: #69f0ae;
+  border-bottom: 1px solid #03fa6e;
+}
+
+.custom-sidenav {
+  background-color: #1e1e1e !important;
+  color: #69f0ae;
+  height: 100%;
+}
+
+
+/* === SIDENAV ESTILO PERSONALIZADO === */
+
+.sidenav ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem;
+}
+
+.sidenav ul li {
+  margin: 15px 0;
+}
+
+.sidenav ul li a {
+  display: block;
+  text-align: left;
+  color: #69f0ae; /* mismo verde neón de tus botones */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* BOTÓN DE MENÚ SOLO EN MÓVIL */
+.mobile-toggle {
+  display: none;
+}
+
+/* Quita el triángulo/flechita por defecto */
+details summary {
+  list-style: none; 
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* Ajusta alineación del texto */
+details summary,
+.sidenav ul li a {
+  display: block;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+/* Estilo para submenu */
+details ul {
+  padding-left: 1rem;
+  margin-top: 5px;
+}
+
+details[open] summary::after {
+  content: "▼";
+  float: right;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+details:not([open]) summary::after {
+  content: "▶";
+  float: right;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+.active-link {
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ff99;
+}
+
+.active-sub-link {
+  font-weight: bold;
+  color: #00ff99 !important;
+  text-shadow: 0 0 5px #00ff99;
+}
+
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .logo-img {
+    margin: 0 auto;
+  }
+  
+}
