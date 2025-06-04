@@ -1,0 +1,34 @@
+[
+  {
+    "titulo": "Mokepon",
+    "descripcion": "Videojuego estilo Pokémon hecho en JavaScript puro, ideal para entender lógica de videojuegos desde cero.",
+    "videoUrl": "https://www.youtube.com/embed/df_9mN0kNSQ",
+    "imagenes": [
+      "assets/juegos/mokepon1.png",
+      "assets/juegos/mokepon2.png"
+    ],
+    "tecnologias": [
+      { "nombre": "JavaScript", "icono": "fab fa-js" },
+      { "nombre": "HTML", "icono": "fab fa-html5" },
+      { "nombre": "CSS", "icono": "fab fa-css3-alt" }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/mokepon",
+    "enlaceDescarga": "assets/descargas/Mokepon.zip",
+    "destacado": true
+  },
+  {
+    "titulo": "Otro Juego",
+    "descripcion": "Este es otro juego que muestra otra mecánica divertida y desafiante.",
+    "videoUrl": "https://www.youtube.com/embed/otroVideoID",
+    "imagenes": [
+      "assets/juegos/otro1.png",
+      "assets/juegos/otro2.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original " },
+      { "nombre": "C#", "icono": "devicon-csharp-plain " }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/otro-juego",
+    "enlaceDescarga": "assets/descargas/OtroJuego.zip"
+  }
+]

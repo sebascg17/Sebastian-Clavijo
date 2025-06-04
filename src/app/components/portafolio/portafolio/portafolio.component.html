@@ -1,1 +1,34 @@
-<p>portafolio works!</p>
+<h1 class="titulo-portafolio"> Proyectos Destacados </h1>
+<section class="destacados">
+  <div *ngFor="let proyecto of destacados" class="destacado-card">
+    <h2>{{ proyecto.titulo }}</h2>
+
+    <iframe
+      width="100%"
+      height="315"
+      [src]="proyecto.videoUrl | safeUrl"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+
+    <p>{{ proyecto.descripcion }}</p>
+
+    <div class="tecnologias">
+      <span *ngFor="let tech of proyecto.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
+        <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
+        {{ tech.nombre }}
+      </span>
+    </div>
+
+    <div class="imagenes">
+      <img *ngFor="let img of proyecto.imagenes" [src]="img" alt="{{ proyecto.titulo }}" />
+    </div>
+
+    <div class="acciones">
+      <a mat-button color="primary" [href]="proyecto.enlaceCodigo" target="_blank">Ver código</a>
+      <a *ngIf="proyecto.enlaceDemo" mat-button color="accent" [href]="proyecto.enlaceDemo" target="_blank">
+        {{ proyecto.tipo === 'web' ? 'Ver demo' : 'Descargar juego' }}
+      </a>
+    </div>
+  </div>
+</section>

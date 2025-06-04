@@ -1,0 +1,37 @@
+{
+  "nombre": "Juan Sebastián Clavijo Giraldo",
+  "titulo": "Game Developer | FullStack Developer",
+  "biografia": "Soy un apasionado por la tecnología, desarrollo de software y los videojuegos. Me gusta aprender, crear y compartir lo que sé.",
+  "foto": "assets/perfil/Juan Sebastian Clavijo.jpg",
+  "habilidades": ["JavaScript", "TypeScript", "Angular", "Node.js", ".NET Core", "MongoDB", "SQL Server", "Unity"],
+  "contacto": {
+    "github": "https://github.com/sebascg17",
+    "linkedin": "https://www.linkedin.com/in/juan-sebasti%C3%A1n-clavijo-giraldo-415080160/",
+    "correo": "juansebastianclavijodev@gmail.com",
+    "cv": "assets/docs/cv-sebastian-garcia.pdf"
+  },
+  "experiencia": [
+    {
+      "puesto": "Desarrollador FullStack",
+      "empresa": "Sociedad San Vicente de Paul de Medellín",
+      "fechaInicio": "Junio 2022",
+      "fechaFin": "Diciembre 2022",
+      "tecnologias": ["C#", "ASP.NET Core", "SQL Server", "Bootstrap", "Power BI"],
+      "descripcion": "Desarrollé soluciones con C#, ASP.NET y SQL Server. Implementé arquitectura MVVM, procedimientos almacenados, procesos ETL y dashboards con Power BI."
+    }
+  ],
+  "educacion": [
+    {
+      "titulo": "Ingeniería de Software",
+      "institucion": "Institución Universitaria Tecnológico de Antioquia",
+      "fechaInicio": "Febrero 2017",
+      "fechaFin": "Marzo 2022"
+    },
+    {
+      "titulo": "Curso ASP.NET Core MVC 9",
+      "institucion": "Udemy",
+      "fechaInicio": "Abril 2025",
+      "fechaFin": "Actualidad"
+    }
+  ]
+}

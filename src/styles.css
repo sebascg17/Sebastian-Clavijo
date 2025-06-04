@@ -24,8 +24,15 @@ body {
 /* TÍTULOS GENERALES */
 h1, h2, h3 {
   color: #03fa6e;
-  text-shadow: 0 0 8px #03fa6e;
   margin-top: 0;
+  font-family: 'Consolas', monospace, 'Courier New', monospace;
+}
+
+.titulo-portafolio {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #03fa6e;
+  margin-top: 20px;
 }
 
 /* BOTONES ESTILO GAMEDEV */
@@ -59,15 +66,21 @@ button:hover, .mat-button:hover {
   min-width: 250px;
 }
 
+.glow-text {
+  color: #03fa6e;
+  font-weight: bold;
+}
+
+
 /* EFECTOS BRILLANTES EN LETRAS ESPECÍFICAS */
 .glow-text :hover, .glow-text:focus {
-  color: #03fa6e;
-  text-shadow: 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 5px #03fa6e;
+  color: #00ff99;
+  text-shadow: 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 5px #00ff99;
   font-weight: bold;
 }
 .glow-text-sub :hover{
-  color: #03fa6e;
-  text-shadow: 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 1px #03fa6e, 0 0 5px #03fa6e;
+  color: #00ff99;
+  text-shadow: 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 5px #00ff99;
   font-weight: bold;
 }
 
@@ -81,14 +94,14 @@ img {
     margin: 0;
     padding: 0 0;
     outline: 0;
-    background: #3f3f3f;
+    background: #222 !important;
 }
 
 footer {
   text-align: center;
   padding: 20px;
   background-color: #222;
-  color: #69f0ae;
+  color: #03fa6e;
   border-top: 1px solid #03fa6e;
 }
 

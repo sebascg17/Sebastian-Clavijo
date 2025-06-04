@@ -5,7 +5,7 @@
   </button>
   
   <a class="logo-img" mat-button routerLink="">
-    <img src="assets/LogoPortafolio-removebg-preview.png" alt="Logo Sebas" width="200px" style="margin-right: 10px;" />
+    <img src="assets/logo/LogoPortafolio 2.png" alt="Logo Sebas" width="200" style="margin-right: 10px;" />
   </a>
 
   <span class="spacer"></span>
@@ -13,9 +13,9 @@
   <!-- Menú de escritorio -->
    <ng-container>
     <div class="desktop-menu">
-      <a class="glow-text" mat-button routerLink="">Inicio</a>
+      <a class="glow-text" mat-button [routerLink]="'/'" [ngClass]="{'active-link': isActive('/')}">Inicio</a>
 
-      <a class="glow-text" mat-button [matMenuTriggerFor]="portfolioMenu" [class.active-link]="isSubRouteActive()">
+      <a class="glow-text" mat-button [matMenuTriggerFor]="portfolioMenu" [routerLink]="'/portafolio'" [ngClass]="{'active-link': currentRoute.startsWith('/portafolio')}">
         Portafolio
       </a>
       <mat-menu #portfolioMenu="matMenu" class="mat-menu-bg">
@@ -26,8 +26,8 @@
           Desarrollo Web
         </a>
       </mat-menu>
-      <a class="glow-text" mat-button routerLink="about">Sobre mí</a>
-      <a class="glow-text" mat-button routerLink="contacto">Contacto</a>
+      <a class="glow-text" mat-button [routerLink]="'/about'" [ngClass]="{'active-link': isActive('/about')}">Sobre mí</a>
+      <a class="glow-text" mat-button [routerLink]="'/contacto'" [ngClass]="{'active-link': isActive('/contacto')}">Contacto</a>
     </div>
    </ng-container>
 </mat-toolbar>
@@ -40,7 +40,7 @@
       </li>
       <li>
         <details>
-          <summary class="glow-text" mat-button >Portafolio</summary>
+          <summary class="glow-text" mat-button >Portafolio</summary>          
           <ul>
             <li><a class="glow-text" mat-button (click)="navigateAndClose('portafolio/videojuegos')">Videojuegos</a></li>
             <li><a class="glow-text" mat-button (click)="navigateAndClose('portafolio/desarrollo-web')">Desarrollo Web</a></li>

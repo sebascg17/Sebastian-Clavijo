@@ -1,1 +1,57 @@
-<p>about works!</p>
+<section class="about-container" *ngIf="perfil">
+  <div class="about-content">
+    <img [src]="perfil.foto" alt="Foto de {{ perfil.nombre }}" class="perfil-foto" />
+    <div class="texto">
+      <h1>{{ perfil.nombre }}</h1>
+      <h2>{{ perfil.titulo }}</h2>
+      <p>{{ perfil.biografia }}</p>
+
+      <div class="habilidades">
+        <h3>Habilidades</h3>
+        <ul>
+          <li *ngFor="let skill of perfil.habilidades">{{ skill }}</li>
+        </ul>
+      </div>
+
+      <div class="experiencia">
+        <h3 class="texto">Experiencia Laboral</h3>
+        <div *ngFor="let exp of perfil.experiencia" class="exp-item">
+          <h4 class="texto">{{ exp.puesto }} - {{ exp.empresa }}</h4>
+          <small>{{ exp.fechaInicio }} - {{exp.fechaFin}}</small>
+          <p>{{ exp.descripcion }}</p>
+        </div>
+      </div>
+
+      <div class="educacion">
+        <h3>Educación</h3>
+        <div *ngFor="let edu of perfil.educacion" class="edu-item">
+          <h4 class="texto">{{ edu.titulo }}</h4>
+          <small>{{ edu.institucion }} • {{ edu.fechaInicio }} - {{edu.fechaFin}}</small>
+        </div>
+      </div>
+      
+      <div class="contacto">
+        <h3>Contacto</h3>
+        <ul>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a [href]="'mailto:' + perfil.contacto.correo">{{ perfil.contacto.correo }}</a>
+          </li>
+          <li>
+            <i class="fab fa-github"></i>
+            <a [href]="perfil.contacto.github" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <i class="fab fa-linkedin"></i>
+            <a [href]="perfil.contacto.linkedin" target="_blank">LinkedIn</a>
+          </li>
+          <li>
+            <i class="fas fa-file-alt"></i>
+            <a [href]="perfil.contacto.cv" download>Descargar CV</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>

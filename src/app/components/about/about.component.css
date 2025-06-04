@@ -1,0 +1,132 @@
+.about-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.perfil-foto {
+  width: 300px;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.texto {
+  flex: 1;
+}
+
+.texto h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.texto h2 {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+.texto h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #03fa6e;
+}
+
+.texto h4 {
+  font-size: 1.1rem;
+  color: #aaa !important;
+  margin-top: 0.5rem;
+}
+
+.texto p {
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.habilidades h3 {
+  margin-top: 2rem;
+}
+
+.habilidades ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.habilidades li {
+  background: #2f2f2f;
+  color: #03fa6e;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+.experiencia, .educacion {
+  margin-top: 2rem;
+}
+
+.exp-item, .edu-item {
+  margin-bottom: 1rem;
+}
+
+.exp-item h4, .edu-item h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: #03fa6e;
+}
+
+.exp-item small, .edu-item small {
+  color: #fff;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.exp-item p {
+  margin: 0.5rem 0 0 0;
+  line-height: 1.5;
+}
+
+
+.contacto {
+  margin-top: 2rem;
+}
+
+.contacto h3 {
+  color: #03fa6e;
+  margin-bottom: 1rem;
+}
+
+.contacto ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contacto li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.contacto i {
+  color: #03fa6e;
+  margin-right: 0.6rem;
+  font-size: 1.2rem;
+  width: 24px;
+}
+
+.contacto a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacto a:hover {
+  text-decoration: underline;
+}
+

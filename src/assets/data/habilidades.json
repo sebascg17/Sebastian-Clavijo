@@ -1,0 +1,46 @@
+[
+  {
+    "nombre": "Angular",
+    "icono": "fab fa-angular"
+  },
+  {
+    "nombre": "TypeScript",
+    "icono": "devicon-typescript-plain"
+  },
+  {
+    "nombre": "JavaScript",
+    "icono": "fab fa-js"
+  },
+  {
+    "nombre": "HTML5",
+    "icono": "fab fa-html5"
+  },
+  {
+    "nombre": "CSS3",
+    "icono": "fab fa-css3-alt"
+  },
+  {
+    "nombre": "Node.js",
+    "icono": "fab fa-node"
+  },
+  {
+    "nombre": "MongoDB",
+    "icono": "fas fa-leaf"
+  },
+  {
+    "nombre": ".NET",
+    "icono": "fas fa-circle-dot"
+  },
+  {
+    "nombre": "MySQL",
+    "icono": "fas fa-database"
+  },
+  {
+    "nombre": "Unity",
+    "icono": "devicon-unity-original"
+  },
+  {
+    "nombre": "C#",
+    "icono": "devicon-csharp-plain"
+  }
+]

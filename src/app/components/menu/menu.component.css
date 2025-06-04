@@ -4,15 +4,28 @@
 
 .menu-bar{  
   background-color: #222;
-  color: #69f0ae;
+  color: #03fa6e;
   border-bottom: 1px solid #03fa6e;
+  font-weight: bold;
 }
+
 
 .custom-sidenav {
   background-color: #1e1e1e !important;
-  color: #69f0ae;
+  color: #03fa6e;
   height: 100%;
 }
+
+.custom-sidenav::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px; /* grosor de la línea */
+  height: 100%;
+  background-color: #03fa6e; /* verde neón */
+}
+
 
 
 /* === SIDENAV ESTILO PERSONALIZADO === */
@@ -21,6 +34,7 @@
   list-style: none;
   padding: 0;
   margin: 2rem;
+  width: 150px; /* ancho fijo para el sidenav */
 }
 
 .sidenav ul li {
@@ -30,7 +44,7 @@
 .sidenav ul li a {
   display: block;
   text-align: left;
-  color: #69f0ae; /* mismo verde neón de tus botones */
+  color: #03fa6e; /* mismo verde neón de tus botones */
   text-decoration: none;
   font-weight: bold;
 }
@@ -42,7 +56,14 @@
 
 /* Quita el triángulo/flechita por defecto */
 details summary {
-  list-style: none; 
+  color: #03fa6e;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+details summary:hover {
+  text-shadow: 0 0 5px #00ff99;
+  color: #00ff99;
 }
 
 details summary::-webkit-details-marker {
@@ -102,6 +123,9 @@ details:not([open]) summary::after {
 
   .logo-img {
     margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
 }
