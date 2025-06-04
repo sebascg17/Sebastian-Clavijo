@@ -3,13 +3,20 @@
   "titulo": "Game Developer | FullStack Developer",
   "biografia": "Soy un apasionado por la tecnología, desarrollo de software y los videojuegos. Me gusta aprender, crear y compartir lo que sé.",
   "foto": "assets/perfil/Juan Sebastian Clavijo.jpg",
-  "habilidades": ["JavaScript", "TypeScript", "Angular", "Node.js", ".NET Core", "MongoDB", "SQL Server", "Unity"],
-  "contacto": {
-    "github": "https://github.com/sebascg17",
-    "linkedin": "https://www.linkedin.com/in/juan-sebasti%C3%A1n-clavijo-giraldo-415080160/",
-    "correo": "juansebastianclavijodev@gmail.com",
-    "cv": "assets/docs/cv-sebastian-garcia.pdf"
-  },
+  "habilidades": [
+    { "nombre": "Unity", "icono": "devicon-unity-original" },
+    { "nombre": "C#", "icono": "devicon-csharp-plain" },
+    { "nombre": "HTML5", "icono": "fab fa-html5" },
+    { "nombre": "CSS3", "icono": "fab fa-css3-alt" },
+    { "nombre": "JavaScript", "icono": "fab fa-js" },
+    { "nombre": "TypeScript", "icono": "devicon-typescript-plain" },
+    { "nombre": "Node.js", "icono": "fab fa-node-js" },
+    { "nombre": "Angular", "icono": "fab fa-angular" },
+    { "nombre": ".NET", "icono": "devicon-dot-net-plain" },
+    { "nombre": "SQL Server", "icono": "fas fa-server" },
+    { "nombre": "Git", "icono": "devicon-git-plain" },
+    { "nombre": "GitHub", "icono": "fab fa-github" }
+  ],
   "experiencia": [
     {
       "puesto": "Desarrollador FullStack",
@@ -33,5 +40,13 @@
       "fechaInicio": "Abril 2025",
       "fechaFin": "Actualidad"
     }
-  ]
+  ],
+  "contacto": {
+    "github": "https://github.com/sebascg17",
+    "linkedin": "https://www.linkedin.com/in/juan-sebasti%C3%A1n-clavijo-giraldo-415080160/",
+    "itchio" : "https://sebascg17.itch.io/",
+    "unity" : "https://play.unity.com/es/user/c494ce43-17dc-4328-9c28-e8e8d54b3dad",
+    "correo": "juansebastianclavijodev@gmail.com",
+    "cv": "assets/docs/CV Juan Sebastian Clavijo.pdf"
+  }
 }

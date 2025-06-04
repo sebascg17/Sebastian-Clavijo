@@ -6,12 +6,10 @@
       <h2>{{ perfil.titulo }}</h2>
       <p>{{ perfil.biografia }}</p>
 
-      <div class="habilidades">
-        <h3>Habilidades</h3>
-        <ul>
-          <li *ngFor="let skill of perfil.habilidades">{{ skill }}</li>
-        </ul>
-      </div>
+      <span *ngFor="let hab of perfil.habilidades" class="habilidad-badge">
+        <i [class]="hab.icono" aria-hidden="true" style="margin-right:5px;"></i> {{ hab.nombre }}
+      </span>
+
 
       <div class="experiencia">
         <h3 class="texto">Experiencia Laboral</h3>
@@ -30,27 +28,6 @@
         </div>
       </div>
       
-      <div class="contacto">
-        <h3>Contacto</h3>
-        <ul>
-          <li>
-            <i class="fas fa-envelope"></i>
-            <a [href]="'mailto:' + perfil.contacto.correo">{{ perfil.contacto.correo }}</a>
-          </li>
-          <li>
-            <i class="fab fa-github"></i>
-            <a [href]="perfil.contacto.github" target="_blank">GitHub</a>
-          </li>
-          <li>
-            <i class="fab fa-linkedin"></i>
-            <a [href]="perfil.contacto.linkedin" target="_blank">LinkedIn</a>
-          </li>
-          <li>
-            <i class="fas fa-file-alt"></i>
-            <a [href]="perfil.contacto.cv" download>Descargar CV</a>
-          </li>
-        </ul>
-      </div>
 
     </div>
   </div>

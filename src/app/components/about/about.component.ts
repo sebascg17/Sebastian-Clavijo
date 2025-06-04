@@ -7,7 +7,10 @@ interface Perfil {
   titulo: string;
   biografia: string;
   foto: string;
-  habilidades: string[];
+  habilidades: {
+    icono: string;
+    nombre: string;
+  }[];
   experiencia: {
     puesto: string;
     empresa: string;

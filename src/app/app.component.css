@@ -1,0 +1,25 @@
+
+
+/* El contenedor principal usa flexbox en columna */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* altura completa de la ventana */
+}
+
+/* Este div .content ocupa todo el espacio restante */
+.content {
+  flex: 1;
+  /* Opcional: para que el contenido tenga padding y no pegue al menu/footer */
+  padding: 1rem;
+}
+
+/* Footer con estilo */
+footer.footer {
+  color: #03fa6e;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  box-shadow: 0 -2px 10px rgba(3, 250, 110, 0.3);
+  user-select: none;
+}

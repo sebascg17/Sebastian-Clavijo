@@ -1,67 +1,94 @@
 <div class="home-container">
-  <div class="row">
-    <div class="col-md-12">
-      <section class="hero">
-        <h1>Hola, soy Sebastián 👋</h1>
-        <p>Desarrollador de software y creador de videojuegos. Bienvenido a mi portafolio personal.</p>
-      </section>
+  <!-- Presentación principal -->
+  <section class="hero">
+    <h1>Hola, soy Sebastián 👋</h1>
+    <p>
+      Desarrollador FullStack y creador de videojuegos con enfoque en soluciones prácticas y visuales.
+      Combino el mundo del software con la creatividad del gaming para construir experiencias impactantes.
+    </p>
+  </section>
+
+  <!-- Habilidades en badges -->
+  <section class="skills">
+    <h2 class="h2">Habilidades principales</h2>
+    <div class="skills-row">
+      <div class="skill-box">
+        <h3>Back-End</h3>
+        <div class="tecnologias">
+          <span class="badge">C#</span>
+          <span class="badge">Node.js</span>
+          <span class="badge">.NET Core</span>
+          <span class="badge">Express</span>
+          <span class="badge">SQL Server</span>
+          <span class="badge">MySQL</span>
+          <span class="badge">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h3>Front-End</h3>
+        <div class="tecnologias">
+          <span class="badge">Angular</span>
+          <span class="badge">HTML</span>
+          <span class="badge">CSS</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">Bootstrap</span>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h3>Videojuegos</h3>
+        <div class="tecnologias">
+          <span class="badge">Unity</span>
+          <span class="badge">C#</span>
+          <span class="badge">Diseño de niveles</span>
+          <span class="badge">Lógica de juego</span>
+          <span class="badge">Prototipado</span>
+        </div>
+      </div>
     </div>
-  </div>
- <section class="skills">
-  <h1 class="hero">Habilidades</h1>
-  <div class="skills-row">
-    <div class="skill-box">
-      <h3 class="hero">Desarrollo de Software</h3>
-      <ul>
-        <li>Programación en C# y JavaScript</li>
-        <li>Desarrollo web con ASP.NET Core y Angular</li>
-        <li>Creación de APIs REST con Express y Node.js</li>
-        <li>Gestión de bases de datos con SQL Server, MySQL y MongoDB</li>
-        <li>Consumo de servicios, integración de APIs y autenticación</li>
-        <li>Diseño de arquitecturas MVC y MVVM</li>
-        <li>Uso de herramientas como Postman, Git, Power BI y Excel</li>
-      </ul>
+  </section>
+
+  <!-- Proyectos destacados -->
+  <section class="highlights">
+    <div class="hero">
+      <h2>Proyectos Destacados</h2>
+      <p>Una selección de mis trabajos más representativos en desarrollo web y videojuegos.</p>
     </div>
 
-    <div class="skill-box">
-      <h3 class="hero">Desarrollo de Videojuegos</h3>
-      <ul>
-        <li>Creación de videojuegos en Unity con C#</li>
-        <li>Programación orientada a objetos y patrones de diseño</li>
-        <li>Prototipado rápido y desarrollo iterativo</li>
-        <li>Diseño de niveles y lógica de juego</li>
-        <li>Publicación de juegos en plataformas como Unity Play</li>
-      </ul>
-    </div>
+    <mat-card class="highlight-card" routerLink="portafolio/videojuegos" tabindex="0">
+      <mat-card-title>🎮 Videojuegos</mat-card-title>
+      <mat-card-content>
+        Juegos creados con Unity que combinan lógica, diseño de niveles y experiencia inmersiva.
+      </mat-card-content>
+    </mat-card>
 
-    <div class="skill-box">
-      <h3 class="hero">Habilidades Complementarias</h3>
-      <ul>
-        <li>Trabajo en equipo con metodologías ágiles (Scrum)</li>
-        <li>Resolución de problemas y pensamiento lógico</li>
-        <li>Adaptabilidad y aprendizaje autodidacta</li>
-        <li>Buena comunicación y actitud colaborativa</li>
-        <li>Curiosidad tecnológica y enfoque en la mejora continua</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <mat-card class="highlight-card" routerLink="portafolio/desarrollo-web" tabindex="0">
+      <mat-card-title>💻 Desarrollo Web</mat-card-title>
+      <mat-card-content>
+        Aplicaciones modernas con Angular, .NET y Node.js, orientadas a eficiencia y escalabilidad.
+      </mat-card-content>
+    </mat-card>
+  </section>
 
-  <div class="row">
-    <section class="highlights">
-      <mat-card class="highlight-card" routerLink="portafolio/videojuegos" tabindex="0">
-        <mat-card-title>Videojuegos</mat-card-title>
-        <mat-card-content>
-          Juegos creados con Unity y proyectos de desarrollo de experiencias interactivas.
-        </mat-card-content>
-      </mat-card>
+  <!-- Contacto y enlaces -->
+  <section class="hero">
+    <h2>Contacto</h2>
+    <p>¿Te interesa trabajar conmigo o ver más de lo que hago?</p>
+    <p>¡No dudes en contactarme!</p>
+    <p><i class="fas fa-envelope" aria-hidden="true"></i>
+      <a class="mail" [href]="'mailto:' + contacto.contacto.correo" aria-label="Enviar correo">{{ contacto.contacto.correo }}</a></p>
+    <p>
+      <a href="https://github.com/seb" target="_blank" class="badge">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://play.unity.com/es/user/c494ce43-17dc-4328-9c28-e8e8d54b3dad" target="_blank" class="badge">
+        <i class="devicon-unity-original"></i> Unity Play
+      </a>
+      <a href="https://sebastiangames.itch.io/" target="_blank" class="badge">
+        <i class="fab fa-itch-io"></i> Itch.io
+      </a>
+    </p>
+  </section>
 
-      <mat-card class="highlight-card" routerLink="portafolio/desarrollo-web" tabindex="0">
-        <mat-card-title >Desarrollo Web</mat-card-title>
-        <mat-card-content>
-          Aplicaciones web modernas usando Angular, .NET y tecnologías actuales.
-        </mat-card-content>
-      </mat-card>
-    </section>
-  </div>
 </div>

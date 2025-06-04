@@ -3,6 +3,10 @@ import { SafeUrlPipe } from '../safe-url.pipe'; // ajusta la ruta según tu estr
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
+interface Habilidades {
+  nombre: string;
+  icono: string;
+}
 
 interface Web {
   titulo: string;
@@ -20,12 +24,13 @@ interface Web {
 @Component({
   standalone: true,
   selector: 'app-dev',
-  imports: [SafeUrlPipe, CommonModule],
+  imports: [/*SafeUrlPipe,*/ CommonModule],
   templateUrl: './dev.component.html',
   styleUrl: './dev.component.css'
 })
 export class DevComponent  implements OnInit {
   webs: Web[] = [];
+  habilidades: Habilidades[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -36,6 +41,14 @@ export class DevComponent  implements OnInit {
       },
       (error) => {
         console.error('Error cargando proyectos:', error);
+      }
+    );
+    this.http.get<Habilidades[]>('assets/data/habilidades.json').subscribe(
+      (data) => {
+        this.habilidades = data;
+      },
+      (error) => {
+        console.error('Error cargando habilidades:', error);
       }
     );
   }

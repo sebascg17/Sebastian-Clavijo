@@ -3,6 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { SafeUrlPipe } from '../safe-url.pipe'; // ajusta la ruta según tu estructura
 import { CommonModule } from '@angular/common';
 
+interface Habilidades{
+  icono: string;
+  nombre: string;
+}
+
 interface Proyecto {
   tipo: 'videojuego' | 'web';
   titulo: string;
@@ -19,12 +24,13 @@ interface Proyecto {
 
 @Component({
   selector: 'app-portafolio',
-  imports: [SafeUrlPipe, CommonModule],
+  imports: [/*SafeUrlPipe,*/ CommonModule],
   templateUrl: './portafolio.component.html',
   styleUrls: ['./portafolio.component.css']
 })
 export class PortafolioComponent implements OnInit {
   destacados: Proyecto[] = [];
+  habilidades: Habilidades[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -45,6 +51,9 @@ export class PortafolioComponent implements OnInit {
 
         this.destacados = [...destacadosJuegos, ...destacadosWeb];
       });
+    });
+    this.http.get<Habilidades[]>('assets/data/habilidades.json').subscribe(data => {
+      this.habilidades = data;
     });
   }
 }

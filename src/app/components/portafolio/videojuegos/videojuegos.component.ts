@@ -3,6 +3,11 @@ import { SafeUrlPipe } from '../safe-url.pipe'; // ajusta la ruta según tu estr
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
+interface Habilidades{
+  icono: string;
+  nombre: string;
+}
+
 interface Juego {
   titulo: string;
   descripcion: string;
@@ -19,13 +24,14 @@ interface Juego {
 @Component({
   standalone: true,
   selector: 'app-videojuegos',
-  imports: [SafeUrlPipe, CommonModule],
+  imports: [/*SafeUrlPipe,*/ CommonModule],
   templateUrl: './videojuegos.component.html',
   styleUrl: './videojuegos.component.css'
 })
 
 export class VideojuegosComponent implements OnInit {
   juegos: Juego[] = [];
+  habilidades: Habilidades[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -33,6 +39,11 @@ export class VideojuegosComponent implements OnInit {
     this.http.get<Juego[]>('assets/data/videojuegos.json')
       .subscribe(data => {
         this.juegos = data;
+      });
+      
+    this.http.get<Habilidades[]>('assets/data/habilidades.json')
+      .subscribe(data => {
+        this.habilidades = data;
       });
   }
 }

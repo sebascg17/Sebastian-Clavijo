@@ -13,22 +13,21 @@
       { "nombre": "CSS", "icono": "fab fa-css3-alt" }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/mokepon",
-    "enlaceDescarga": "assets/descargas/Mokepon.zip",
-    "destacado": true
+    "enlaceDescarga": "assets/descargas/Mokepon.zip"
   },
   {
-    "titulo": "Otro Juego",
-    "descripcion": "Este es otro juego que muestra otra mecánica divertida y desafiante.",
+    "titulo": "Juego de la Estampida",
+    "descripcion": "Este juego consiste en esquivar una estampida mientras lanzas comida a los animales silvestres, si alguno de ellos te toca, 3 veces se acaba el juego. Buena suerte probando el juego, es muy entretenido",
     "videoUrl": "https://www.youtube.com/embed/otroVideoID",
     "imagenes": [
-      "assets/juegos/otro1.png",
-      "assets/juegos/otro2.png"
+      "assets/juegos/JuegoEstampida/img/JuegoEstampida.png"
     ],
     "tecnologias": [
       { "nombre": "Unity", "icono": "devicon-unity-original " },
       { "nombre": "C#", "icono": "devicon-csharp-plain " }
     ],
-    "enlaceCodigo": "https://github.com/sebascg17/otro-juego",
-    "enlaceDescarga": "assets/descargas/OtroJuego.zip"
+    "enlaceCodigo": "https://github.com/sebascg17/Dodge-the-stampede-Game",
+    "enlaceDescarga": "assets/juegos/JuegoEstampida/descarga/JuegoEstampida.zip",
+    "destacado": true
   }
 ]

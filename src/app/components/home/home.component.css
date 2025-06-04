@@ -41,6 +41,29 @@
   font-size: 1.3rem;
   color: #ccc;
 }
+.hero a {
+  color: #03fa6e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero a:hover {
+  color: #121212;
+  text-shadow: 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 5px #00ff99;
+  font-weight: bold;  
+}
+
+.mail {
+  color: #ccc !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mail:hover {
+  color: #03fa6e !important; /* Verde neón al hacer hover */
+  text-shadow: 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 5px #00ff99 !important;
+  text-decoration: underline;
+}
 
 .h2{
   text-align: center;

@@ -1,1 +1,29 @@
-<p>contacto works!</p>
+<div class="contacto">
+  <h1>Contacto</h1>
+  <ul>
+    <li>
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <a [href]="'mailto:' + contacto.contacto.correo" aria-label="Enviar correo">{{ contacto.contacto.correo }}</a>
+    </li>
+    <li>
+      <i class="fab fa-github" aria-hidden="true"></i>
+      <a [href]="contacto.contacto.github" target="_blank" rel="noopener noreferrer" aria-label="Ir a GitHub">GitHub</a>
+    </li>
+    <li>
+      <i class="fab fa-linkedin" aria-hidden="true"></i>
+      <a [href]="contacto.contacto.linkedin" target="_blank" rel="noopener noreferrer" aria-label="Ir a LinkedIn">LinkedIn</a>
+    </li>
+    <li>
+      <i class="devicon-unity-original" aria-hidden="true"></i>
+      <a [href]="contacto.contacto.unity" target="_blank" rel="noopener noreferrer" aria-label="Ir a Unity Play">Unity Play</a>
+    </li>
+    <li>
+      <i class="fab fa-itch-io" aria-hidden="true"></i>
+      <a [href]="contacto.contacto.itchio" target="_blank" rel="noopener noreferrer" aria-label="Ir a Itch.io">Itch.io</a>
+    </li>
+    <li>
+      <i class="fas fa-file-alt" aria-hidden="true"></i>
+      <a [href]="contacto.contacto.cv" download aria-label="Descargar CV">Descargar CV</a>
+    </li>
+  </ul>
+</div>

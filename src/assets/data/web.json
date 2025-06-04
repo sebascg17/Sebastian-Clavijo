@@ -3,7 +3,11 @@
     "titulo": "CRUD con Node.js y MongoDB",
     "videoUrl": "https://www.youtube.com/embed/tuVideoId",
     "descripcion": "Aplicación CRUD con API REST construida en Node.js y Express, usando MongoDB como base de datos.",
-    "tecnologias": ["Node.js", "Express", "MongoDB", "Bootstrap"],
+    "tecnologias": [
+      { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
+      { "nombre": "Express", "icono": "devicon-express-original" },
+      { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" }
+    ],
     "imagenes": [
       "assets/proyectos/desarrollo-web/crud-node-1.png",
       "assets/proyectos/desarrollo-web/crud-node-2.png"
@@ -16,7 +20,11 @@
     "titulo": "Portafolio en Angular + .NET",
     "videoUrl": "https://www.youtube.com/embed/otroVideoId",
     "descripcion": "Portafolio profesional con frontend en Angular y backend en ASP.NET Core.",
-    "tecnologias": ["Angular", ".NET Core", "SQL Server"],
+    "tecnologias": [
+      { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
+      { "nombre": ".NET Core", "icono": "devicon-nodejs-plain" },
+    { "nombre": "SQL Server", "icono": "fas fa-server" }
+    ],
     "imagenes": [
       "assets/proyectos/desarrollo-web/portafolio-1.png",
       "assets/proyectos/desarrollo-web/portafolio-2.png"

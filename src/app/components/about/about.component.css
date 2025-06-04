@@ -66,6 +66,26 @@
   border-radius: 0.5rem;
   font-size: 0.85rem;
 }
+
+.habilidad-badge {
+  display: inline-block;
+  background: #121212;
+  color: #03fa6e;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+  border: 0.5px solid #03fa6e;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.habilidad-badge:hover {
+  background: #03fa6e;
+  color: #121212;
+  box-shadow: 0 0 8px #03fa6e, 0 0 12px #03fa6e;
+}
+
 .experiencia, .educacion {
   margin-top: 2rem;
 }
@@ -89,44 +109,5 @@
 .exp-item p {
   margin: 0.5rem 0 0 0;
   line-height: 1.5;
-}
-
-
-.contacto {
-  margin-top: 2rem;
-}
-
-.contacto h3 {
-  color: #03fa6e;
-  margin-bottom: 1rem;
-}
-
-.contacto ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.contacto li {
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-
-.contacto i {
-  color: #03fa6e;
-  margin-right: 0.6rem;
-  font-size: 1.2rem;
-  width: 24px;
-}
-
-.contacto a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contacto a:hover {
-  text-decoration: underline;
 }
 
