@@ -104,26 +104,8 @@ button:hover, .mat-button:hover {
   font-weight: bold;
 }
 
-/* ESTILOS DE TEXTO */
-.badge {
-  display: inline-block;
-  background: #1e1e1e;
-  color: #03fa6e;
-  padding: 0.3rem 0.7rem;
-  margin: 0.2rem;
-  border-radius: 5px;
-  border: 0.5px solid #03fa6e;
-  font-size: 0.85rem;transition: all 0.3s ease;
-  cursor: default;
-}
 
-.badge:hover {
-  background: #03fa6e;
-  color: #121212;
-  box-shadow: 0 0 8px #03fa6e, 0 0 12px #03fa6e;
-}
-
-/* HANILIDADES */
+/* HABILIDADES */
 .skills-row {
   display: flex;
   flex-wrap: wrap;
@@ -161,32 +143,9 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  max-width: 1200px; /* Limita el ancho máximo */
-  margin: 0 auto;     /* Centra el contenido */
+  margin: 0 auto;
 }
 
-/* Tarjetas de cada juego */
-.game-card {
-  background-color: #1e1e1e;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease-in-out;
-}
-
-.game-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 15px #69f0ae;
-  transform: translateY(-6px);
-  outline: none;
-}
-
-/* Título */
-.game-title {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #fff;
-}
 .card {
   background-color: #1e1e1e;
   border-radius: 1rem;
@@ -201,17 +160,58 @@ img {
   outline: none;
 }
 
-
 /* Tecnologías */
 .tecnologias {
   margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-/* Imágenes */
-.imagenes img {
-  width: 100%;
-  margin-top: 1rem;
+.badge {
+  background-color: #2f2f2f;
+  color: #03fa6e;
+  border: 1px solid #03fa6e;
   border-radius: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* .badge {
+  display: inline-block;
+  background: #1e1e1e;
+  color: #03fa6e;
+  padding: 0.3rem 0.7rem;
+  margin: 0.2rem;
+  border-radius: 5px;
+  border: 0.5px solid #03fa6e;
+  font-size: 0.85rem;transition: all 0.3s ease;
+  cursor: default;
+} */
+
+.badge:hover {
+  background: #03fa6e;
+  color: #121212;
+  box-shadow: 0 0 8px #03fa6e, 0 0 12px #03fa6e;
+}
+/* Imágenes responsive */
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.imagenes img {
+  flex: 1 1 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
 
 /* Acciones */
@@ -256,6 +256,13 @@ footer {
 
 /* MEDIA QUERIES: ajustes por tamaño */
 
+@media (min-width: 1024px) {
+  .imagenes img {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
+
+
 @media (max-width: 900px) {
   .app-container {
     padding: 15px 10px;
@@ -276,7 +283,11 @@ footer {
     width: 100%;
     padding: 14px 0;
   }
+  .imagenes img {
+    flex: 1 1 calc(50% - 1rem);
+  }
 }
+
 
 
 
