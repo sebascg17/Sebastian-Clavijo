@@ -1,34 +1,56 @@
-<h1 class="titulo-portafolio"> Proyectos Destacados </h1>
-<section class="destacados">
-  <div *ngFor="let proyecto of destacados" class="destacado-card">
-    <h2>{{ proyecto.titulo }}</h2>
-
-    <!-- <iframe
-      width="100%"
-      height="315"
-      [src]="proyecto.videoUrl | safeUrl"
-      frameborder="0"
-      allowfullscreen
-    ></iframe> -->
-
-    <div class="imagenes">
-      <img *ngFor="let img of proyecto.imagenes" [src]="img" alt="{{ proyecto.titulo }}" />
+<div class="app-container">
+  <!-- Proyectos destacados -->
+  <section class="highlights">
+    <h1 class="titulo-seccion">Proyectos Destacados</h1>
+    <div class="hero">
+      <p class="hero">Una selección de mis trabajos más representativos en desarrollo web y videojuegos.</p>
     </div>
 
-    <p>{{ proyecto.descripcion }}</p>
+    <mat-card class="highlight-card" routerLink="portafolio/videojuegos" tabindex="0">
+      <mat-card-title>🎮 Videojuegos</mat-card-title>
+      <mat-card-content>
+        Juegos creados con Unity que combinan lógica, diseño de niveles y experiencia inmersiva.
+      </mat-card-content>
+    </mat-card>
 
-    <div class="tecnologias">
-      <span *ngFor="let tech of proyecto.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
-        <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
-        {{ tech.nombre }}
-      </span>
-    </div>
+    <mat-card class="highlight-card" routerLink="portafolio/desarrollo-web" tabindex="0">
+      <mat-card-title>💻 Desarrollo Web</mat-card-title>
+      <mat-card-content>
+        Aplicaciones modernas con Angular, .NET y Node.js, orientadas a eficiencia y escalabilidad.
+      </mat-card-content>
+    </mat-card>
+  </section>
+  <section class="projects">
+    <div *ngFor="let proyecto of destacados" class="card">
+      <h2>{{ proyecto.titulo }}</h2>
 
-    <div class="acciones">
-      <a mat-button color="primary" [href]="proyecto.enlaceCodigo" target="_blank">Ver código</a>
-      <a *ngIf="proyecto.enlaceDemo" mat-button color="accent" [href]="proyecto.enlaceDemo" target="_blank">
-        {{ proyecto.tipo === 'web' ? 'Ver demo' : 'Descargar juego' }}
-      </a>
+      <!-- <iframe
+        width="100%"
+        height="315"
+        [src]="proyecto.videoUrl | safeUrl"
+        frameborder="0"
+        allowfullscreen
+      ></iframe> -->
+
+      <div class="imagenes">
+        <img *ngFor="let img of proyecto.imagenes" [src]="img" alt="{{ proyecto.titulo }}" />
+      </div>
+
+      <p>{{ proyecto.descripcion }}</p>
+
+      <div class="tecnologias">
+        <span *ngFor="let tech of proyecto.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
+          <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
+          {{ tech.nombre }}
+        </span>
+      </div>
+
+      <div class="acciones">
+        <a mat-button color="primary" [href]="proyecto.enlaceCodigo" target="_blank">Ver código</a>
+        <a *ngIf="proyecto.enlaceDemo" mat-button color="accent" [href]="proyecto.enlaceDemo" target="_blank">
+          {{ proyecto.tipo === 'web' ? 'Ver demo' : 'Descargar juego' }}
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+</div>

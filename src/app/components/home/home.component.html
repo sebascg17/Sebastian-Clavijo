@@ -1,99 +1,16 @@
-<div class="home-container">
+
   <!-- Presentación principal -->
-  <section class="hero">
-    <h1>Hola, soy Sebastián 👋</h1>
+  <!-- <section class="hero">
+    <h1>Hola, soy Sebastián Clavijo👋</h1>
     <p>
       Desarrollador FullStack y creador de videojuegos con enfoque en soluciones prácticas y visuales.
       Combino el mundo del software con la creatividad del gaming para construir experiencias impactantes.
     </p>
-  </section>
+  </section> -->
 
-  <!-- Habilidades en badges -->
-  <section class="skills">    
-    <h2 class="hero">Habilidades Principales</h2>
-    <div class="skills-row" *ngIf="habilidades">
-      <!-- VIDEOJUEGOS -->
-      <div class="skill-box">
-        <h3>Videojuegos</h3>
-        <div class="tecnologias">
-          <span class="badge" *ngFor="let tech of habilidades.videojuegos">
-            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
-          </span>
-        </div>
-      </div>
-      
-      <!-- BACKEND -->
-      <div class="skill-box">
-        <h3>Back-End</h3>
-        <div class="tecnologias">
-          <span class="badge" *ngFor="let tech of habilidades.backend">
-            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
-          </span>
-        </div>
-      </div>
+  <app-about></app-about>
+  <hr class="separador-neon">
+  <app-portafolio></app-portafolio> 
+  <hr class="separador-neon"> 
+  <app-contacto></app-contacto>
 
-      <!-- FRONTEND -->
-      <div class="skill-box">
-        <h3>Front-End</h3>
-        <div class="tecnologias">
-          <span class="badge" *ngFor="let tech of habilidades.frontend">
-            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
-          </span>
-        </div>
-      </div>
-
-      <!-- OTROS -->
-      <div class="skill-box">
-        <h3>Conocimientos en...</h3>
-        <div class="tecnologias">
-          <span class="badge" *ngFor="let tech of habilidades.otros">
-            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Proyectos destacados -->
-  <section class="highlights">
-    <div class="hero">
-      <h2>Proyectos Destacados</h2>
-      <p>Una selección de mis trabajos más representativos en desarrollo web y videojuegos.</p>
-    </div>
-
-    <mat-card class="highlight-card" routerLink="portafolio/videojuegos" tabindex="0">
-      <mat-card-title>🎮 Videojuegos</mat-card-title>
-      <mat-card-content>
-        Juegos creados con Unity que combinan lógica, diseño de niveles y experiencia inmersiva.
-      </mat-card-content>
-    </mat-card>
-
-    <mat-card class="highlight-card" routerLink="portafolio/desarrollo-web" tabindex="0">
-      <mat-card-title>💻 Desarrollo Web</mat-card-title>
-      <mat-card-content>
-        Aplicaciones modernas con Angular, .NET y Node.js, orientadas a eficiencia y escalabilidad.
-      </mat-card-content>
-    </mat-card>
-  </section>
-
-  <!-- Contacto y enlaces -->
-  <section class="hero">
-    <h2>Contacto</h2>
-    <p>¿Te interesa trabajar conmigo o ver más de lo que hago?</p>
-    <p>¡No dudes en contactarme!</p>
-    <p><i class="fas fa-envelope" aria-hidden="true"></i>
-      <a class="mail" [href]="'mailto:' + contacto.contacto.correo" aria-label="Enviar correo">{{ contacto.contacto.correo }}</a></p>
-    <p>
-      <a href="https://github.com/seb" target="_blank" class="badge">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://play.unity.com/es/user/c494ce43-17dc-4328-9c28-e8e8d54b3dad" target="_blank" class="badge">
-        <i class="devicon-unity-original"></i> Unity Play
-      </a>
-      <a href="https://sebastiangames.itch.io/" target="_blank" class="badge">
-        <i class="fab fa-itch-io"></i> Itch.io
-      </a>
-    </p>
-  </section>
-
-</div>

@@ -1,32 +1,35 @@
-<h1 class="titulo-portafolio"> Proyectos de Desarrollo Web </h1>
-<section class="web-project">
-  <div *ngFor="let web of webs" class="web-card">
-    <h2>{{ web.titulo }}</h2>
+<div class="app-container">  
+  <h1 class="titulo-seccion"> Proyectos de Desarrollo Web </h1>
+  <section class="projects">
+    <div *ngFor="let web of webs" class="card">
+      <h2>{{ web.titulo }}</h2>
 
-    <!-- <iframe
-      width="100%"
-      height="315"
-      [src]="web.videoUrl | safeUrl"
-      frameborder="0"
-      allowfullscreen
-    ></iframe> -->
+      <!-- <iframe
+        width="100%"
+        height="315"
+        [src]="web.videoUrl | safeUrl"
+        frameborder="0"
+        allowfullscreen
+      ></iframe> -->
 
-    <div class="imagenes">
-      <img *ngFor="let img of web.imagenes" [src]="img" alt="{{ web.titulo }}" />
+      <div class="imagenes">
+        <img *ngFor="let img of web.imagenes" [src]="img" alt="{{ web.titulo }}" />
+      </div>
+
+      <p>{{ web.descripcion }}</p>
+
+      <div class="tecnologias">
+        <span *ngFor="let tech of web.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
+          <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
+          {{ tech.nombre }}
+        </span>
+      </div>
+
+      <div class="acciones">
+        <a mat-button color="primary" [href]="web.enlaceCodigo" target="_blank">Ver código</a>
+        <a mat-button color="accent" [href]="web.enlaceDemo" target="_blank">Ver demo</a>
+      </div>
     </div>
+  </section>
 
-    <p>{{ web.descripcion }}</p>
-
-    <div class="tecnologias">
-      <span *ngFor="let tech of web.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
-        <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
-        {{ tech.nombre }}
-      </span>
-    </div>
-
-    <div class="acciones">
-      <a mat-button color="primary" [href]="web.enlaceCodigo" target="_blank">Ver código</a>
-      <a mat-button color="accent" [href]="web.enlaceDemo" target="_blank">Ver demo</a>
-    </div>
-  </div>
-</section>
+</div>

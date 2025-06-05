@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SafeUrlPipe } from '../safe-url.pipe'; // ajusta la ruta según tu estructura
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 interface Habilidades{
   icono: string;
@@ -24,7 +25,7 @@ interface Proyecto {
 
 @Component({
   selector: 'app-portafolio',
-  imports: [/*SafeUrlPipe,*/ CommonModule],
+  imports: [/*SafeUrlPipe,*/ CommonModule, MatCardModule],
   templateUrl: './portafolio.component.html',
   styleUrls: ['./portafolio.component.css']
 })

@@ -2,7 +2,12 @@
   flex: 1 1 auto;
 }
 
-.menu-bar{  
+.menu-bar{ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
   background-color: #222;
   color: #03fa6e;
   border-bottom: 1px solid #03fa6e;
@@ -11,6 +16,7 @@
 
 
 .custom-sidenav {
+  padding-top: 64px; /* Coincide con la altura del menú */
   background-color: #1e1e1e !important;
   color: #03fa6e;
   height: 100%;
@@ -23,10 +29,8 @@
   right: 0;
   width: 3px; /* grosor de la línea */
   height: 100%;
-  background-color: #03fa6e; /* verde neón */
+  background-color: #00ff99; /* verde neón */
 }
-
-
 
 /* === SIDENAV ESTILO PERSONALIZADO === */
 

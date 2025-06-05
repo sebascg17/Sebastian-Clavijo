@@ -1,0 +1,46 @@
+<!-- Habilidades en badges -->
+<section class="skills">    
+  <h2 class="hero">Habilidades Principales</h2>
+  <div class="skills-row" *ngIf="habilidades">
+    <!-- VIDEOJUEGOS -->
+    <div class="skill-box">
+      <h3>Videojuegos</h3>
+      <div class="tecnologias">
+        <span class="badge" *ngFor="let tech of habilidades.videojuegos">
+          <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+        </span>
+      </div>
+    </div>
+    
+    <!-- BACKEND -->
+    <div class="skill-box">
+      <h3>Back-End</h3>
+      <div class="tecnologias">
+        <span class="badge" *ngFor="let tech of habilidades.backend">
+          <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+        </span>
+      </div>
+    </div>
+
+    <!-- FRONTEND -->
+    <div class="skill-box">
+      <h3>Front-End</h3>
+      <div class="tecnologias">
+        <span class="badge" *ngFor="let tech of habilidades.frontend">
+          <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+        </span>
+      </div>
+    </div>
+
+    <!-- OTROS -->
+    <div class="skill-box">
+      <h3>Conocimientos en...</h3>
+      <div class="tecnologias">
+        <span class="badge" *ngFor="let tech of habilidades.otros">
+          <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+        </span>
+      </div>
+    </div>
+  </div>
+</section> 
+

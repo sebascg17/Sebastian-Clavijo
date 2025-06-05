@@ -1,7 +1,7 @@
 {
   "nombre": "Juan Sebastián Clavijo Giraldo",
   "titulo": "Game Developer | FullStack Developer",
-  "biografia": "Soy un apasionado por la tecnología, desarrollo de software y los videojuegos. Me gusta aprender, crear y compartir lo que sé.",
+  "biografia": "Desarrollador de Unity especializado en crear videojuegos 2D y 3D usando C#. Con conocimientos en .NET y Angular. Con experiencia en la programación de mecánicas, la optimización y el diseño de interfaces. Caracterizado por la facilidad para trabajar en equipo, la adaptabilidad, la proactividad, el liderazgo y la orientación al detalle. Creo experiencias interactivas y atractivas, combinando la creatividad y el uso de herramientas tecnológicas.",
   "foto": "assets/perfil/Juan Sebastian Clavijo.jpg",
   "habilidades": [
     { "nombre": "Unity", "icono": "devicon-unity-original" },
@@ -23,23 +23,85 @@
       "empresa": "Sociedad San Vicente de Paul de Medellín",
       "fechaInicio": "Junio 2022",
       "fechaFin": "Diciembre 2022",
-      "tecnologias": ["C#", "ASP.NET Core", "SQL Server", "Bootstrap", "Power BI"],
-      "descripcion": "Desarrollé soluciones con C#, ASP.NET y SQL Server. Implementé arquitectura MVVM, procedimientos almacenados, procesos ETL y dashboards con Power BI."
-    }
-  ],
-  "educacion": [
-    {
-      "titulo": "Ingeniería de Software",
-      "institucion": "Institución Universitaria Tecnológico de Antioquia",
-      "fechaInicio": "Febrero 2017",
-      "fechaFin": "Marzo 2022"
+      "descripcion": [
+        "🛠️ Lideré el desarrollo de soluciones internas con C#, ASP.NET y SQL Server, entregando productos que resolvieron necesidades clave de la organización.",
+        "🧩 Implementé arquitectura MVVM en aplicaciones reales, mejorando la mantenibilidad y estructura del código.",
+        "📊 Diseñé procedimientos almacenados y procesos ETL para una migración de datos 100% efectiva, y generé dashboards en Power BI que facilitaron el análisis de información."
+      ],
+      "tecnologias": [
+        { "nombre": "C#", "icono": "devicon-csharp-plain" },
+        { "nombre": "ASP.NET Core", "icono": "devicon-dotnetcore-plain" },
+        { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
+        { "nombre": "Bootstrap", "icono": "devicon-bootstrap-plain" },
+        { "nombre": "Power BI", "icono": "fas fa-chart-bar" }
+      ]
     },
     {
-      "titulo": "Curso ASP.NET Core MVC 9",
-      "institucion": "Udemy",
-      "fechaInicio": "Abril 2025",
-      "fechaFin": "Actualidad"
+      "puesto": "Implementador Web",
+      "empresa": "Julius 2 Grow",
+      "fechaInicio": "Julio 2021",
+      "fechaFin": "Enero 2022",
+      "descripcion": [
+        "🌐 Desarrollé sitios web personalizados con CMS DNN, HTML, CSS y Bootstrap para clientes como EPM, mejorando significativamente su presencia digital.",
+        "🔍 Apliqué estrategias SEO efectivas que incrementaron la visibilidad de los sitios en un 40%, atrayendo más tráfico orgánico.",
+        "🎧 Desarrollé aplicaciones en Angular consumiendo APIs de Spotify y YouTube, logrando interfaces dinámicas para gestionar y visualizar contenido multimedia."
+      ],
+      "tecnologias": [
+        { "nombre": "DNN CMS", "icono": "fas fa-cog" },
+        { "nombre": "HTML5", "icono": "devicon-html5-plain" },
+        { "nombre": "CSS3", "icono": "devicon-css3-plain" },
+        { "nombre": "Bootstrap", "icono": "devicon-bootstrap-plain" },
+        { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
+        { "nombre": "Spotify API", "icono": "fab fa-spotify" },
+        { "nombre": "YouTube API", "icono": "fab fa-youtube" },
+        { "nombre": "SEO", "icono": "fas fa-chart-line" }
+      ]
     }
+
+  ],
+  "educacion": [    
+    {
+      "institucion": "Generation Colombia",
+      "ciudad": "Medellín, Colombia",
+      "fechaInicio": "Abr 2025",
+      "fechaFin": "Actualidad",
+      "descripcion": "Desarrollando videojuegos en Unity"
+    },
+    {
+      "institucion": "Udemy",
+      "ciudad": "Medellín, Colombia",
+      "fechaInicio": "Abr 2025",
+      "fechaFin": "Actualidad",
+      "descripcion": "Desarrollando aplicaciones en Angular 19 y ASP.NET Core 9"
+    },
+    {
+      "institucion": "Programming Hub",
+      "ciudad": "Medellín, Colombia",
+      "fechaInicio": "Mar 2024",
+      "fechaFin": "Mar 2024",
+      "descripcion": "Curso certificado de Python 3"
+    },
+    {
+      "institucion": "Platzi",
+      "ciudad": "Medellín, Colombia",
+      "fechaInicio": "Sep 2023",
+      "fechaFin": "Sep 2023",
+      "descripcion": "Introducción a React Native"
+    },
+    {
+      "institucion": "Platzi",
+      "ciudad": "Medellín, Colombia",
+      "fechaInicio": "Sep 2023",
+      "fechaFin": "Sep 2023",
+      "descripcion": "Curso de programación básica en JavaScript"
+    },
+    {
+      "institucion": "Institución Universitaria Tecnológico de Antioquia",
+      "ciudad": "Medellín, Colombia",
+      "fechaInicio": "Feb 2017",
+      "fechaFin": "Mar 2022",
+      "descripcion": "Ingeniero de Software"
+    }    
   ],
   "contacto": {
     "github": "https://github.com/sebascg17",

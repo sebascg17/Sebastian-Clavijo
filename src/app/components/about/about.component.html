@@ -1,34 +1,45 @@
-<section class="about-container" *ngIf="perfil">
-  <div class="about-content">
-    <img [src]="perfil.foto" alt="Foto de {{ perfil.nombre }}" class="perfil-foto" />
-    <div class="texto">
-      <h1>{{ perfil.nombre }}</h1>
-      <h2>{{ perfil.titulo }}</h2>
-      <p>{{ perfil.biografia }}</p>
+<div class="app-container">  
+  <section class="about-container" *ngIf="perfil">
+    <div class="about-content">
+      <img [src]="perfil.foto" alt="Foto de {{ perfil.nombre }}" class="perfil-foto" />
+      <div class="texto">
+        <h1>{{ perfil.nombre }}</h1>
+        <h2>{{ perfil.titulo }}</h2>
+        <p>{{ perfil.biografia }}</p>
 
-      <span *ngFor="let hab of perfil.habilidades" class="habilidad-badge">
-        <i [class]="hab.icono" aria-hidden="true" style="margin-right:5px;"></i> {{ hab.nombre }}
-      </span>
+        <!-- <span *ngFor="let hab of perfil.habilidades" class="habilidad-badge">
+          <i [class]="hab.icono" aria-hidden="true" style="margin-right:5px;"></i> {{ hab.nombre }}
+        </span> -->
+        <app-habilidades></app-habilidades>
+        
+        <div class="experiencia">
+          <h3 class="texto">Experiencia Laboral</h3>
+          <div *ngFor="let exp of perfil.experiencia" class="exp-item">
+            <h4 class="texto">{{ exp.puesto }} - {{ exp.empresa }}</h4>
+            <small>{{ exp.fechaInicio }} - {{ exp.fechaFin }}</small>
 
+            <ul>
+              <li *ngFor="let desc of exp.descripcion" class="texto">{{ desc }}</li>
+              <br>
+            </ul>
 
-      <div class="experiencia">
-        <h3 class="texto">Experiencia Laboral</h3>
-        <div *ngFor="let exp of perfil.experiencia" class="exp-item">
-          <h4 class="texto">{{ exp.puesto }} - {{ exp.empresa }}</h4>
-          <small>{{ exp.fechaInicio }} - {{exp.fechaFin}}</small>
-          <p>{{ exp.descripcion }}</p>
+            <div class="tecnologías" style="margin-top: 8px;">
+              <span *ngFor="let tech of exp.tecnologias" class="badge">
+                <i [class]="tech.icono" aria-hidden="true"></i> {{ tech.nombre }}
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="educacion">
-        <h3>Educación</h3>
-        <div *ngFor="let edu of perfil.educacion" class="edu-item">
-          <h4 class="texto">{{ edu.titulo }}</h4>
-          <small>{{ edu.institucion }} • {{ edu.fechaInicio }} - {{edu.fechaFin}}</small>
-        </div>
+        <div class="educacion">
+          <h3>Educación</h3>
+          <div *ngFor="let edu of perfil.educacion" class="edu-item">
+            <h4 class="texto">{{ edu.institucion }}</h4>
+            <small>{{ edu.ciudad }} • {{ edu.fechaInicio }} - {{ edu.fechaFin }}</small>
+            <p>{{ edu.descripcion }}</p>
+          </div>
+        </div> 
       </div>
-      
-
     </div>
-  </div>
-</section>
+  </section>
+</div>

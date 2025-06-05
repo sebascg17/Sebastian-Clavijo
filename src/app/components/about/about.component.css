@@ -12,7 +12,7 @@
 }
 
 .perfil-foto {
-  width: 300px;
+  width: 150px;
   border-radius: 2rem;
   object-fit: cover;
 }
@@ -86,28 +86,73 @@
   box-shadow: 0 0 8px #03fa6e, 0 0 12px #03fa6e;
 }
 
-.experiencia, .educacion {
-  margin-top: 2rem;
+.experiencia {
+  margin-top: 40px;
 }
 
-.exp-item, .edu-item {
-  margin-bottom: 1rem;
-}
-
-.exp-item h4, .edu-item h4 {
-  margin: 0;
-  font-size: 1rem;
+.experiencia h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
   color: #03fa6e;
 }
 
-.exp-item small, .edu-item small {
-  color: #fff;
-  display: block;
-  margin-bottom: 0.5rem;
+.exp-item {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
-.exp-item p {
-  margin: 0.5rem 0 0 0;
-  line-height: 1.5;
+.exp-item h4 {
+  color: #b9f6ca;
+  margin-bottom: 6px;
+  font-size: 1.2rem;
 }
+
+.exp-item small {
+  color: #ccc;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.exp-item ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #eee;
+  margin: 0;
+}
+
+.exp-item li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+.edu-item {
+  background-color: #1e1e1e;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: #b9f6ca; /* verde neón tenue */
+}
+
+.edu-item h4 {
+  color: #03fa6e; /* verde neón */
+  margin-bottom: 4px;
+}
+
+.edu-item small {
+  color: #ccc;
+  font-style: italic;
+}
+
+.edu-item p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #eee;
+}
+
+
 

@@ -1,32 +1,35 @@
-<h1 class="titulo-portafolio"> Proyectos de Desarrollo de Videojuegos </h1>
-<section class="game-project">
-  <div *ngFor="let juego of juegos" class="game-card">
-    <h2>{{ juego.titulo }}</h2>
+<div class="app-container">
+  <h1 class="titulo-seccion"> Proyectos de Desarrollo de Videojuegos </h1>
+  <section class="projects">
+    <div *ngFor="let juego of juegos" class="card">
+      <h2>{{ juego.titulo }}</h2>
 
-    <!-- <iframe
-      width="100%"
-      height="315"
-      [src]="juego.videoUrl | safeUrl"
-      frameborder="0"
-      allowfullscreen
-    ></iframe> -->
+      <!-- <iframe
+        width="100%"
+        height="315"
+        [src]="juego.videoUrl | safeUrl"
+        frameborder="0"
+        allowfullscreen
+      ></iframe> -->
 
-    <div class="imagenes">
-      <img *ngFor="let img of juego.imagenes" [src]="img" alt="{{ juego.titulo }}" />
+      <div class="imagenes">
+        <img *ngFor="let img of juego.imagenes" [src]="img" alt="{{ juego.titulo }}" />
+      </div>
+
+      <p>{{ juego.descripcion }}</p>
+
+      <div class="tecnologias">
+        <span *ngFor="let tech of juego.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
+          <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
+          {{ tech.nombre }}
+        </span>
+      </div>
+
+      <div class="acciones">
+        <a mat-button color="primary" [href]="juego.enlaceCodigo" target="_blank">Ver código</a>
+        <a mat-button color="accent" [href]="juego.enlaceDescarga" download>Descargar juego</a>
+      </div>
     </div>
+  </section>
 
-    <p>{{ juego.descripcion }}</p>
-
-    <div class="tecnologias">
-      <span *ngFor="let tech of juego.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
-        <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
-        {{ tech.nombre }}
-      </span>
-    </div>
-
-    <div class="acciones">
-      <a mat-button color="primary" [href]="juego.enlaceCodigo" target="_blank">Ver código</a>
-      <a mat-button color="accent" [href]="juego.enlaceDescarga" download>Descargar juego</a>
-    </div>
-  </div>
-</section>
+</div>

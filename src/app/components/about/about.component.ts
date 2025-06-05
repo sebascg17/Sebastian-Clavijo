@@ -1,6 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { HabilidadesComponent } from "../habilidades/habilidades.component";
 
 interface Perfil {
   nombre: string;
@@ -16,11 +17,16 @@ interface Perfil {
     empresa: string;
     fechaInicio: string;
     fechaFin?: string; // opcional
-    descripcion: string;
+    descripcion: string[]; // Cambiado de string a array de strings
+    tecnologias: {
+      nombre: string;
+      icono: string;
+    }[];
   }[];
   educacion: {
     titulo: string;
     institucion: string;
+    ciudad: string;
     fechaInicio: string;
     fechaFin?: string; // opcional
     descripcion: string;
@@ -33,9 +39,10 @@ interface Perfil {
   };
 }
 
+
 @Component({
   selector: 'app-about',
-  imports: [CommonModule],
+  imports: [CommonModule, HabilidadesComponent],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
