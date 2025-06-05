@@ -1,35 +1,38 @@
-[
-  { "nombre": "Unity", "icono": "devicon-unity-original" },   
-  { "nombre": "JavaScript", "icono": "devicon-javascript-plain" },
-  { "nombre": "TypeScript", "icono": "devicon-typescript-plain" },
-  { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
-  { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
-  { "nombre": ".NET Core", "icono": "devicon-dot-net-plain" },
-  { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" },
-  { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
-  { "nombre": "Express", "icono": "devicon-express-original" },
-  { "nombre": "Python", "icono": "devicon-python-plain" },
-  { "nombre": "Java", "icono": "devicon-java-plain" },
-  { "nombre": "PHP", "icono": "devicon-php-plain" },
-  { "nombre": "Ruby", "icono": "devicon-ruby-plain" },
-  { "nombre": "Django", "icono": "devicon-django-plain" },
-  { "nombre": "Flask", "icono": "devicon-flask-original" },
-  { "nombre": "Laravel", "icono": "devicon-laravel-plain" },
-  { "nombre": "React", "icono": "devicon-react-original" },
-  { "nombre": "Vue.js", "icono": "devicon-vuejs-plain" },
-  { "nombre": "Blender", "icono": "devicon-blender-plain" },
-  { "nombre": "Figma", "icono": "devicon-figma-plain" },
-  { "nombre": "Photoshop", "icono": "devicon-photoshop-plain" },
-  { "nombre": "Visual Studio Code", "icono": "devicon-vscode-plain" },
-  { "nombre": "Visual Studio", "icono": "devicon-visualstudio-plain" },
-  { "nombre": "Power BI", "icono": "devicon-powerbi-plain" },
-  { "nombre": "C++", "icono": "devicon-cplusplus-plain" },
-  { "nombre": "C#", "icono": "devicon-csharp-plain" },
-  { "nombre": "HTML5", "icono": "devicon-html5-plain" },
-  { "nombre": "CSS3", "icono": "devicon-css3-plain" },
-  { "nombre": "Git", "icono": "devicon-git-plain" },
-  { "nombre": "GitHub", "icono": "devicon-github-original" },
-  { "nombre": "Bootstrap", "icono": "devicon-bootstrap-plain" },
-  { "nombre": "Tailwind CSS", "icono": "devicon-tailwindcss-plain" },
-  { "nombre": "Sass", "icono": "devicon-sass-original" }
-]
+{
+  "frontend": [
+    { "nombre": "HTML5", "icono": "devicon-html5-plain" },
+    { "nombre": "CSS3", "icono": "devicon-css3-plain" },
+    { "nombre": "JavaScript", "icono": "devicon-javascript-plain" },
+    { "nombre": "TypeScript", "icono": "devicon-typescript-plain" },
+    { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
+    { "nombre": "Bootstrap", "icono": "devicon-bootstrap-plain" }
+  ],
+  "backend": [
+    { "nombre": "C#", "icono": "devicon-csharp-plain" },
+    { "nombre": ".NET Core", "icono": "devicon-dot-net-plain" },
+    { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
+    { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
+    { "nombre": "Express", "icono": "devicon-express-original" },
+    { "nombre": "JWT", "icono": "devicon-jwt-plain" }
+  ],
+  "videojuegos": [
+    { "nombre": "Unity", "icono": "devicon-unity-original" },
+    { "nombre": "C#", "icono": "devicon-csharp-plain" }
+  ],
+  "otros": [
+    { "nombre": "Git", "icono": "devicon-git-plain" },
+    { "nombre": "GitHub", "icono": "devicon-github-original" },
+    { "nombre": "React", "icono": "devicon-react-original" },
+    { "nombre": "Java", "icono": "devicon-java-plain" },
+    { "nombre": "PHP", "icono": "devicon-php-plain" },
+    { "nombre": "Python", "icono": "devicon-python-plain" },
+    { "nombre": "MySQL", "icono": "devicon-mysql-plain" },
+    { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" },
+    { "nombre": "Firebase", "icono": "devicon-firebase-plain" },
+    { "nombre": "Photoshop", "icono": "devicon-photoshop-plain" },
+    { "nombre": "RESTful APIs", "icono": "devicon-rest-api-plain" },
+    { "nombre": "OAuth", "icono": "devicon-oauth-plain" },
+    { "nombre": "Postman", "icono": "devicon-postman-plain" },
+    { "nombre": "Scrum", "icono": "devicon-scrum-plain" }
+  ]
+}

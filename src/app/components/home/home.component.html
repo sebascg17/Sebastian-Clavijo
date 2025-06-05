@@ -9,41 +9,46 @@
   </section>
 
   <!-- Habilidades en badges -->
-  <section class="skills">
-    <h2 class="h2">Habilidades principales</h2>
-    <div class="skills-row">
-      <div class="skill-box">
-        <h3>Back-End</h3>
-        <div class="tecnologias">
-          <span class="badge">C#</span>
-          <span class="badge">Node.js</span>
-          <span class="badge">.NET Core</span>
-          <span class="badge">Express</span>
-          <span class="badge">SQL Server</span>
-          <span class="badge">MySQL</span>
-          <span class="badge">MongoDB</span>
-        </div>
-      </div>
-
-      <div class="skill-box">
-        <h3>Front-End</h3>
-        <div class="tecnologias">
-          <span class="badge">Angular</span>
-          <span class="badge">HTML</span>
-          <span class="badge">CSS</span>
-          <span class="badge">JavaScript</span>
-          <span class="badge">Bootstrap</span>
-        </div>
-      </div>
-
+  <section class="skills">    
+    <h2 class="hero">Habilidades Principales</h2>
+    <div class="skills-row" *ngIf="habilidades">
+      <!-- VIDEOJUEGOS -->
       <div class="skill-box">
         <h3>Videojuegos</h3>
         <div class="tecnologias">
-          <span class="badge">Unity</span>
-          <span class="badge">C#</span>
-          <span class="badge">Diseño de niveles</span>
-          <span class="badge">Lógica de juego</span>
-          <span class="badge">Prototipado</span>
+          <span class="badge" *ngFor="let tech of habilidades.videojuegos">
+            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+          </span>
+        </div>
+      </div>
+      
+      <!-- BACKEND -->
+      <div class="skill-box">
+        <h3>Back-End</h3>
+        <div class="tecnologias">
+          <span class="badge" *ngFor="let tech of habilidades.backend">
+            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+          </span>
+        </div>
+      </div>
+
+      <!-- FRONTEND -->
+      <div class="skill-box">
+        <h3>Front-End</h3>
+        <div class="tecnologias">
+          <span class="badge" *ngFor="let tech of habilidades.frontend">
+            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+          </span>
+        </div>
+      </div>
+
+      <!-- OTROS -->
+      <div class="skill-box">
+        <h3>Conocimientos en...</h3>
+        <div class="tecnologias">
+          <span class="badge" *ngFor="let tech of habilidades.otros">
+            <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
+          </span>
         </div>
       </div>
     </div>

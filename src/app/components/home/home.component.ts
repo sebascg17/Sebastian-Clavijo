@@ -3,6 +3,7 @@ import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 interface Contacto {
   contacto: {
@@ -15,15 +16,27 @@ interface Contacto {
   };
 }
 
+interface Tecnologia {
+  nombre: string;
+  icono: string;
+}
+
+interface Habilidades {
+  frontend: Tecnologia[];
+  backend: Tecnologia[];
+  videojuegos: Tecnologia[];
+  otros: Tecnologia[];
+}
+
 @Component({
   selector: 'app-home',
-  imports: [MatCardModule, RouterLink, MatIconModule],
+  imports: [MatCardModule, RouterLink, MatIconModule, CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
   contacto!: Contacto;
-  habilidades: string[] = [];
+  habilidades!: Habilidades;
 
   constructor(private http: HttpClient) {}
 
@@ -33,9 +46,9 @@ export class HomeComponent implements OnInit {
   };  
 
   cargarHabilidades(): void {
-    this.http.get<{ habilidades: string[] }>('assets/data/habilidades.json')
+    this.http.get<Habilidades>('assets/data/habilidades.json')
       .subscribe(data => {
-        this.habilidades = data.habilidades;
+        this.habilidades = data;
       });
   }
 
