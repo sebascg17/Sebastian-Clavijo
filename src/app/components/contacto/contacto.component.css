@@ -1,39 +1,48 @@
 .contacto {
-  text-align: center;  /* Centrar texto dentro del contenedor */
-  font-size: 1.25rem; /* texto más grande */
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
 }
 
-
-.contacto ul {
-  list-style: none;
-  padding-left: 0;
-  display: inline-block; /* Hace que el ul ocupe sólo el espacio necesario */
-  text-align: left; /* Para que los li mantengan la alineación izquierda */
-  margin: 0 auto; /* Centra el ul dentro del div */
-}
-
-.contacto li {
+.contacto h1 {
+  font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.contacto p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.contacto-botones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-contacto {
   display: flex;
   align-items: center;
-  color: #fff;
-}
-
-.contacto i {
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.8rem;
+  background-color: #2f2f2f;
   color: #03fa6e;
-  font-size: 1.8rem; /* iconos más grandes */
-  width: 30px;
-  margin-right: 1rem;
-}
-
-.contacto a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.contacto a:hover {
-  color: #00ff99;
-  text-shadow: 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 5px #00ff99;
+  border: 1px solid #03fa6e;
+  border-radius: 0.5rem;
   font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-contacto i {
+  font-size: 1.2rem;
+}
+
+.btn-contacto:hover {
+  background-color: #03fa6e;
+  color: #1e1e1e;
+  box-shadow: 0 0 10px #03fa6e;
 }

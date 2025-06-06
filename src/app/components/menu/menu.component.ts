@@ -58,4 +58,13 @@ export class MenuComponent implements OnInit {
   getSubLinkClass(path: string): string {
     return this.currentRoute === path ? 'active-link' : '';
   }
+  
+  cerrarSiClickFuera(event: MouseEvent): void {
+    const target = event.target as HTMLElement;
+    const clickedInside = target.closest('.custom-sidenav');
+
+    if (!clickedInside) {
+      this.sidenav.close();
+    }
+  }
 }

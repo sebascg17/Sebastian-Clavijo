@@ -9,102 +9,93 @@
   flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
+  align-items: center;
+}
+
+/* Perfil */
+.about-content .perfil {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-content .educacion {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-content .experiencia {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .perfil-foto {
-  width: 150px;
-  border-radius: 2rem;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #03fa6e;
+  box-shadow: 0 0 12px rgba(3, 250, 110, 0.5);
+  display: block;
+  margin-bottom: 2rem;
+}
+.perfil {
+  text-align: center;
+  padding: 1.5rem;
+  color: #ffffff;
 }
 
-.texto {
-  flex: 1;
+.perfil-foto {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #03fa6e;
+  box-shadow: 0 0 12px rgba(3, 250, 110, 0.5);
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
-.texto h1 {
+.perfil h1 {
   font-size: 2rem;
-  margin: 0;
+  margin: 0.5rem 0;
 }
 
-.texto h2 {
-  font-size: 1.2rem;
-  color: #aaa;
-}
-.texto h3 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+.perfil h2 {
+  font-size: 1.4rem;
   color: #03fa6e;
+  margin-bottom: 1rem;
 }
 
-.texto h4 {
-  font-size: 1.1rem;
-  color: #aaa !important;
-  margin-top: 0.5rem;
+.perfil p {
+  text-align: justify; /* <-- Esto es lo importante */
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.texto p {
-  margin-top: 1rem;
-  line-height: 1.5;
-}
-
-.habilidades h3 {
-  margin-top: 2rem;
-}
-
-.habilidades ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  list-style: none;
-}
-
-.habilidades li {
-  background: #2f2f2f;
-  color: #03fa6e;
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.5rem;
-  font-size: 0.85rem;
-}
-
-.habilidad-badge {
-  display: inline-block;
-  background: #121212;
-  color: #03fa6e;
-  padding: 0.3rem 0.7rem;
-  margin: 0.2rem;
-  border-radius: 5px;
-  border: 0.5px solid #03fa6e;
-  font-size: 0.85rem;
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-.habilidad-badge:hover {
-  background: #03fa6e;
-  color: #121212;
-  box-shadow: 0 0 8px #03fa6e, 0 0 12px #03fa6e;
-}
-
-.experiencia {
-  margin-top: 40px;
-}
+/* Sección de Experiencia */
 
 .experiencia h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #03fa6e;
+  text-align: center;
 }
 
 .exp-item {
   background-color: #1e1e1e;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 8px;  
 }
 
 .exp-item h4 {
-  color: #b9f6ca;
+  color: #03fa6e;
   margin-bottom: 6px;
   font-size: 1.2rem;
 }
@@ -129,11 +120,21 @@
   line-height: 1.5;
   font-size: 0.95rem;
 }
+
+/* Sección de Educación */
+
+.educacion h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #03fa6e;
+}
 .edu-item {
   background-color: #1e1e1e;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
+  width: 100%;
   color: #b9f6ca; /* verde neón tenue */
 }
 

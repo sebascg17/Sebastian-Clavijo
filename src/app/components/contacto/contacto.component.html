@@ -1,33 +1,28 @@
 <div class="app-container">
   <div class="contacto">
-    <h1>Contacto</h1>
-      <p>¿Te interesa trabajar conmigo o ver más de lo que hago?</p>
-      <p>¡No dudes en contactarme!</p>
-    <ul>
-      <li>
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <a [href]="'mailto:' + contacto.contacto.correo" aria-label="Enviar correo">{{ contacto.contacto.correo }}</a>
-      </li>
-      <li>
-        <i class="fab fa-github" aria-hidden="true"></i>
-        <a [href]="contacto.contacto.github" target="_blank" rel="noopener noreferrer" aria-label="Ir a GitHub">GitHub</a>
-      </li>
-      <li>
-        <i class="fab fa-linkedin" aria-hidden="true"></i>
-        <a [href]="contacto.contacto.linkedin" target="_blank" rel="noopener noreferrer" aria-label="Ir a LinkedIn">LinkedIn</a>
-      </li>
-      <li>
-        <i class="devicon-unity-original" aria-hidden="true"></i>
-        <a [href]="contacto.contacto.unity" target="_blank" rel="noopener noreferrer" aria-label="Ir a Unity Play">Unity Play</a>
-      </li>
-      <li>
-        <i class="fab fa-itch-io" aria-hidden="true"></i>
-        <a [href]="contacto.contacto.itchio" target="_blank" rel="noopener noreferrer" aria-label="Ir a Itch.io">Itch.io</a>
-      </li>
-      <li>
-        <i class="fas fa-file-alt" aria-hidden="true"></i>
-        <a [href]="contacto.contacto.cv" download aria-label="Descargar CV">Descargar CV</a>
-      </li>
-    </ul>
+    <h2>Contacto</h2>
+    <p>¿Te interesa trabajar conmigo o ver más de lo que hago?</p>
+    <p>¡No dudes en contactarme!</p>
+
+    <div class="contacto-botones">
+      <a [href]="'mailto:' + contacto.contacto.correo" aria-label="Correo" class="btn-contacto">
+        <i class="fas fa-envelope"></i> Correo
+      </a>
+      <a [href]="contacto.contacto.github" target="_blank" rel="noopener" aria-label="GitHub" class="btn-contacto">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a [href]="contacto.contacto.linkedin" target="_blank" rel="noopener" aria-label="LinkedIn" class="btn-contacto">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a [href]="contacto.contacto.unity" target="_blank" rel="noopener" aria-label="Unity" class="btn-contacto">
+        <i class="devicon-unity-original"></i> Unity
+      </a>
+      <a [href]="contacto.contacto.itchio" target="_blank" rel="noopener" aria-label="Itch.io" class="btn-contacto">
+        <i class="fab fa-itch-io"></i> Itch.io
+      </a>
+      <a [href]="contacto.contacto.cv" download aria-label="CV" class="btn-contacto">
+        <i class="fas fa-file-alt"></i> CV
+      </a>
+    </div>
   </div>
 </div>

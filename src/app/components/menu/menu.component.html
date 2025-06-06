@@ -32,8 +32,8 @@
    </ng-container>
 </mat-toolbar>
 
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav mode="over" class="sidenav custom-sidenav" [fixedInViewport]="true" [disableClose]="true">
+<mat-sidenav-container class="sidenav-container" (click)="cerrarSiClickFuera($event)">
+  <mat-sidenav #sidenav mode="over" class="sidenav custom-sidenav" [fixedInViewport]="true" [disableClose]="false">
     <ul>
       <li>
         <a class="glow-text" mat-button (click)="navigateAndClose('/')">Inicio</a>
