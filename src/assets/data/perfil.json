@@ -32,8 +32,7 @@
         { "nombre": "C#", "icono": "devicon-csharp-plain" },
         { "nombre": "ASP.NET Core", "icono": "devicon-dotnetcore-plain" },
         { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
-        { "nombre": "Bootstrap", "icono": "devicon-bootstrap-plain" },
-        { "nombre": "Power BI", "icono": "fas fa-chart-bar" }
+        { "nombre": "Bootstrap", "icono": "devicon-bootstrap-plain" }
       ]
     },
     {
@@ -52,8 +51,6 @@
         { "nombre": "CSS3", "icono": "devicon-css3-plain" },
         { "nombre": "Bootstrap", "icono": "devicon-bootstrap-plain" },
         { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
-        { "nombre": "Spotify API", "icono": "fab fa-spotify" },
-        { "nombre": "YouTube API", "icono": "fab fa-youtube" },
         { "nombre": "SEO", "icono": "fas fa-chart-line" }
       ]
     }

@@ -20,13 +20,13 @@
     { "nombre": "C#", "icono": "devicon-csharp-plain" }
   ],
   "otros": [
+    { "nombre": "React", "icono": "devicon-react-original" },
+    { "nombre": "Python", "icono": "devicon-python-plain" },
+    { "nombre": "PHP", "icono": "devicon-php-plain" },
+    { "nombre": "MySQL", "icono": "devicon-mysql-plain" },
+    { "nombre": "Java", "icono": "devicon-java-plain" },
     { "nombre": "Git", "icono": "devicon-git-plain" },
     { "nombre": "GitHub", "icono": "devicon-github-original" },
-    { "nombre": "React", "icono": "devicon-react-original" },
-    { "nombre": "Java", "icono": "devicon-java-plain" },
-    { "nombre": "PHP", "icono": "devicon-php-plain" },
-    { "nombre": "Python", "icono": "devicon-python-plain" },
-    { "nombre": "MySQL", "icono": "devicon-mysql-plain" },
     { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" },
     { "nombre": "Firebase", "icono": "devicon-firebase-plain" },
     { "nombre": "Photoshop", "icono": "devicon-photoshop-plain" },

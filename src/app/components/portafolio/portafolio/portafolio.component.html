@@ -35,7 +35,7 @@
   
   <section class="projects">
     <div *ngFor="let proyecto of destacados" class="card" [ngClass]="{ 'expandido': proyecto.expandido }">
-      <div class="card-info-portafolio">
+      <div class="card-info">
           <h3 class="centrado">{{ proyecto.titulo }}</h3>
         <!-- Tecnologías -->
         <div class="tecnologias">
@@ -43,7 +43,7 @@
             <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
             {{ tech.nombre }}
           </span>
-        </div>
+        </div> 
 
          <div class="carrusel">
           <!-- Botón Izquierdo -->

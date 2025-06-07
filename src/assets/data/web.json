@@ -16,8 +16,7 @@
     ],
     "enlaceCodigo": "https://github.com/sebascg17/curso-node-js",
     "enlaceDemo": "https://crud-node-sebas.netlify.app",
-    "tipo": "web",  
-    "destacado": true
+    "tipo": "web"
   },
   {
     "titulo": "Películas App",
@@ -29,10 +28,17 @@
       { "nombre": "SQL Server", "icono": "fas fa-server" }
     ],
     "imagenes": [
-      "assets/juegos/Mokepon/mokeponResultado.png"
+      "assets/web/PeliculasApp/peliculas-app-inicio.png",
+      "assets/web/PeliculasApp/peliculas-app-buscar.png",
+      "assets/web/PeliculasApp/peliculas-app-generos.png",
+      "assets/web/PeliculasApp/peliculas-app-cines.png",
+      "assets/web/PeliculasApp/peliculas-app-actores.png",
+      "assets/web/PeliculasApp/peliculas-app-crear-pelicula.png",
+      "assets/web/PeliculasApp/peliculas-app-detalle-pelicula.png"
     ],
     "enlaceCodigo": "https://github.com/sebascg17/peliculas-app",
-    "enlaceDemo": "https://crud-node-sebas.netlify.app",
-    "tipo": "web"
+    "enlaceDemo": "",
+    "tipo": "web",
+    "destacado": true
   }
 ]
