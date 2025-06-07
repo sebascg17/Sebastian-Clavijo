@@ -7,7 +7,9 @@ body {
   margin: 0;
   background-color: #121212;
   color: #e0e0e0;
-  font-family: 'Consolas', monospace, 'Courier New', monospace;
+  /* font-family: 'Consolas', monospace, 'Courier New', monospace; */
+  /* font-family: 'Orbitron', sans-serif; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -24,15 +26,18 @@ body {
 }
 
 /* TÍTULOS GENERALES */
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #03fa6e;
   margin-top: 0;
-  font-family: 'Consolas', monospace, 'Courier New', monospace;
+  font-family: 'Orbitron', sans-serif;
 }
+
+
 
 .hero {
   text-align: center;
 }
+
 
 .hero h1 {
   font-size: 2.8rem;
@@ -162,6 +167,8 @@ img {
   padding: 1rem;
   margin: 0 auto;
   justify-content: center;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .card {
@@ -171,7 +178,7 @@ img {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease-in-out;
   position: relative;
-  
+  width: 450px;
 }
 
 .card:hover {
@@ -179,6 +186,7 @@ img {
   box-shadow: 0 0 15px #03fa6e;
   outline: none;
 }
+
 .card .card-title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -211,10 +219,10 @@ img {
 
 /* Tecnologías */
 .tecnologias {
-  margin: 1rem 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .badge {
@@ -445,6 +453,12 @@ footer p {
 }
 
 @media (max-width: 600px) {
+  .projects {
+    grid-template-columns: 1fr; /* una sola columna en móviles */
+  }
+  .card {
+    width: 300px /* tarjetas ocupan todo el ancho */
+  }
   .row {
     flex-direction: column;
   }
@@ -470,6 +484,10 @@ footer p {
 
   .media-container {
     padding: 0; /* elimina padding en celular para que el slide no se desplace */
+  }
+
+  .card-info {
+    height: auto; /* permite que la tarjeta se ajuste al contenido */
   }
 }
 

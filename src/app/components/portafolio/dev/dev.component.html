@@ -1,4 +1,4 @@
-<div class="portafolio-container">  
+<div class="portafolio-container">
   <h1 class="titulo-seccion"> Proyectos de Desarrollo Web </h1>
   <section class="projects">
     <div *ngFor="let web of webs" class="card" [ngClass]="{ 'expandido': web.expandido }">
@@ -52,11 +52,12 @@
             {{ web.expandido ? 'Ver menos' : 'Ver más' }}
           </a>
         </div>
-      </div>      
+      </div>
+      
 
       <div class="acciones">
-        <a mat-button color="primary" [href]="web.enlaceCodigo" target="_blank">Ver código</a>
-        <a mat-button color="accent" [href]="web.enlaceDemo" download>Descargar Demo</a>
+        <a mat-button color="primary" [href]="web.enlaceCodigo" target="_blank"><i class="fab fa-github"></i> Ver código</a>
+        <a mat-button color="accent" [href]="web.enlaceDemo" download><i class="fas fa-gamepad"></i> Jugar</a>
       </div>
     </div>
   </section>

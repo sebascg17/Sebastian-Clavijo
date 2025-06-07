@@ -4,7 +4,7 @@
   <div class="skills-row" *ngIf="habilidades">
     <!-- VIDEOJUEGOS -->
     <div class="skill-box">
-      <h3>Videojuegos</h3>
+      <h4>Videojuegos</h4>
       <div class="tecnologias">
         <span class="badge" *ngFor="let tech of habilidades.videojuegos">
           <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
@@ -14,7 +14,7 @@
     
     <!-- BACKEND -->
     <div class="skill-box">
-      <h3>Back-End</h3>
+      <h4>Back-End</h4>
       <div class="tecnologias">
         <span class="badge" *ngFor="let tech of habilidades.backend">
           <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
@@ -24,7 +24,7 @@
 
     <!-- FRONTEND -->
     <div class="skill-box">
-      <h3>Front-End</h3>
+      <h4>Front-End</h4>
       <div class="tecnologias">
         <span class="badge" *ngFor="let tech of habilidades.frontend">
           <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
@@ -34,7 +34,7 @@
 
     <!-- OTROS -->
     <div class="skill-box">
-      <h3>Conocimientos en...</h3>
+      <h4>Conocimientos en...</h4>
       <div class="tecnologias">
         <span class="badge" *ngFor="let tech of habilidades.otros">
           <i *ngIf="tech.icono" [class]="tech.icono"></i> {{ tech.nombre }}
