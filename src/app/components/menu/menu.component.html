@@ -39,14 +39,22 @@
         <a class="glow-text" mat-button (click)="navigateAndClose('/')">Inicio</a>
       </li>
       <li>
-        <details>
-          <summary class="glow-text" mat-button >Portafolio</summary>          
-          <ul>
-            <li><a class="glow-text" mat-button (click)="navigateAndClose('portafolio/videojuegos')">Videojuegos</a></li>
-            <li><a class="glow-text" mat-button (click)="navigateAndClose('portafolio/desarrollo-web')">Desarrollo Web</a></li>
-          </ul>
-        </details>
+        <div class="menu-item">
+          <a class="glow-text" mat-button (click)="navigateAndClose('/portafolio')">Portafolio</a>
+          <button class="arrow-btn" mat-icon-button (click)="mostrarSubmenu = !mostrarSubmenu">
+            <mat-icon>{{ mostrarSubmenu ? 'expand_less' : 'play_arrow' }}</mat-icon>
+          </button>
+        </div>
+        <ul *ngIf="mostrarSubmenu" class="submenu">
+          <li>
+            <a class="glow-text" mat-button (click)="navigateAndClose('portafolio/videojuegos')">Videojuegos</a>
+          </li>
+          <li>
+            <a class="glow-text" mat-button (click)="navigateAndClose('portafolio/desarrollo-web')">Desarrollo Web</a>
+          </li>
+        </ul>
       </li>
+
       <li>
         <a class="glow-text" mat-button (click)="navigateAndClose('/about')">Sobre mí</a>
       </li>

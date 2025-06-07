@@ -26,10 +26,11 @@ body {
 }
 
 /* TÍTULOS GENERALES */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, a{
   color: #03fa6e;
   margin-top: 0;
   font-family: 'Orbitron', sans-serif;
+  /* font-family: 'Consolas', monospace, 'Courier New', monospace; */
 }
 
 
@@ -97,6 +98,7 @@ button:hover, .mat-button:hover {
   color: #03fa6e;
   font-weight: bold;
 }
+
 
 .glow-text :hover, .glow-text:focus {
   color: #00ff99;
@@ -457,7 +459,7 @@ footer p {
     grid-template-columns: 1fr; /* una sola columna en móviles */
   }
   .card {
-    width: 300px /* tarjetas ocupan todo el ancho */
+    width: 100% 
   }
   .row {
     flex-direction: column;

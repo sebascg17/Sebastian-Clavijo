@@ -31,6 +31,7 @@ import { CommonModule } from '@angular/common';
 export class MenuComponent implements OnInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   currentRoute: string = '';
+  mostrarSubmenu = false;
 
   constructor(private router: Router) {}
 
