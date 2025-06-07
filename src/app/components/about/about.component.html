@@ -1,17 +1,17 @@
 <div class="app-container">  
   <section class="about-container" *ngIf="perfil">
     <div class="about-content">
-      <div class="perfil">        
+      <div class="perfil">
         <img [src]="perfil.foto" alt="Foto de {{ perfil.nombre }}" class="perfil-foto" />
-        <h1>{{ perfil.nombre }}</h1>
-        <h2>{{ perfil.titulo }}</h2>
-        <p>{{ perfil.biografia }}</p>      
+        <div class="perfil-info">
+          <h1 class="perfil-nombre">{{ perfil.nombre }}</h1>
+          <h2 class="perfil-titulo">{{ perfil.titulo }}</h2>
+          <p class="perfil-biografia">{{ perfil.biografia }}</p>
+        </div>
       </div>
       <!-- <span *ngFor="let hab of perfil.habilidades" class="habilidad-badge">
         <i [class]="hab.icono" aria-hidden="true" style="margin-right:5px;"></i> {{ hab.nombre }}
-      </span> -->
-      
-      <hr class="separador-neon">
+      </span> -->      
 
       <app-habilidades></app-habilidades>
       

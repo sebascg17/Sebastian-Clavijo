@@ -1,7 +1,7 @@
 [
   {
     "titulo": "CRUD con Node.js y MongoDB",
-    "videoUrl": "https://www.youtube.com/embed/tuVideoId",
+    "videoUrl": "",
     "descripcion": "Aplicación CRUD con API REST construida en Node.js y Express, usando MongoDB como base de datos.",
     "tecnologias": [
       { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
@@ -9,27 +9,30 @@
       { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" }
     ],
     "imagenes": [
-      "assets/proyectos/desarrollo-web/crud-node-1.png",
-      "assets/proyectos/desarrollo-web/crud-node-2.png"
+      "assets/juegos/Mokepon/mokeponInicio.png",
+      "assets/juegos/Mokepon/mokeponJugadores.png",
+      "assets/juegos/Mokepon/mokeponAtaques.png",
+      "assets/juegos/Mokepon/mokeponResultado.png"
     ],
-    "enlaceCodigo": "https://github.com/sebascg17/crud-node",
-    "enlaceDemo": "https://crud-node-sebas.netlify.app",    
+    "enlaceCodigo": "https://github.com/sebascg17/curso-node-js",
+    "enlaceDemo": "https://crud-node-sebas.netlify.app",
+    "tipo": "web",  
     "destacado": true
   },
   {
-    "titulo": "Portafolio en Angular + .NET",
-    "videoUrl": "https://www.youtube.com/embed/otroVideoId",
-    "descripcion": "Portafolio profesional con frontend en Angular y backend en ASP.NET Core.",
+    "titulo": "Películas App",
+    "videoUrl": "",
+    "descripcion": "Aplicación web para gestionar películas, con funcionalidades de CRUD y una interfaz amigable.",
     "tecnologias": [
       { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
       { "nombre": ".NET Core", "icono": "devicon-nodejs-plain" },
-    { "nombre": "SQL Server", "icono": "fas fa-server" }
+      { "nombre": "SQL Server", "icono": "fas fa-server" }
     ],
     "imagenes": [
-      "assets/proyectos/desarrollo-web/portafolio-1.png",
-      "assets/proyectos/desarrollo-web/portafolio-2.png"
+      "assets/juegos/Mokepon/mokeponResultado.png"
     ],
-    "enlaceCodigo": "https://github.com/sebascg17/portafolio",
-    "enlaceDemo": "https://sebas-portafolio.netlify.app"
+    "enlaceCodigo": "https://github.com/sebascg17/peliculas-app",
+    "enlaceDemo": "https://crud-node-sebas.netlify.app",
+    "tipo": "web"
   }
 ]

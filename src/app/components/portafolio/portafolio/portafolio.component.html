@@ -1,57 +1,112 @@
-<div class="app-container">
-  <!-- Proyectos destacados -->
-  <section class="highlights">
-    <h1 class="titulo-seccion">Proyectos Destacados</h1>
-    <div class="hero">
-      <p class="hero">Una selección de mis trabajos más representativos en desarrollo web y videojuegos.</p>
-    </div>
+<div class="portafolio-container">
 
-    <mat-card class="highlight-card" routerLink="portafolio/videojuegos" tabindex="0">
-      <mat-card-title>🎮 Videojuegos</mat-card-title>
+  <h1 class="titulo-seccion centrado">🗂️ Portafolio</h1>
+
+  <!-- Introducción -->
+  <section class="highlights">
+
+    <!-- Categorías -->
+    <mat-card class="highlight-card" routerLink="/portafolio/videojuegos" tabindex="0">
+      <mat-card-title class="centrado">🎮 Videojuegos</mat-card-title>
       <mat-card-content>
-        Juegos creados con Unity que combinan lógica, diseño de niveles y experiencia inmersiva.
+        Títulos desarrollados en Unity que combinan programación, diseño visual y jugabilidad envolvente.
       </mat-card-content>
     </mat-card>
 
-    <mat-card class="highlight-card" routerLink="portafolio/desarrollo-web" tabindex="0">
-      <mat-card-title>💻 Desarrollo Web</mat-card-title>
+    <mat-card class="highlight-card" routerLink="/portafolio/desarrollo-web" tabindex="0">
+      <mat-card-title class="centrado">💻 Desarrollo Web</mat-card-title>
       <mat-card-content>
-        Aplicaciones modernas con Angular, .NET y Node.js, orientadas a eficiencia y escalabilidad.
+        Aplicaciones modernas construidas con Angular, .NET y Node.js, enfocadas en rendimiento, escalabilidad y experiencia de usuario.
       </mat-card-content>
     </mat-card>
   </section>
   
+    <div class="hero">
+      <p class="hero centrado">
+        Descubre una selección de mis proyectos más representativos en desarrollo web y videojuegos. Cada trabajo refleja mi pasión por la tecnología, el diseño y la experiencia del usuario.
+      </p>
+      <p class="hero centrado">
+        Explora mis habilidades en programación, diseño y desarrollo de aplicaciones interactivas. ¡Espero que disfrutes navegando por mi portafolio!
+      </p>
+    </div>
+  <!-- Proyectos destacados -->
+  
   <section class="projects">
-    <div *ngFor="let proyecto of destacados" class="card">
-      <h2>{{ proyecto.titulo }}</h2>
+    <div *ngFor="let proyecto of destacados" class="card" [ngClass]="{ 'expandido': proyecto.expandido }">
+      <div class="card-info-portafolio">
+          <h3 class="centrado">{{ proyecto.titulo }}</h3>
+        <!-- Tecnologías -->
+        <div class="tecnologias">
+          <span *ngFor="let tech of proyecto.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
+            <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
+            {{ tech.nombre }}
+          </span>
+        </div>
 
-      <!-- <iframe
-        width="100%"
-        height="315"
-        [src]="proyecto.videoUrl | safeUrl"
-        frameborder="0"
-        allowfullscreen
-      ></iframe> -->
+         <div class="carrusel">
+          <!-- Botón Izquierdo -->
+          <a class="slide-btn left"(click)="cambiarSlide(proyecto, -1)"*ngIf="proyecto.medios && proyecto.medios.length > 1">
+            <i class="fas fa-chevron-left"></i>
+          </a>
 
-      <div class="imagenes">
-        <img *ngFor="let img of proyecto.imagenes" [src]="img" alt="{{ proyecto.titulo }}" />
-      </div>
+          <!-- Contenedor del medio -->
+          <div class="media-container">
+            <ng-container *ngIf="proyecto.medios && proyecto.medios.length > 0">
+              <ng-container *ngIf="esImagen(proyecto.medios[proyecto.currentSlide!])">
+                <img [src]="proyecto.medios[proyecto.currentSlide!]" alt="Media del proyecto" />
+              </ng-container>
 
-      <p>{{ proyecto.descripcion }}</p>
+              <ng-container *ngIf="esVideo(proyecto.medios[proyecto.currentSlide!])">
+                <iframe
+                  width="100%"
+                  height="315"
+                  [src]="proyecto.medios[proyecto.currentSlide!] | safeUrl"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </ng-container>
+            </ng-container>
+          </div>
 
-      <div class="tecnologias">
-        <span *ngFor="let tech of proyecto.tecnologias" class="badge" style="display: inline-flex; align-items: center; gap: 6px;">
-          <i [class]="tech.icono" style="font-size: 1.2rem;"></i>
-          {{ tech.nombre }}
-        </span>
-      </div>
+          <!-- Botón Derecho -->
+          <a
+            class="slide-btn right"
+            (click)="cambiarSlide(proyecto, 1)"
+            *ngIf="proyecto.medios && proyecto.medios.length > 1"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
 
+        <div class="descripcion" [class.colapsado]="!proyecto.expandido && proyecto.descripcion.length > 250">
+          {{ proyecto.descripcion }}
+          <a *ngIf="proyecto.descripcion.length > 250" (click)="proyecto.expandido = !proyecto.expandido" class="ver-mas-btn">
+            {{ proyecto.expandido ? 'Ver menos' : 'Ver más' }}
+          </a>
+        </div>
+      </div> 
+      
+      <!-- Acciones -->
       <div class="acciones">
         <a mat-button color="primary" [href]="proyecto.enlaceCodigo" target="_blank">Ver código</a>
-        <a *ngIf="proyecto.enlaceDemo" mat-button color="accent" [href]="proyecto.enlaceDemo" target="_blank">
-          {{ proyecto.tipo === 'web' ? 'Ver demo' : 'Descargar juego' }}
+
+        <!-- Mostrar demo si es web -->
+        <a *ngIf="proyecto.enlaceDemo"
+          mat-button color="accent"
+          [href]="proyecto.enlaceDemo"
+          target="_blank">
+          Ver demo
+        </a>
+
+        <!-- Mostrar descarga si es juego -->
+        <a *ngIf="proyecto.enlaceDescarga"
+          mat-button color="accent"
+          [href]="proyecto.enlaceDescarga"
+          target="_blank">
+          Ver juego
         </a>
       </div>
+
     </div>
   </section>
 </div>

@@ -2,10 +2,12 @@
   {
     "titulo": "Mokepon",
     "descripcion": "Videojuego estilo Pokémon hecho en JavaScript puro, ideal para entender lógica de videojuegos desde cero.",
-    "videoUrl": "https://www.youtube.com/embed/df_9mN0kNSQ",
+    "videoUrl": "",
     "imagenes": [
-      "assets/juegos/mokepon1.png",
-      "assets/juegos/mokepon2.png"
+      "assets/juegos/Mokepon/mokeponInicio.png",
+      "assets/juegos/Mokepon/mokeponJugadores.png",
+      "assets/juegos/Mokepon/mokeponAtaques.png",
+      "assets/juegos/Mokepon/mokeponResultado.png"
     ],
     "tecnologias": [
       { "nombre": "JavaScript", "icono": "fab fa-js" },
@@ -13,12 +15,13 @@
       { "nombre": "CSS", "icono": "fab fa-css3-alt" }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/mokepon",
-    "enlaceDescarga": "assets/descargas/Mokepon.zip"
+    "enlaceDescarga": "assets/descargas/Mokepon.zip",
+    "tipo": "juego"
   },
   {
     "titulo": "Juego de la Estampida",
     "descripcion": "Este juego consiste en esquivar una estampida mientras lanzas comida a los animales silvestres, si alguno de ellos te toca, 3 veces se acaba el juego. Buena suerte probando el juego, es muy entretenido",
-    "videoUrl": "https://www.youtube.com/embed/otroVideoID",
+    "videoUrl": "",
     "imagenes": [
       "assets/juegos/JuegoEstampida/img/JuegoEstampida.png"
     ],
@@ -27,7 +30,24 @@
       { "nombre": "C#", "icono": "devicon-csharp-plain " }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/Dodge-the-stampede-Game",
-    "enlaceDescarga": "assets/juegos/JuegoEstampida/descarga/JuegoEstampida.zip",
+    "enlaceDescarga": "https://sebascg17.itch.io/juego-de-la-estampida",
+    "tipo": "juego",
+    "destacado": true
+  },
+  {
+    "titulo": "Flying Game",
+    "descripcion": "Juego de vuelo en 3D, El objetivo es completar el recorrido en el menor tiempo posible.",
+    "videoUrl": "",
+    "imagenes": [
+      "assets/juegos/Flying Game/img/flying-game.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original " },
+      { "nombre": "C#", "icono": "devicon-csharp-plain " }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/FlyingDrivingGame",
+    "enlaceDescarga": "https://play.unity.com/es/games/d18b137d-d095-4067-b313-6b2052499940/flying-driving-game",
+    "tipo": "juego",
     "destacado": true
   }
 ]

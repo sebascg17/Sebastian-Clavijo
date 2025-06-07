@@ -1,5 +1,4 @@
 .about-container {
-  padding: 2rem;
   max-width: 1000px;
   margin: auto;
 }
@@ -16,9 +15,11 @@
 .about-content .perfil {
   flex: 1 1 300px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
+
 .about-content .educacion {
   flex: 1 1 500px;
   display: flex;
@@ -32,51 +33,84 @@
   align-items: center;
 }
 
-.perfil-foto {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #03fa6e;
-  box-shadow: 0 0 12px rgba(3, 250, 110, 0.5);
-  display: block;
-  margin-bottom: 2rem;
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
 }
+
 .perfil {
-  text-align: center;
-  padding: 1.5rem;
-  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .perfil-foto {
-  width: 180px;
-  height: 180px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #03fa6e;
-  box-shadow: 0 0 12px rgba(3, 250, 110, 0.5);
   display: block;
-  margin: 0 auto 1rem auto;
+  margin-bottom: 2rem;  
+  flex-shrink: 0;
+}
+.perfil-foto:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.6);
 }
 
-.perfil h1 {
+.perfil-info {
+  flex: 1;
+  min-width: 300px;
+  color: #fff;
+}
+
+.perfil-nombre {
   font-size: 2rem;
-  margin: 0.5rem 0;
+  color: #03fa6e;
+  margin-bottom: 0.5rem;
 }
 
-.perfil h2 {
-  font-size: 1.4rem;
-  color: #03fa6e;
+.perfil-titulo {
+  font-size: 1.3rem;
+  color: #69f0ae;
   margin-bottom: 1rem;
 }
 
-.perfil p {
-  text-align: justify; /* <-- Esto es lo importante */
+.perfil-biografia {
+  text-align: justify;
   font-size: 1rem;
   line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto;
 }
+
+/* Responsive: apila contenido en móviles */
+@media (max-width: 768px) {
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .perfil-foto {
+    margin: 0 auto; /* centrado */
+  }
+
+  .perfil-info {
+    width: 100%;
+  }
+
+  .perfil-biografia {
+    text-align: center;
+  }
+}
+
+
 
 /* Sección de Experiencia */
 
