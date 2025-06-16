@@ -9,13 +9,11 @@
       { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" }
     ],
     "imagenes": [
-      "assets/juegos/Mokepon/mokeponInicio.png",
-      "assets/juegos/Mokepon/mokeponJugadores.png",
-      "assets/juegos/Mokepon/mokeponAtaques.png",
-      "assets/juegos/Mokepon/mokeponResultado.png"
+      "assets/web/CRUD con Node.js y MongoDB/DatosPelicula.png",
+      "assets/web/CRUD con Node.js y MongoDB/Render.png"
     ],
     "enlaceCodigo": "https://github.com/sebascg17/curso-node-js",
-    "enlaceDemo": "https://crud-node-sebas.netlify.app",
+    "enlaceDemo": "https://rest-api-deploy-fknk.onrender.com/movies",
     "tipo": "web"
   },
   {
@@ -24,7 +22,7 @@
     "descripcion": "Aplicación web para gestionar películas, con funcionalidades de CRUD y una interfaz amigable.",
     "tecnologias": [
       { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
-      { "nombre": ".NET Core", "icono": "devicon-nodejs-plain" },
+      { "nombre": ".NET Core", "icono": "devicon-dot-net-plain" },
       { "nombre": "SQL Server", "icono": "fas fa-server" }
     ],
     "imagenes": [

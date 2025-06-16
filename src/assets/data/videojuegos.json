@@ -1,5 +1,23 @@
 [
   {
+    "titulo": "IE'S Revenge",
+    "descripcion": "IE's Revenge es un juego de acción y aventura en 2D protagonizado por Internet Explorer, el icónico navegador. Tras años de ser objeto de burlas por su lentitud, cae en un mundo alterno donde busca demostrar que aún puede ser el mejor navegador, incluso superior a Chrome.",
+    "videoUrl": "https://www.youtube.com/watch?v=ag-jfjUJ9gA&ab_channel=sebascg17",
+    "imagenes": [
+      "assets/juegos/IE´S Revenge/Inicio.png",
+      "assets/juegos/IE´S Revenge/Gaming.png",
+      "assets/juegos/IE´S Revenge/Game Over.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original " },
+      { "nombre": "C#", "icono": "devicon-csharp-plain " }
+    ],
+    "enlaceCodigo": "https://github.com/judperezre/IEs-Revenge",
+    "enlaceDescarga": "https://zinnahmoon.itch.io/ies-revenge",
+    "tipo": "juego",
+    "destacado": true
+  },
+  {
     "titulo": "Mokepon",
     "descripcion": "Videojuego estilo Pokémon hecho en JavaScript puro, ideal para entender lógica de videojuegos desde cero.",
     "videoUrl": "",
@@ -47,6 +65,27 @@
     ],
     "enlaceCodigo": "https://github.com/sebascg17/FlyingDrivingGame",
     "enlaceDescarga": "https://play.unity.com/es/games/d18b137d-d095-4067-b313-6b2052499940/flying-driving-game",
+    "tipo": "juego",
+    "destacado": true
+  },
+  {
+    "titulo": "Whack a Food",
+    "descripcion": [
+      "Este es un juego donde aparecen objetos buenos y malos en lugares aleatorios por tiempo de aparición, cada tiempo varía según su dificultad, el objetivo es pinchar con el mouse cada objeto al presionar clic."
+    ],
+    "videoUrl": "https://youtu.be/54PVJF71AWI?si=dcMsHEbK9C5Wi1n6",
+    "imagenes": [
+      "assets/juegos/Whack the food/start.png",
+      "assets/juegos/Whack the food/playing.png",
+      "assets/juegos/Whack the food/game over.png"
+
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original " },
+      { "nombre": "C#", "icono": "devicon-csharp-plain " }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/Whack-The-Food/blob/main/README.md",
+    "enlaceDescarga": "https://sebascg17.itch.io/whack-a-food",
     "tipo": "juego",
     "destacado": true
   }

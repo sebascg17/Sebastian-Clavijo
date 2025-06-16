@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SafeUrlPipe } from '../safe-url.pipe'; // Ajusta la ruta según tu estructura
+import { SafeUrlPipe } from '../safe-url.pipe';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -20,8 +20,8 @@ interface Juego {
   enlaceCodigo: string;
   enlaceDescarga?: string;
   currentSlide?: number;
-  medios?: string[]; // combinación de imágenes y video
-  expandido?: boolean; // <-- agrega esta línea
+  medios?: string[];
+  expandido?: boolean;
 }
 
 @Component({
@@ -40,12 +40,19 @@ export class VideojuegosComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<Juego[]>('assets/data/videojuegos.json')
       .subscribe(data => {
-        this.juegos = data.map(juego => ({
-          ...juego,
-          expandido: false,
-          currentSlide: 0,
-          medios: juego.videoUrl ? [juego.videoUrl, ...juego.imagenes] : [...juego.imagenes]
-        }));
+        this.juegos = data.map(juego => {
+          let videoUrl = juego.videoUrl;
+          if (videoUrl) {
+            videoUrl = this.convertirYoutubeEmbed(videoUrl);
+          }
+          return {
+            ...juego,
+            videoUrl: videoUrl,
+            expandido: false,
+            currentSlide: 0,
+            medios: videoUrl ? [videoUrl, ...juego.imagenes] : [...juego.imagenes]
+          };
+        });
       });
 
     this.http.get<Habilidades[]>('assets/data/habilidades.json')
@@ -70,4 +77,12 @@ export class VideojuegosComponent implements OnInit {
     return url.includes("youtube.com") || url.includes("youtu.be");
   }
 
+  convertirYoutubeEmbed(url: string): string {
+    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/;
+    const match = url.match(regex);
+    if (match && match[1]) {
+      return `https://www.youtube.com/embed/${match[1]}`;
+    }
+    return url;
+  }
 }

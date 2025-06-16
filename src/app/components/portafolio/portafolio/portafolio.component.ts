@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SafeUrlPipe } from '../safe-url.pipe'; // ajusta la ruta según tu estructura
+import { SafeUrlPipe } from '../safe-url.pipe';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { RouterLink } from '@angular/router';
 
-interface Habilidades{
+interface Habilidades {
   icono: string;
   nombre: string;
 }
@@ -13,7 +13,7 @@ interface Habilidades{
 interface Proyecto {
   tipo: 'videojuego' | 'web';
   titulo: string;
-  descripcion: string;
+  descripcion: string[];
   tecnologias: {
     nombre: string;
     icono: string;
@@ -24,8 +24,8 @@ interface Proyecto {
   enlaceDescarga?: string;
   enlaceDemo?: string;
   currentSlide?: number;
-  medios?: string[]; // combinación de imágenes y video
-  expandido?: boolean; // <-- agrega esta línea
+  medios?: string[];
+  expandido?: boolean;
 }
 
 @Component({
@@ -48,36 +48,51 @@ export class PortafolioComponent implements OnInit {
     this.http.get<any[]>('assets/data/videojuegos.json').subscribe(juegos => {
       const destacadosJuegos = juegos
         .filter(j => j.destacado)
-        .map(j => ({ 
-          ...j, 
-          tipo: 'videojuego',
-          expandido: false,
-          currentSlide: 0,
-          medios: j.videoUrl ? [j.videoUrl, ...j.imagenes] : [...j.imagenes] 
-        }));
+        .map(j => {
+          let videoUrl = j.videoUrl;
+          if (videoUrl) {
+            videoUrl = this.convertirYoutubeEmbed(videoUrl);
+          }
+          return {
+            ...j,
+            tipo: 'videojuego',
+            videoUrl,
+            expandido: false,
+            currentSlide: 0,
+            medios: videoUrl ? [videoUrl, ...j.imagenes] : [...j.imagenes]
+          };
+        });
 
       this.http.get<any[]>('assets/data/web.json').subscribe(webs => {
         const destacadosWeb = webs
           .filter(w => w.destacado)
-          .map(w => ({ 
-            ...w, 
-            tipo: 'web',
-            expandido: false,
-            currentSlide: 0,
-            medios: w.videoUrl ? [w.videoUrl, ...w.imagenes] : [...w.imagenes] 
-          }));
+          .map(w => {
+            let videoUrl = w.videoUrl;
+            if (videoUrl) {
+              videoUrl = this.convertirYoutubeEmbed(videoUrl);
+            }
+            return {
+              ...w,
+              tipo: 'web',
+              videoUrl,
+              expandido: false,
+              currentSlide: 0,
+              medios: videoUrl ? [videoUrl, ...w.imagenes] : [...w.imagenes]
+            };
+          });
 
         this.destacados = [...destacadosJuegos, ...destacadosWeb];
       });
     });
+
     this.http.get<Habilidades[]>('assets/data/habilidades.json').subscribe(data => {
       this.habilidades = data;
     });
   }
+
   cambiarSlide(destacado: Proyecto, direccion: number) {
     const total = destacado.medios?.length ?? 0;
     if (total === 0) return;
-
     destacado.currentSlide = (destacado.currentSlide! + direccion + total) % total;
   }
 
@@ -88,5 +103,14 @@ export class PortafolioComponent implements OnInit {
   esVideo(url?: string): boolean {
     if (!url) return false;
     return url.includes("youtube.com") || url.includes("youtu.be");
+  }
+
+  convertirYoutubeEmbed(url: string): string {
+    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/;
+    const match = url.match(regex);
+    if (match && match[1]) {
+      return `https://www.youtube.com/embed/${match[1]}`;
+    }
+    return url;
   }
 }

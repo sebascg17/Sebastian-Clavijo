@@ -1,5 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
-import { SafeUrlPipe } from '../safe-url.pipe'; // ajusta la ruta según tu estructura
+import { SafeUrlPipe } from '../safe-url.pipe';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,7 +10,7 @@ interface Habilidades {
 
 interface Web {  
   titulo: string;
-  descripcion: string;
+  descripcion: string[];
   videoUrl?: string;
   imagenes: string[];
   tecnologias: {
@@ -18,10 +18,10 @@ interface Web {
     icono: string;
   }[];
   enlaceCodigo: string;
-  enlaceDemo?: string; // opcional
+  enlaceDemo?: string;
   currentSlide?: number;
-  medios?: string[]; // combinación de imágenes y video
-  expandido?: boolean; // <-- agrega esta línea
+  medios?: string[];
+  expandido?: boolean;
 }
 
 @Component({
@@ -31,7 +31,7 @@ interface Web {
   templateUrl: './dev.component.html',
   styleUrl: './dev.component.css'
 })
-export class DevComponent  implements OnInit {
+export class DevComponent implements OnInit {
   webs: Web[] = [];
   habilidades: Habilidades[] = [];
 
@@ -40,12 +40,19 @@ export class DevComponent  implements OnInit {
   ngOnInit(): void {
     this.http.get<Web[]>('assets/data/web.json')
       .subscribe(data => {
-        this.webs = data.map(web => ({
-          ...web,
-          expandido: false,
-          currentSlide: 0,
-          medios: web.videoUrl ? [web.videoUrl, ...web.imagenes] : [...web.imagenes]
-        }));
+        this.webs = data.map(web => {
+          let videoUrl = web.videoUrl;
+          if (videoUrl) {
+            videoUrl = this.convertirYoutubeEmbed(videoUrl);
+          }
+          return {
+            ...web,
+            videoUrl,
+            expandido: false,
+            currentSlide: 0,
+            medios: videoUrl ? [videoUrl, ...web.imagenes] : [...web.imagenes]
+          }
+        });
       });
 
     this.http.get<Habilidades[]>('assets/data/habilidades.json')
@@ -57,7 +64,6 @@ export class DevComponent  implements OnInit {
   cambiarSlide(web: Web, direccion: number) {
     const total = web.medios?.length ?? 0;
     if (total === 0) return;
-
     web.currentSlide = (web.currentSlide! + direccion + total) % total;
   }
 
@@ -68,5 +74,14 @@ export class DevComponent  implements OnInit {
   esVideo(url?: string): boolean {
     if (!url) return false;
     return url.includes("youtube.com") || url.includes("youtu.be");
+  }
+
+  convertirYoutubeEmbed(url: string): string {
+    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/;
+    const match = url.match(regex);
+    if (match && match[1]) {
+      return `https://www.youtube.com/embed/${match[1]}`;
+    }
+    return url;
   }
 }
