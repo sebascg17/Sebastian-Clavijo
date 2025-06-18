@@ -15,6 +15,10 @@
   color: #03fa6e;
 }
 
+h3{
+  font-size: 1.5rem;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -262,4 +266,13 @@ p{
   background-color: #03fa6e;
   color: #2f2f2f;
   box-shadow: 0 0 5px #69f0ae;
+}
+
+@media (max-width: 1000px) {
+  .projects {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
 }
