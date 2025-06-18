@@ -137,7 +137,6 @@
   border-bottom: 2px solid #03fa6e;
   display: inline-block;
   padding-bottom: 0.5rem;
-  text-shadow: 0 0 5px #03fa6e;
 }
 
 .edu-item {
@@ -161,7 +160,6 @@
   font-size: 1.6rem;
   margin-bottom: 0.3rem;
   font-weight: bold;
-  text-shadow: 0 0 3px #03fa6e;
 }
 
 .edu-item small {
@@ -173,7 +171,7 @@
 }
 
 .edu-item p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   color: #ddd;
   margin: 0 auto 1.5rem;
