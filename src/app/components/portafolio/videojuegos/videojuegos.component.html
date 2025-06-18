@@ -1,7 +1,7 @@
 <div class="portafolio-container">
   <h1 class="titulo-seccion"> Proyectos de Desarrollo de Videojuegos </h1>
   <section class="projects">
-    <div *ngFor="let juego of juegos" class="card" [ngClass]="{ 'expandido': juego.expandido }">
+    <div *ngFor="let juego of juegos" class="card">
       <h2>{{ juego.titulo }}</h2>      
       <div class="card-info">
         <div class="tecnologias">
@@ -46,14 +46,24 @@
           </a>
         </div>
 
-        <div class="descripcion" [class.colapsado]="!juego.expandido && juego.descripcion.length > 250">
-          {{ juego.descripcion }}
-          <a *ngIf="juego.descripcion.length > 250" (click)="juego.expandido = !juego.expandido" class="ver-mas-btn">
-            {{ juego.expandido ? 'Ver menos' : 'Ver más' }}
-          </a>
-        </div>
-      </div>
-      
+        <!-- DESCRIPCIÓN CON VER MÁS -->
+       <div class="descripcion-wrapper">
+          <div class="descripcion"
+              [ngClass]="{
+                'descripcion-truncada': juego.descripcion.length > maxLength && !juego.expandido,
+                'expandida': juego.expandido
+              }">
+              {{ juego.expandido || juego.descripcion.length <= maxLength
+                ? juego.descripcion
+                : (juego.descripcion | slice:0:maxLength) }}
+            </div>
+            <span *ngIf="juego.descripcion.length > maxLength"
+                  class="ver-mas-btn"
+                  (click)="juego.expandido = !juego.expandido">
+              {{ juego.expandido ? 'Ver menos' : 'Ver más' }}
+            </span>
+          </div>
+        </div>     
 
       <div class="acciones">
         <a mat-button color="primary" [href]="juego.enlaceCodigo" target="_blank"><i class="fab fa-github"></i> Ver código</a>

@@ -15,31 +15,11 @@
 }
 
 /* Perfil */
-.about-content .perfil {
+.perfil {
   flex: 1 1 300px;
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.about-content .educacion {
-  flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.about-content .experiencia {
-  flex: 1 1 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.perfil {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
   flex-wrap: wrap;
 }
 
@@ -50,7 +30,7 @@
   border-radius: 50%;
   border: 3px solid #03fa6e;
   display: block;
-  margin-bottom: 2rem;  
+  margin-bottom: 2rem;
   flex-shrink: 0;
 }
 .perfil-foto:hover {
@@ -69,24 +49,166 @@
   font-size: 2rem;
   color: #03fa6e;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .perfil-titulo {
   font-size: 1.3rem;
   color: #69f0ae;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .perfil-biografia {
   text-align: justify;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
 }
 
-/* Responsive: apila contenido en móviles */
+/* Experiencia Laboral */
+.experiencia {
+  text-align: center;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.experiencia h2 {
+  font-size: 2rem;
+  color: #03fa6e;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #03fa6e;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.exp-item {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(3, 250, 110, 0.1);
+}
+
+.exp-item h4 {
+  color: #03fa6e;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.exp-item small {
+  color: #bbb;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  display: block;
+}
+
+.exp-item ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.exp-item li {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #eee;
+  border-left: 4px solid #03fa6e;
+  padding-left: 1rem;
+  text-align: left;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
-@media (max-width: 768px) {
+/* Educación */
+.educacion {
+  text-align: center;
+  width: 100%;
+  padding: 3rem 1rem;
+}
+
+.educacion h2 {
+  font-size: 2.2rem;
+  color: #03fa6e;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #03fa6e;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  text-shadow: 0 0 5px #03fa6e;
+}
+
+.edu-item {
+  background-color: #1a1a1a;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #03fa6e33;
+  box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(3, 250, 110, 0.3);
+}
+
+.edu-item h4 {
+  color: #03fa6e;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  text-shadow: 0 0 3px #03fa6e;
+}
+
+.edu-item small {
+  color: #aaa;
+  font-style: italic;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.edu-item p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin: 0 auto 1.5rem;
+  max-width: 700px;
+}
+
+/* Badges más estilizados */
+.edu-item .tecnologias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.edu-item .badge {
+  border: 1px solid #03fa6e;
+  color: #03fa6e;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.edu-item .badge:hover {
+  background: #03fa6e;
+  color: #000;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1000px) {
   .perfil {
     flex-direction: column !important;
     align-items: center;
@@ -106,87 +228,16 @@
   .perfil-foto {
     margin: 0 auto;
   }
+
+  .exp-item ul {
+    padding-left: 0;
+  }
+
+  .exp-item li {
+    text-align: center;
+  }
+
+  .edu-item p {
+    text-align: center;
+  }
 }
-
-
-
-
-/* Sección de Experiencia */
-
-.experiencia h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #03fa6e;
-  text-align: center;
-}
-
-.exp-item {
-  background-color: #1e1e1e;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;  
-}
-
-.exp-item h4 {
-  color: #03fa6e;
-  margin-bottom: 6px;
-  font-size: 1.2rem;
-}
-
-.exp-item small {
-  color: #ccc;
-  font-size: 0.9rem;
-  display: block;
-  margin-bottom: 12px;
-  font-style: italic;
-}
-
-.exp-item ul {
-  padding-left: 20px;
-  list-style-type: disc;
-  color: #eee;
-  margin: 0;
-}
-
-.exp-item li {
-  margin-bottom: 6px;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-/* Sección de Educación */
-
-.educacion h3 {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #03fa6e;
-}
-.edu-item {
-  background-color: #1e1e1e;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  width: 100%;
-  color: #b9f6ca; /* verde neón tenue */
-}
-
-.edu-item h4 {
-  color: #03fa6e; /* verde neón */
-  margin-bottom: 4px;
-}
-
-.edu-item small {
-  color: #ccc;
-  font-style: italic;
-}
-
-.edu-item p {
-  margin-top: 8px;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #eee;
-}
-
-
-

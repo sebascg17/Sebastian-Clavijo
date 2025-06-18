@@ -1,0 +1,265 @@
+
+.portafolio-container {  
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  margin-top: 80px;
+  padding: 0 15px;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/* Contenedor principal con grid */
+.titulo-seccion {
+  color: #03fa6e;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+/* Imágenes responsive */
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  flex: 1 1 calc(50% - 1rem);
+}
+
+.imagenes img {
+  flex: 1 1 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.carrusel {
+  position: relative;
+  height: 315px; /* altura fija para que iframe y/o imagen no cambien el layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  border: #00ff6a 1px solid;
+}
+
+.media-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 315px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.media-container img,
+.media-container iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* mantiene la proporción sin deformar */
+  border-radius: 12px;
+}
+.carrusel .slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  color: rgba(132, 131, 131, 0.4);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 999;
+  border-radius: 0.5rem;
+  transition: background 0.3s;
+}
+
+.carrusel .slide-btn:hover {
+  color: rgba(211, 206, 206, 0.8);
+}
+
+.carrusel .slide-btn.left {
+  left: 0.2rem;
+}
+
+.carrusel .slide-btn.right {
+  right: 0.2rem;
+}
+
+
+/* Botones transparentes dentro del carrusel */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  color: rgba(255,255,255,0.6);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
+}
+
+.slide-btn:hover {
+  color: #03fa6e;
+}
+
+
+.slide-btn.left {
+  left: 1rem; /* distancia fija del borde */
+}
+
+.slide-btn.right {
+  right: 1rem; /* distancia fija del borde */
+}
+
+p{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.card {
+  display: block; /* <-- evita que herede alturas o se estire con flex */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #1a1a1a;
+  transition: all 0.3s ease-in-out;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+
+.card:hover {
+  transform: scale(1.02) translateY(-6px);
+  box-shadow: 0 0 15px #03fa6e;
+  outline: none;
+}
+
+.card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-height: 2.5rem; /* espacio reservado siempre */
+  color: #03fa6e;
+}
+
+.card .tecnologias {
+  min-height: 3rem;
+}
+
+.card .imagenes {
+  height: 180px; /* altura fija */
+  overflow: hidden;
+}
+
+.card .imagenes img {
+  height: 100%;
+  object-fit: cover;  
+}
+
+.card.expandida {
+  min-height: auto; /* o un valor más grande si prefieres */
+  transition: all 0.3s ease-in-out;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.descripcion-wrapper {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* Estilo base sin truncado ni expansión */
+.descripcion {
+  line-height: 1.5em;
+  flex: 1;
+  position: relative;
+  font-size: 1rem;
+  color: #ddd;
+  margin: 1rem auto;
+  max-width: 700px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Se aplica solo si la descripción es larga Y no está expandida */
+.descripcion-truncada {
+  max-height: 4.5em; /* Aproximadamente 3 líneas */
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0));
+}
+
+/* Se aplica cuando se expande */
+.descripcion.expandida {
+  max-height: 1000px; /* Valor grande para asegurar que se vea todo */
+  mask-image: none;
+}
+
+.ver-mas-btn {
+  cursor: pointer;
+  margin-top: 5px;
+  color: #03fa6e;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color 0.3s;
+}
+
+.ver-mas-btn:hover {
+  color: #00ffae;
+}
+
+
+/* Acciones */
+.acciones {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.acciones a {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #03fa6e;
+  font-weight: bold;
+  color: #03fa6e;
+  background-color: #2f2f2f;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.acciones a:hover {
+  background-color: #03fa6e;
+  color: #2f2f2f;
+  box-shadow: 0 0 5px #69f0ae;
+}

@@ -26,7 +26,6 @@
           Desarrollo Web
         </a>
       </mat-menu>
-      <a class="glow-text" mat-button [routerLink]="'/about'" [ngClass]="{'active-link': isActive('/about')}">Sobre mí</a>
       <a class="glow-text" mat-button [routerLink]="'/contacto'" [ngClass]="{'active-link': isActive('/contacto')}">Contacto</a>
     </div>
    </ng-container>
@@ -53,10 +52,6 @@
             <a class="glow-text" mat-button (click)="navigateAndClose('portafolio/desarrollo-web')">Desarrollo Web</a>
           </li>
         </ul>
-      </li>
-
-      <li>
-        <a class="glow-text" mat-button (click)="navigateAndClose('/about')">Sobre mí</a>
       </li>
       <li>
         <a class="glow-text" mat-button (click)="navigateAndClose('/contacto')">Contacto</a>

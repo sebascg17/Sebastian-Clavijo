@@ -57,49 +57,84 @@
 
   ],
   "educacion": [    
-    {
-      "institucion": "Generation Colombia",
-      "ciudad": "Medellín, Colombia",
-      "fechaInicio": "Abr 2025",
-      "fechaFin": "Actualidad",
-      "descripcion": "Desarrollando videojuegos en Unity"
-    },
-    {
-      "institucion": "Udemy",
-      "ciudad": "Medellín, Colombia",
-      "fechaInicio": "Abr 2025",
-      "fechaFin": "Actualidad",
-      "descripcion": "Desarrollando aplicaciones en Angular 19 y ASP.NET Core 9"
-    },
-    {
-      "institucion": "Programming Hub",
-      "ciudad": "Medellín, Colombia",
-      "fechaInicio": "Mar 2024",
-      "fechaFin": "Mar 2024",
-      "descripcion": "Curso certificado de Python 3"
-    },
-    {
-      "institucion": "Platzi",
-      "ciudad": "Medellín, Colombia",
-      "fechaInicio": "Sep 2023",
-      "fechaFin": "Sep 2023",
-      "descripcion": "Introducción a React Native"
-    },
-    {
-      "institucion": "Platzi",
-      "ciudad": "Medellín, Colombia",
-      "fechaInicio": "Sep 2023",
-      "fechaFin": "Sep 2023",
-      "descripcion": "Curso de programación básica en JavaScript"
-    },
-    {
-      "institucion": "Institución Universitaria Tecnológico de Antioquia",
-      "ciudad": "Medellín, Colombia",
-      "fechaInicio": "Feb 2017",
-      "fechaFin": "Mar 2022",
-      "descripcion": "Ingeniero de Software"
-    }    
-  ],
+  {
+    "institucion": "Generation Colombia",
+    "ciudad": "Medellín, Colombia",
+    "fechaInicio": "Abr 2025",
+    "fechaFin": "Actualidad",
+    "descripcion": "Desarrollando videojuegos en Unity",
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+    ]
+  },
+  {
+    "institucion": "Udemy",
+    "ciudad": "Medellín, Colombia",
+    "fechaInicio": "Abr 2025",
+    "fechaFin": "Actualidad",
+    "descripcion": "Desarrollando aplicaciones en Angular 19 y ASP.NET Core 9",
+    "tecnologias": [
+      { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
+      { "nombre": ".NET Core 9", "icono": "devicon-dotnetcore-plain" },
+      { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
+      { "nombre": "Azure", "icono": "devicon-azure-plain" }
+
+    ]
+  },
+  {
+    "institucion": "Programming Hub",
+    "ciudad": "Medellín, Colombia",
+    "fechaInicio": "Mar 2024",
+    "fechaFin": "Mar 2024",
+    "descripcion": "Curso certificado de Python 3",
+    "tecnologias": [
+      { "nombre": "Python", "icono": "devicon-python-plain" }
+    ]
+  },
+  {
+    "institucion": "Platzi",
+    "ciudad": "Medellín, Colombia",
+    "fechaInicio": "Sep 2023",
+    "fechaFin": "Sep 2023",
+    "descripcion": "Introducción a React Native",
+    "tecnologias": [
+      { "nombre": "React Native", "icono": "devicon-react-original" }
+    ]
+  },
+  {
+    "institucion": "Platzi",
+    "ciudad": "Medellín, Colombia",
+    "fechaInicio": "Sep 2023",
+    "fechaFin": "Sep 2023",
+    "descripcion": "Curso de programación básica en JavaScript",
+    "tecnologias": [
+      { "nombre": "JavaScript", "icono": "devicon-javascript-plain" },
+      { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
+      { "nombre": "Express", "icono": "devicon-express-original" }
+    ]
+  },
+  {
+    "institucion": "Institución Universitaria Tecnológico de Antioquia",
+    "ciudad": "Medellín, Colombia",
+    "fechaInicio": "Feb 2017",
+    "fechaFin": "Mar 2022",
+    "descripcion": "Ingeniero de Software",
+    "tecnologias": [
+      { "nombre": "Java", "icono": "devicon-java-plain" },
+      { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
+      { "nombre": "MySQL", "icono": "devicon-mysql-plain" },
+      { "nombre": "PHP", "icono": "devicon-php-plain" },
+      { "nombre": "Python", "icono": "devicon-python-plain" },
+      { "nombre": "JavaScript", "icono": "devicon-javascript-plain" },
+      { "nombre": "HTML5", "icono": "devicon-html5-plain" },
+      { "nombre": "CSS3", "icono": "devicon-css3-plain" },
+      { "nombre": "Photoshop", "icono": "devicon-photoshop-plain" },
+      { "nombre": "Illustrator", "icono": "devicon-illustrator-plain" }
+    ]
+  }    
+]
+,
   "contacto": {
     "github": "https://github.com/sebascg17",
     "linkedin": "https://www.linkedin.com/in/juan-sebasti%C3%A1n-clavijo-giraldo-415080160/",

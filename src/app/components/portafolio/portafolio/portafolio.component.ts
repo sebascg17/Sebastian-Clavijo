@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SafeUrlPipe } from '../safe-url.pipe';
 import { CommonModule } from '@angular/common';
@@ -37,6 +37,7 @@ interface Proyecto {
 export class PortafolioComponent implements OnInit {
   destacados: Proyecto[] = [];
   habilidades: Habilidades[] = [];
+  @Input() maxLength: number = 250; 
 
   constructor(private http: HttpClient) {}
 

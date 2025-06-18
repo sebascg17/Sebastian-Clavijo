@@ -1,0 +1,44 @@
+
+.skills {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.skills h2.hero {
+  font-size: 2rem;
+  color: #03fa6e;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #03fa6e;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.skill-box {
+  background-color: #1b1b1b;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(3, 250, 110, 0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.skill-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(3, 250, 110, 0.3);
+}
+
+.skill-box h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
+  color: #03fa6e;
+  margin-bottom: 1rem;
+}

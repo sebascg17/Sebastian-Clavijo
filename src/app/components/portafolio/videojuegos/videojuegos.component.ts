@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SafeUrlPipe } from '../safe-url.pipe';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
@@ -34,6 +34,7 @@ interface Juego {
 export class VideojuegosComponent implements OnInit {
   juegos: Juego[] = [];
   habilidades: Habilidades[] = [];
+  @Input() maxLength: number = 250; 
 
   constructor(private http: HttpClient) {}
 
@@ -85,4 +86,5 @@ export class VideojuegosComponent implements OnInit {
     }
     return url;
   }
+
 }

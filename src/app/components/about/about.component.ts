@@ -30,6 +30,10 @@ interface Perfil {
     fechaInicio: string;
     fechaFin?: string; // opcional
     descripcion: string;
+    tecnologias: {
+      nombre: string;
+      icono: string;
+    }[];
   }[];
   contacto: {
     github: string;
