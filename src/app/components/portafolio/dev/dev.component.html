@@ -46,23 +46,6 @@
           </a>
         </div>
 
-        <div class="descripcion-wrapper">
-          <div
-            class="descripcion"
-            [class.expandida]="web.expandido"
-            [class.descripcion-truncada]="!web.expandido && web.descripcion.length > maxLength">
-            {{ web.expandido || web.descripcion.length <= maxLength
-              ? web.descripcion
-              : (web.descripcion | slice:0:maxLength) + '...' }}
-          </div>
-
-          <a
-            *ngIf="web.descripcion.length > maxLength"
-            class="ver-mas-btn"
-            (click)="web.expandido = !web.expandido">
-            {{ web.expandido ? 'Ver menos' : 'Ver más' }}
-          </a>
-        </div>
 
       </div>
       

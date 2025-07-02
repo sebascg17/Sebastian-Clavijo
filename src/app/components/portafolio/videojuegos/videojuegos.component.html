@@ -44,26 +44,8 @@
           >
             <i class="fas fa-chevron-right"></i>
           </a>
-        </div>
-
-        <!-- DESCRIPCIÓN CON VER MÁS -->
-       <div class="descripcion-wrapper">
-          <div class="descripcion"
-              [ngClass]="{
-                'descripcion-truncada': juego.descripcion.length > maxLength && !juego.expandido,
-                'expandida': juego.expandido
-              }">
-              {{ juego.expandido || juego.descripcion.length <= maxLength
-                ? juego.descripcion
-                : (juego.descripcion | slice:0:maxLength) }}
-            </div>
-            <span *ngIf="juego.descripcion.length > maxLength"
-                  class="ver-mas-btn"
-                  (click)="juego.expandido = !juego.expandido">
-              {{ juego.expandido ? 'Ver menos' : 'Ver más' }}
-            </span>
-          </div>
-        </div>     
+        </div>       
+      </div> 
 
       <div class="acciones">    
         <a [routerLink]="['/portafolio/detalle', juego.id]">

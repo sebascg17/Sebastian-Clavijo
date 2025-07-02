@@ -41,7 +41,7 @@
           </span>
         </div> 
 
-         <div class="carrusel">
+        <div class="carrusel">
           <!-- Botón Izquierdo -->
           <a class="slide-btn left"(click)="cambiarSlide(proyecto, -1)"*ngIf="proyecto.medios && proyecto.medios.length > 1">
             <i class="fas fa-chevron-left"></i>
@@ -73,24 +73,6 @@
             *ngIf="proyecto.medios && proyecto.medios.length > 1"
           >
             <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-
-        <div class="descripcion-wrapper">
-          <div
-            class="descripcion"
-            [class.expandida]="proyecto.expandido"
-            [class.descripcion-truncada]="!proyecto.expandido && proyecto.descripcion.length > maxLength">
-            {{ proyecto.expandido || proyecto.descripcion.length <= 200
-              ? proyecto.descripcion
-              : (proyecto.descripcion | slice:0:maxLength)}}
-          </div>
-
-          <a
-            *ngIf="proyecto.descripcion.length > maxLength"
-            class="ver-mas-btn"
-            (click)="proyecto.expandido = !proyecto.expandido">
-            {{ proyecto.expandido ? 'Ver menos' : 'Ver más' }}
           </a>
         </div>
 
