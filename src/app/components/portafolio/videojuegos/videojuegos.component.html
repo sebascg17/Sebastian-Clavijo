@@ -65,9 +65,10 @@
           </div>
         </div>     
 
-      <div class="acciones">
-        <a mat-button color="primary" [href]="juego.enlaceCodigo" target="_blank"><i class="fab fa-github"></i> Ver código</a>
-        <a mat-button color="accent" [href]="juego.enlaceDescarga" download><i class="fas fa-gamepad"></i> Jugar</a>
+      <div class="acciones">    
+        <a [routerLink]="['/portafolio/detalle', juego.id]">
+          Ver más detalles
+        </a>
       </div>
     </div>
   </section>

@@ -2,50 +2,35 @@ import { Component, Input, OnInit  } from '@angular/core';
 import { SafeUrlPipe } from '../safe-url.pipe';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-
-interface Habilidades {
-  nombre: string;
-  icono: string;
-}
-
-interface Web {  
-  titulo: string;
-  descripcion: string[];
-  videoUrl?: string;
-  imagenes: string[];
-  tecnologias: {
-    nombre: string;
-    icono: string;
-  }[];
-  enlaceCodigo: string;
-  enlaceDemo?: string;
-  currentSlide?: number;
-  medios?: string[];
-  expandido?: boolean;
-}
+import { Proyecto } from '../../../interfaces/Proyecto';
+import { Habilidad } from '../../../interfaces/Habilidad';
+import { RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-dev',
-  imports: [SafeUrlPipe, CommonModule],
+  imports: [SafeUrlPipe, CommonModule, RouterLink],
   templateUrl: './dev.component.html',
   styleUrl: './dev.component.css'
 })
 export class DevComponent implements OnInit {
-  webs: Web[] = [];
-  habilidades: Habilidades[] = [];
+  webs: Proyecto[] = [];
+  habilidades: Habilidad[] = [];
   @Input() maxLength: number = 250; 
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Web[]>('assets/data/web.json')
+    this.http.get<Proyecto[]>('assets/data/proyectos.json')
       .subscribe(data => {
-        this.webs = data.map(web => {
-          let videoUrl = web.videoUrl;
-          if (videoUrl) {
-            videoUrl = this.convertirYoutubeEmbed(videoUrl);
-          }
+        const filtrados  = data.filter(p => p.categoria === 'web');
+        this.webs = filtrados
+          .sort((a, b) => b.id - a.id) // Ordenar de mayor a menor ID
+          .map(web => {
+            let videoUrl = web.videoUrl;
+            if (videoUrl) {
+              videoUrl = this.convertirYoutubeEmbed(videoUrl);
+            }
           return {
             ...web,
             videoUrl,
@@ -56,13 +41,13 @@ export class DevComponent implements OnInit {
         });
       });
 
-    this.http.get<Habilidades[]>('assets/data/habilidades.json')
+    this.http.get<Habilidad[]>('assets/data/habilidades.json')
       .subscribe(data => {
         this.habilidades = data;
       });    
   }
 
-  cambiarSlide(web: Web, direccion: number) {
+  cambiarSlide(web: Proyecto, direccion: number) {
     const total = web.medios?.length ?? 0;
     if (total === 0) return;
     web.currentSlide = (web.currentSlide! + direccion + total) % total;

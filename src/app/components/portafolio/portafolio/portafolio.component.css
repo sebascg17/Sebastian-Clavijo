@@ -1,41 +1,31 @@
-
-
-.highlights {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+.titulo-portafolio {
+  position: relative;
+  display: inline-block;
+  font-size: 2.2rem;
+  color: #03fa6e;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 
-.highlight-card {
-  background-color: #1e1e1e;
-  color: #b9f6ca;
-  cursor: pointer;
-  width: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
-  box-shadow: 0 0 8px #000;
-  text-align: center;
+/* Línea centrada debajo del texto */
+.titulo-portafolio h1:after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 3px;
+  background-color: #03fa6e;
+  margin: 0 auto;
+  margin-top: 8px;
+  border-radius: 2px;
 }
-
-.highlight-card:hover,
-.highlight-card:focus {
-  box-shadow: 0 0 15px #69f0ae;
-  transform: translateY(-6px);
-  outline: none;
-}
-
-mat-card-title {
-  font-weight: bold;
+.descripcion-portafolio {
+  line-height: 1.5em;
+  flex: 1;
+  position: relative;
   font-size: 1.5rem;
-  margin-bottom: 10px;
-  margin: 20px;
-  color: #03fa6e; /* verde neón */
+  color: #ddd;
+  margin: 1rem auto;
+  max-width: 700px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
-
-mat-card-content {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-

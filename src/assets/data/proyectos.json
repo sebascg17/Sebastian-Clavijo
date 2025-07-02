@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "categoria": "videojuego",
+    "titulo": "Mokepon",
+    "descripcion": "Videojuego estilo Pokémon hecho en JavaScript puro, ideal para entender lógica de videojuegos desde cero.",
+    "imagenes": [
+      "assets/juegos/Mokepon/mokeponInicio.png",
+      "assets/juegos/Mokepon/mokeponJugadores.png",
+      "assets/juegos/Mokepon/mokeponAtaques.png",
+      "assets/juegos/Mokepon/mokeponResultado.png"
+    ],
+    "tecnologias": [
+      { "nombre": "JavaScript", "icono": "fab fa-js" },
+      { "nombre": "HTML", "icono": "fab fa-html5" },
+      { "nombre": "CSS", "icono": "fab fa-css3-alt" }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/mokepon",
+    "enlaceDescarga": "assets/descargas/Mokepon.zip"
+  },
+  {
+    "id": 2,
+    "categoria": "web",
+    "titulo": "CRUD con Node.js y MongoDB",
+    "descripcion": "Aplicación CRUD con API REST construida en Node.js y Express, usando MongoDB como base de datos.",
+    "imagenes": [
+      "assets/web/CRUD con Node.js y MongoDB/DatosPelicula.png",
+      "assets/web/CRUD con Node.js y MongoDB/Render.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
+      { "nombre": "Express", "icono": "devicon-express-original" },
+      { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/curso-node-js",
+    "enlaceDemo": "https://rest-api-deploy-fknk.onrender.com/movies"
+  },
+  {
+    "id": 3,
+    "categoria": "web",
+    "titulo": "Películas App",
+    "descripcion": "Aplicación web para gestionar películas, con funcionalidades de CRUD y una interfaz amigable.",
+    "imagenes": [
+      "assets/web/PeliculasApp/peliculas-app-inicio.png",
+      "assets/web/PeliculasApp/peliculas-app-buscar.png",
+      "assets/web/PeliculasApp/peliculas-app-generos.png",
+      "assets/web/PeliculasApp/peliculas-app-cines.png",
+      "assets/web/PeliculasApp/peliculas-app-actores.png",
+      "assets/web/PeliculasApp/peliculas-app-crear-pelicula.png",
+      "assets/web/PeliculasApp/peliculas-app-detalle-pelicula.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
+      { "nombre": ".NET Core", "icono": "devicon-dot-net-plain" },
+      { "nombre": "SQL Server", "icono": "fas fa-server" }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/peliculas-app",
+    "destacado": true
+  },
+  {
+    "id": 4,
+    "categoria": "videojuego",
+    "titulo": "Juego de la Estampida",
+    "descripcion": "Este juego consiste en esquivar una estampida mientras lanzas comida a los animales silvestres, si alguno de ellos te toca, 3 veces se acaba el juego. Buena suerte probando el juego, es muy entretenido",
+    "imagenes": [
+      "assets/juegos/JuegoEstampida/img/JuegoEstampida.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/Dodge-the-stampede-Game",
+    "enlaceDescarga": "https://sebascg17.itch.io/juego-de-la-estampida",
+    "destacado": true
+  },
+  {
+    "id": 5,
+    "categoria": "videojuego",
+    "titulo": "Flying Game",
+    "descripcion": "Juego de vuelo en 3D. El objetivo es completar el recorrido en el menor tiempo posible.",
+    "imagenes": [
+      "assets/juegos/Flying Game/img/flying-game.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/FlyingDrivingGame",
+    "enlaceDescarga": "https://play.unity.com/es/games/d18b137d-d095-4067-b313-6b2052499940/flying-driving-game",
+    "destacado": true
+  },
+  {
+    "id": 6,
+    "categoria": "videojuego",
+    "titulo": "Whack a Food",
+    "descripcion": "Este juego consiste en esquivar una estampida mientras lanzas comida a los animales silvestres, si alguno de ellos te toca, 3 veces se acaba el juego. Buena suerte probando el juego, es muy entretenido",
+    "videoUrl": "https://youtu.be/54PVJF71AWI?si=dcMsHEbK9C5Wi1n6",
+    "imagenes": [
+      "assets/juegos/Whack the food/start.png",
+      "assets/juegos/Whack the food/playing.png",
+      "assets/juegos/Whack the food/game over.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+    ],
+    "enlaceCodigo": "https://github.com/sebascg17/Whack-The-Food/blob/main/README.md",
+    "enlaceDescarga": "https://sebascg17.itch.io/whack-a-food",
+    "destacado": true
+  },
+  {
+    "id": 7,
+    "categoria": "videojuego",
+    "titulo": "IE'S Revenge",
+    "descripcion": "IE's Revenge es un juego de acción y aventura en 2D protagonizado por Internet Explorer, el icónico navegador. Tras años de ser objeto de burlas por su lentitud, cae en un mundo alterno donde busca demostrar que aún puede ser el mejor navegador, incluso superior a Chrome.",
+    "videoUrl": "https://www.youtube.com/watch?v=ag-jfjUJ9gA&ab_channel=sebascg17",
+    "imagenes": [
+      "assets/juegos/IE´S Revenge/Inicio.png",
+      "assets/juegos/IE´S Revenge/Gaming.png",
+      "assets/juegos/IE´S Revenge/Game Over.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+    ],
+    "enlaceCodigo": "https://github.com/judperezre/IEs-Revenge",
+    "enlaceDescarga": "https://zinnahmoon.itch.io/ies-revenge",
+    "destacado": true
+  },
+  {
+    "id": 8,
+    "categoria": "videojuego",
+    "titulo": "Abuelo Panelo",
+    "descripcion": "Videojuego 3D desarrollado en equipo durante la segunda Game Jam de Generation Colombia. Encarnas al icónico abuelo Panelo, un personaje que debe recolectar caña, procesarla en la máquina, llenar botellas de jarabe y entregarlas antes de que el tiempo se agote. Con mecánicas de corte, baile, interacción con NPCs (como el burro asistente) y manejo de inventario, el juego ofrece un equilibrio entre estrategia, destreza y humor. Se implementó lógica de recolección, estados del jugador, detección de errores y control de flujo para garantizar una experiencia robusta. Ideal para mostrar habilidades técnicas, resolución de bugs complejos y trabajo colaborativo bajo presión.",
+    "imagenes": [
+      "assets/juegos/Abuelo Panelo/img/imagen1.png",
+      "assets/juegos/Abuelo Panelo/img/imagen2.png",
+      "assets/juegos/Abuelo Panelo/img/imagen3.png",
+      "assets/juegos/Abuelo Panelo/img/imagen3.2.png",
+      "assets/juegos/Abuelo Panelo/img/imagen3.3.png",
+      "assets/juegos/Abuelo Panelo/img/imagen4.png",
+      "assets/juegos/Abuelo Panelo/img/imagen5.png",
+      "assets/juegos/Abuelo Panelo/img/imagen6.png"
+    ],
+    "videoUrl": "",
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+    ],
+    "rol": "Programador principal",
+    "lugar": "Game Jam Generation Colombia",
+    "colaboradores": ["Ana Peña", "Melina Muñoz", "Andrés Zapata", "Julián Monroy", "Sebastián Clavijo"],
+    "retos": [
+      "Implementar recolección de objetos y estados del jugador",
+      "Prevenir errores lógicos al dejar caer botellas o recolectar en condiciones especiales",
+      "Coordinar múltiples sistemas como burro NPC, máquina procesadora, HUD y lógica de juego"
+    ],
+    "logros": [
+      "Sistema funcional de corte, recolección, entrega y llenado de botellas",
+      "Control de flujo completo con estados de victoria y derrota",
+      "Lógica robusta para evitar bugs críticos bajo presión de tiempo",
+      "Audio e interfaces integradas con animaciones y condiciones jugables"
+    ],
+    "problema": "Complejidad creciente en la gestión de estados del jugador, recolección de botellas y condiciones de entrega",
+    "solucion": "Se reestructuraron componentes clave como el PlayerController, se crearon funciones desacopladas y se implementaron validaciones lógicas basadas en eventos y estados",
+
+    "enlaceCodigo": "https://github.com/groverush/Abuelo-Panelo",
+    "enlaceDescarga": "https://zinnahmoon.itch.io/abuelo-panelo",
+    "destacado": true
+  }
+
+]

@@ -1,7 +1,13 @@
 <div class="portafolio-container">
 
-  <h1 class="titulo-seccion">🗂️ Portafolio</h1>
+  <h1 class="titulo-portafolio">🗂️ Portafolio</h1>
 
+  
+  <div>
+    <p class="descripcion-portafolio">
+      Explora mis habilidades en programación, diseño y desarrollo de aplicaciones interactivas. ¡Espero que disfrutes navegando por mi portafolio!
+    </p>
+  </div>
   <!-- Introducción -->
   <section class="projects">
     <!-- Categorías -->
@@ -20,11 +26,7 @@
     </div>
   </section>
   
-  <div>
-    <p>
-      Explora mis habilidades en programación, diseño y desarrollo de aplicaciones interactivas. ¡Espero que disfrutes navegando por mi portafolio!
-    </p>
-  </div>
+  <hr class="separador-neon">
   <!-- Proyectos destacados -->
   
   <section class="projects">
@@ -96,22 +98,8 @@
       
       <!-- Acciones -->
       <div class="acciones">
-        <a mat-button color="primary" [href]="proyecto.enlaceCodigo" target="_blank">Ver código</a>
-
-        <!-- Mostrar demo si es web -->
-        <a *ngIf="proyecto.enlaceDemo"
-          mat-button color="accent"
-          [href]="proyecto.enlaceDemo"
-          target="_blank">
-          Ver demo
-        </a>
-
-        <!-- Mostrar descarga si es juego -->
-        <a *ngIf="proyecto.enlaceDescarga"
-          mat-button color="accent"
-          [href]="proyecto.enlaceDescarga"
-          target="_blank">
-          Ver juego
+        <a [routerLink]="['/portafolio/detalle', proyecto.id]">
+          Ver más detalles
         </a>
       </div>
 

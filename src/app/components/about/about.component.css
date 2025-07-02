@@ -82,12 +82,18 @@
 }
 
 .exp-item {
-  background-color: #1e1e1e;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 12px;
+  background-color: #1a1a1a;
+  padding: 2rem 1.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #03fa6e33;
+  box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
   text-align: center;
-  box-shadow: 0 0 20px rgba(3, 250, 110, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.exp-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(3, 250, 110, 0.3);
 }
 
 .exp-item h4 {

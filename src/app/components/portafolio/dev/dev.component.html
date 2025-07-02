@@ -68,8 +68,9 @@
       
 
       <div class="acciones">
-        <a mat-button color="primary" [href]="web.enlaceCodigo" target="_blank"><i class="fab fa-github"></i> Ver código</a>
-        <a mat-button color="accent" [href]="web.enlaceDemo" download><i class="fas fa-gamepad"></i> Probar</a>
+        <a [routerLink]="['/portafolio/detalle', web.id]">
+          Ver más detalles
+        </a>
       </div>
     </div>
   </section>

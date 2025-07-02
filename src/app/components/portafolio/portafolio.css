@@ -24,8 +24,8 @@ h3{
 }
 
 .projects {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  flex-direction: column-reverse;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
   padding: 1rem;
@@ -151,9 +151,11 @@ p{
 .card {
   display: block; /* <-- evita que herede alturas o se estire con flex */
   padding: 1.5rem;
-  border-radius: 1rem;
   background-color: #1a1a1a;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;  
+  border-radius: 16px;
+  border: 1px solid #03fa6e33;
+  box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
 }
 
 .cards-container {

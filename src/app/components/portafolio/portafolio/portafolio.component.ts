@@ -3,41 +3,21 @@ import { HttpClient } from '@angular/common/http';
 import { SafeUrlPipe } from '../safe-url.pipe';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
-import { RouterLink } from '@angular/router';
-
-interface Habilidades {
-  icono: string;
-  nombre: string;
-}
-
-interface Proyecto {
-  tipo: 'videojuego' | 'web';
-  titulo: string;
-  descripcion: string[];
-  tecnologias: {
-    nombre: string;
-    icono: string;
-  }[];
-  imagenes: string[];
-  videoUrl?: string;
-  enlaceCodigo: string;
-  enlaceDescarga?: string;
-  enlaceDemo?: string;
-  currentSlide?: number;
-  medios?: string[];
-  expandido?: boolean;
-}
+import { RouterLink, RouterModule } from '@angular/router';
+import { Proyecto } from '../../../interfaces/Proyecto';
+import { Habilidad } from '../../../interfaces/Habilidad';
 
 @Component({
   selector: 'app-portafolio',
-  imports: [SafeUrlPipe, CommonModule, MatCardModule, RouterLink],
+  standalone: true,
+  imports: [SafeUrlPipe, CommonModule, MatCardModule, RouterLink, RouterModule],
   templateUrl: './portafolio.component.html',
   styleUrls: ['./portafolio.component.css']
 })
 export class PortafolioComponent implements OnInit {
+  @Input() maxLength: number = 250;
   destacados: Proyecto[] = [];
-  habilidades: Habilidades[] = [];
-  @Input() maxLength: number = 250; 
+  habilidades: Habilidad[] = [];
 
   constructor(private http: HttpClient) {}
 
@@ -46,55 +26,31 @@ export class PortafolioComponent implements OnInit {
   }
 
   cargarDestacados() {
-    this.http.get<any[]>('assets/data/videojuegos.json').subscribe(juegos => {
-      const destacadosJuegos = juegos
-        .filter(j => j.destacado)
-        .map(j => {
-          let videoUrl = j.videoUrl;
-          if (videoUrl) {
-            videoUrl = this.convertirYoutubeEmbed(videoUrl);
-          }
+    this.http.get<Proyecto[]>('assets/data/proyectos.json').subscribe(proyectos => {
+      this.destacados = proyectos
+        .filter(p => p.destacado)
+        .sort((a, b) => b.id - a.id) // Ordenar de mayor a menor ID
+        .map(p => {
+          const videoUrl = p.videoUrl ? this.convertirYoutubeEmbed(p.videoUrl) : undefined;
           return {
-            ...j,
-            tipo: 'videojuego',
+            ...p,
             videoUrl,
             expandido: false,
             currentSlide: 0,
-            medios: videoUrl ? [videoUrl, ...j.imagenes] : [...j.imagenes]
+            medios: videoUrl ? [videoUrl, ...p.imagenes] : [...p.imagenes]
           };
         });
-
-      this.http.get<any[]>('assets/data/web.json').subscribe(webs => {
-        const destacadosWeb = webs
-          .filter(w => w.destacado)
-          .map(w => {
-            let videoUrl = w.videoUrl;
-            if (videoUrl) {
-              videoUrl = this.convertirYoutubeEmbed(videoUrl);
-            }
-            return {
-              ...w,
-              tipo: 'web',
-              videoUrl,
-              expandido: false,
-              currentSlide: 0,
-              medios: videoUrl ? [videoUrl, ...w.imagenes] : [...w.imagenes]
-            };
-          });
-
-        this.destacados = [...destacadosJuegos, ...destacadosWeb];
-      });
     });
 
-    this.http.get<Habilidades[]>('assets/data/habilidades.json').subscribe(data => {
+    this.http.get<Habilidad[]>('assets/data/habilidades.json').subscribe(data => {
       this.habilidades = data;
     });
   }
 
-  cambiarSlide(destacado: Proyecto, direccion: number) {
-    const total = destacado.medios?.length ?? 0;
+  cambiarSlide(proyecto: Proyecto, direccion: number) {
+    const total = proyecto.medios?.length ?? 0;
     if (total === 0) return;
-    destacado.currentSlide = (destacado.currentSlide! + direccion + total) % total;
+    proyecto.currentSlide = (proyecto.currentSlide! + direccion + total) % total;
   }
 
   esImagen(url: string): boolean {
@@ -103,15 +59,12 @@ export class PortafolioComponent implements OnInit {
 
   esVideo(url?: string): boolean {
     if (!url) return false;
-    return url.includes("youtube.com") || url.includes("youtu.be");
+    return url.includes('youtube.com') || url.includes('youtu.be');
   }
 
   convertirYoutubeEmbed(url: string): string {
     const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/;
     const match = url.match(regex);
-    if (match && match[1]) {
-      return `https://www.youtube.com/embed/${match[1]}`;
-    }
-    return url;
+    return match && match[1] ? `https://www.youtube.com/embed/${match[1]}` : url;
   }
 }
