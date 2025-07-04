@@ -1,106 +1,98 @@
+<div class="detalle-proyecto">
+  <div class="contenido" *ngIf="proyecto">
 
-<div class="projectos-detalle">
-  <div class="portafolio-container">
-    <div *ngIf="proyecto" class="detalle-container">
-      <h1>{{ proyecto.titulo }}</h1>    
+    <h1 class="titulo">{{ proyecto.titulo }}</h1>
 
-      <div class="extra-info" *ngIf="proyecto">
-        
-      <!-- Carrusel de medios -->
-        <div class="carrusel" *ngIf="proyecto.medios && proyecto.medios.length > 0">
+    <!-- Carrusel -->
+    <div class="carrusel-modern" *ngIf="proyecto.medios && proyecto.medios.length > 0">
+      <button class="slide-btn left" (click)="cambiarSlide(-1)" *ngIf="proyecto.medios.length > 1">
+        <i class="fas fa-chevron-left"></i>
+      </button>
 
-          <!-- Botón Izquierdo -->
-          <a class="slide-btn left" (click)="cambiarSlide(-1)" *ngIf="proyecto.medios.length > 1">
-            <i class="fas fa-chevron-left"></i>
-          </a>
+      <div class="carrusel-vista" *ngIf="proyecto.medios && proyecto.medios.length > 0">
+        <div class="media-frame">
+          <ng-container *ngIf="proyecto.currentSlide !== undefined && proyecto.medios[proyecto.currentSlide] as media">
 
-          <!-- Contenedor de Media -->
-          <div class="media-container" *ngIf="proyecto.currentSlide !== undefined">
-            <ng-container *ngIf="proyecto.medios[proyecto.currentSlide] as media">
-              <ng-container *ngIf="esImagen(media)">
-                <img [src]="media" alt="media" />
-              </ng-container>
-
-              <ng-container *ngIf="esVideo(media)">
-                <iframe
-                  [src]="media | safeUrl"
-                  frameborder="0"
-                  allowfullscreen>
-                </iframe>
-              </ng-container>
+            <ng-container *ngIf="esImagen(media)">
+              <img [src]="media" alt="Imagen del proyecto">
             </ng-container>
-          </div>
-
-          <!-- Botón Derecho -->
-          <a class="slide-btn right" (click)="cambiarSlide(1)" *ngIf="proyecto.medios.length > 1">
-            <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>  
-
-        <div class="info-section">
-          <h3>📝 Descripción:</h3>
-          <p>{{ proyecto.descripcion }}</p>
+            <ng-container *ngIf="esVideo(media)">
+              <iframe [src]="media | safeUrl" frameborder="0" allowfullscreen></iframe>
+            </ng-container>
+          </ng-container>
         </div>
-
-        <div class="info-section">
-          <h3>🛠️ Tecnologías:</h3>
-          <div class="tecnologias">
-            <span *ngFor="let tech of proyecto.tecnologias" class="badge">
-              <i [class]="tech.icono"></i> {{ tech.nombre }}
-            </span>
-          </div>
-        </div>
-
-        <div class="info-section" *ngIf="proyecto.rol">
-          <h3>📌 Rol:</h3>
-          <p>{{ proyecto.rol }}</p>
-        </div>
-
-        <div class="info-section" *ngIf="proyecto.lugar">
-          <h3>🌍 Lugar:</h3>
-          <p>{{ proyecto.lugar }}</p>
-        </div>
-
-        <div class="info-section" *ngIf="proyecto.colaboradores?.length">
-          <h3>👥 Colaboradores:</h3>
-          <ul class="colaboradores-grid">
-            <li *ngFor="let persona of proyecto.colaboradores">{{ persona }}</li>
-          </ul>
-        </div>
-
-        <div class="info-section" *ngIf="proyecto.retos?.length">
-          <h3>⚔️ Retos enfrentados:</h3>
-          <ul>
-            <li *ngFor="let reto of proyecto.retos">{{ reto }}</li>
-          </ul>
-        </div>
-
-        <div class="info-section" *ngIf="proyecto.logros?.length">
-          <h3>🏆 Logros:</h3>
-          <ul>
-            <li *ngFor="let logro of proyecto.logros">{{ logro }}</li>
-          </ul>
-        </div>
-
-        <div class="info-section" *ngIf="proyecto.problema">
-          <h3>❗ Problema:</h3>
-          <p>{{ proyecto.problema }}</p>
-        </div>
-
-        <div class="info-section" *ngIf="proyecto.solucion">
-          <h3>✅ Solución:</h3>
-          <p>{{ proyecto.solucion }}</p>
-        </div>
-
       </div>
 
-      <!-- Acciones -->
-      <div class="acciones">
-        <a (click)="volver()">← Regresar</a>
-        <a [href]="proyecto.enlaceCodigo" target="_blank"><i class="fab fa-github"></i> Ver código</a>
-        <a *ngIf="proyecto.enlaceDemo" [href]="proyecto.enlaceDemo" target="_blank"><i class="fas fa-desktop"></i> Ver demo</a>
-        <a *ngIf="proyecto.enlaceDescarga" [href]="proyecto.enlaceDescarga" target="_blank"><i class="fas fa-download"></i> Ver juego</a>
-      </div>
+      <button class="slide-btn right" (click)="cambiarSlide(1)" *ngIf="proyecto.medios.length > 1">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
+
+    <!-- Descripción -->
+    <section class="seccion-info">
+      <h3><i class="fas fa-align-left"></i> Descripción</h3>
+      <p>{{ proyecto.descripcion }}</p>
+    </section>
+
+    <!-- Tecnologías -->
+    <section class="seccion-info">
+      <h3><i class="fas fa-tools"></i> Tecnologías</h3>
+      <div class="tech-badges">
+        <span *ngFor="let tech of proyecto.tecnologias" class="badge-pill">
+          <i [class]="tech.icono"></i> {{ tech.nombre }}
+        </span>
+      </div>
+    </section>
+
+    <!-- Extras -->
+    <section class="seccion-info" *ngIf="proyecto.rol">
+      <h3><i class="fas fa-user-tag"></i> Rol</h3>
+      <p>{{ proyecto.rol }}</p>
+    </section>
+
+    <section class="seccion-info" *ngIf="proyecto.lugar">
+      <h3><i class="fas fa-map-marker-alt"></i> Lugar</h3>
+      <p>{{ proyecto.lugar }}</p>
+    </section>
+
+    <section class="seccion-info" *ngIf="proyecto.colaboradores?.length">
+      <h3><i class="fas fa-users"></i> Colaboradores</h3>
+      <ul class="lista-colaboradores">
+        <li *ngFor="let persona of proyecto.colaboradores">{{ persona }}</li>
+      </ul>
+    </section>
+
+    <section class="seccion-info" *ngIf="proyecto.retos?.length">
+      <h3><i class="fas fa-bolt"></i> Retos enfrentados</h3>
+      <ul>
+        <li *ngFor="let reto of proyecto.retos">{{ reto }}</li>
+      </ul>
+    </section>
+
+    <section class="seccion-info" *ngIf="proyecto.logros?.length">
+      <h3><i class="fas fa-trophy"></i> Logros</h3>
+      <ul>
+        <li *ngFor="let logro of proyecto.logros">{{ logro }}</li>
+      </ul>
+    </section>
+
+    <section class="seccion-info" *ngIf="proyecto.problema">
+      <h3><i class="fas fa-exclamation-circle"></i> Problema</h3>
+      <p>{{ proyecto.problema }}</p>
+    </section>
+
+    <section class="seccion-info" *ngIf="proyecto.solucion">
+      <h3><i class="fas fa-check-circle"></i> Solución</h3>
+      <p>{{ proyecto.solucion }}</p>
+    </section>
+
+    <!-- Botones de Acción -->
+    <div class="acciones">
+      <a (click)="volver()">← Regresar</a>
+      <a [href]="proyecto.enlaceCodigo" target="_blank"><i class="fab fa-github"></i> Ver código</a>
+      <a *ngIf="proyecto.enlaceDemo" [href]="proyecto.enlaceDemo" target="_blank"><i class="fas fa-desktop"></i> Ver demo</a>
+      <a *ngIf="proyecto.enlaceDescarga" [href]="proyecto.enlaceDescarga" target="_blank"><i class="fas fa-download"></i> Ver juego</a>
+    </div>
+
   </div>
 </div>
