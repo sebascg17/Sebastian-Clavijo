@@ -6,7 +6,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { PortafolioComponent } from './components/portafolio/portafolio/portafolio.component';
 import { VideojuegosComponent } from './components/portafolio/videojuegos/videojuegos.component';
 import { DevComponent } from './components/portafolio/dev/dev.component';
-import { PortafolioDetalleComponent } from './components/portafolio-detalle/portafolio-detalle.component';
+import { PortafolioDetalleComponent } from './components/portafolio/portafolio-detalle/portafolio-detalle.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: 'portafolio/desarrollo-web', component: DevComponent },
   {
     path: 'portafolio/detalle/:id',
-    loadComponent: () => import('./components/portafolio-detalle/portafolio-detalle.component')
+    loadComponent: () => import('./components/portafolio/portafolio-detalle/portafolio-detalle.component')
       .then(m => m.PortafolioDetalleComponent)
   },
 

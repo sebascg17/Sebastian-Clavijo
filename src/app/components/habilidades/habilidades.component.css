@@ -1,6 +1,5 @@
 
 .skills {
-  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -21,13 +20,12 @@
 }
 
 .skill-box {
-  background-color: #1a1a1a;
+  background-color: #272727;
   padding: 2rem 1.5rem;
   border-radius: 16px;
   border: 1px solid #03fa6e33;
   box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
   flex: 1 1 300px;
-  max-width: 400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   

@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-color: #121212;
+  background-color: #1a1a1a;
   color: #e0e0e0;
   /* font-family: 'Consolas', monospace, 'Courier New', monospace; */
   /* font-family: 'Orbitron', sans-serif; */
@@ -15,7 +15,7 @@ body {
 
 /* CONTENEDOR GENERAL */
 .app-container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 20px auto;
   margin-top: 80px;
   padding: 0 15px;
@@ -108,7 +108,7 @@ button:hover, .mat-button:hover {
 }
 
 .badge {
-  background-color: #1e1e1e;
+  background-color: #272727;
   color: #03fa6e;
   border: 1px solid #03fa6e;
   border-radius: 0.5rem;
@@ -166,9 +166,6 @@ footer p {
 
 
 @media (max-width: 900px) {
-  .app-container {
-    padding: 15px 10px;
-  }
   h1 {
     font-size: 1.8rem;
   }

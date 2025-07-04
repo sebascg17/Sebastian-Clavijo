@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { Proyecto } from '../../interfaces/Proyecto';
-import { SafeUrlPipe } from '../portafolio/safe-url.pipe'
+import { Proyecto } from '../../../interfaces/Proyecto';
+import { SafeUrlPipe } from '../safe-url.pipe';
 import { Location } from '@angular/common';;
 
 
