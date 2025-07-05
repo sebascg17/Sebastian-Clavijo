@@ -32,7 +32,11 @@ h3{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center;
+
+  align-items: start; /* ← Agrega esta línea */
 }
+
 
 
 
@@ -57,7 +61,7 @@ h3{
 
 .carrusel {
   position: relative;
-  height: 315px; /* altura fija para que iframe y/o imagen no cambien el layout */
+  height: auto; /* altura fija para que iframe y/o imagen no cambien el layout */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,7 +134,9 @@ p{
   border-radius: 16px;
   border: 1px solid #03fa6e33;
   box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
-  height: 100%;
+  height: auto;
+  width: 600px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -140,7 +146,7 @@ p{
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 20px;  
 }
 
 

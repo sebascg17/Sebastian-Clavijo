@@ -92,32 +92,19 @@ button:hover, .mat-button:hover {
   margin-bottom: 1rem;
 }
 
-.tecnologias .badge {
-  background-color: transparent;
-  color: #03fa6e;
-  border: 1px solid #03fa6e;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.tecnologias .badge:hover {
-  background-color: #03fa6e;
-  color: #111;
-}
-
 .badge {
-  background-color: #272727;
+  background-color: #03fa6e11;
+  border: 1px solid #03fa6e55;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
   color: #03fa6e;
-  border: 1px solid #03fa6e;
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  font-size: 2rem;
+  gap: 8px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
 }
 
 .badge:hover {

@@ -36,18 +36,21 @@
 
     <div class="educacion">
       <h2>Educación</h2>
-      <div *ngFor="let edu of perfil.educacion" class="edu-item">
-        <h4>{{ edu.institucion }}</h4>
-        <small>{{ edu.ciudad }} • {{ edu.fechaInicio }} - {{ edu.fechaFin }}</small>
-        <p>{{ edu.descripcion }}</p>
 
-        <div class="tecnologias" *ngIf="edu.tecnologias && edu.tecnologias.length > 0">
-          <span *ngFor="let tech of edu.tecnologias" class="badge">
-            <i *ngIf="tech.icono" [class]="tech.icono" aria-hidden="true"></i> {{ tech.nombre }}
-          </span>
+      <div class="educacion-grid">
+        <div *ngFor="let edu of perfil.educacion" class="edu-item">
+          <h4>{{ edu.institucion }}</h4>
+          <small>{{ edu.ciudad }} • {{ edu.fechaInicio }} - {{ edu.fechaFin }}</small>
+          <p>{{ edu.descripcion }}</p>
+
+          <div class="tecnologias" *ngIf="edu.tecnologias?.length">
+            <span *ngFor="let tech of edu.tecnologias" class="badge">
+              <i *ngIf="tech.icono" [class]="tech.icono" aria-hidden="true"></i> {{ tech.nombre }}
+            </span>
+          </div>
         </div>
       </div>
+    </div>
   
-    </div>    
   </div>
 </section>

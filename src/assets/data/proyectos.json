@@ -123,6 +123,29 @@
       { "nombre": "Unity", "icono": "devicon-unity-original" },
       { "nombre": "C#", "icono": "devicon-csharp-plain" }
     ],
+  "rol": "Desarrollador FullStack en equipo",
+  "lugar": "Generation Colombia",
+  "colaboradores": [
+    "Ana Karen Peña Meza",
+    "Edmundo Rabelo",
+    "Juan David Pérez Restrepo",
+    "Christian García",
+    "Juan Sebastián Clavijo Giraldo"
+  ],
+  "retos": [
+    "Implementar la lógica de cambio de niveles y condiciones de victoria",
+    "Diseñar enemigos con comportamientos variados y jefe final funcional",
+    "Sincronizar animaciones, colisiones, HUD y eventos de juego"
+  ],
+  "logros": [
+    "Sistema completo de enemigos, jefe final, UI y lógica de progresión",
+    "Animaciones integradas con estados del jugador y enemigos",
+    "Uso de power-ups, control de vida, puntaje y Game Over/Win",
+    "Trabajo en equipo efectivo en corto tiempo con división de roles"
+  ],
+  "problema": "La integración de múltiples sistemas en poco tiempo requería planificación clara para evitar errores críticos y lograr una experiencia fluida.",
+  "solucion": "Se estructuró el proyecto por módulos reutilizables, se implementó lógica basada en eventos y se estableció comunicación constante entre miembros para alinear avances técnicos y de diseño.",
+  
     "enlaceCodigo": "https://github.com/judperezre/IEs-Revenge",
     "enlaceDescarga": "https://zinnahmoon.itch.io/ies-revenge",
     "destacado": true
@@ -147,8 +170,8 @@
       { "nombre": "Unity", "icono": "devicon-unity-original" },
       { "nombre": "C#", "icono": "devicon-csharp-plain" }
     ],
-    "rol": "Programador principal",
-    "lugar": "Game Jam Generation Colombia",
+    "rol": "Desarrollador Líder",
+    "lugar": "Generation Colombia",
     "colaboradores": ["Ana Peña", "Melina Muñoz", "Andrés Zapata", "Julián Monroy", "Sebastián Clavijo"],
     "retos": [
       "Implementar recolección de objetos y estados del jugador",

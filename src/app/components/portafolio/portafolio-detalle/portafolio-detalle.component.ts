@@ -42,10 +42,10 @@ export class PortafolioDetalleComponent implements OnInit {
 }
 
 
-  cambiarSlide(direccion: number) {
-    if (!this.proyecto || !this.proyecto.medios) return;
-    const total = this.proyecto.medios.length;
-    this.proyecto.currentSlide = (this.proyecto.currentSlide! + direccion + total) % total;
+  cambiarSlide(proyecto: Proyecto, direccion: number) {
+    const total = proyecto.medios?.length ?? 0;
+    if (total === 0) return;
+    proyecto.currentSlide = (proyecto.currentSlide! + direccion + total) % total;
   }
 
   esImagen(url: string): boolean {

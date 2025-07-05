@@ -53,18 +53,15 @@
               <ng-container *ngIf="esImagen(proyecto.medios[proyecto.currentSlide!])">
                 <img [src]="proyecto.medios[proyecto.currentSlide!]" alt="Media del proyecto" />
               </ng-container>
-
               <ng-container *ngIf="esVideo(proyecto.medios[proyecto.currentSlide!])">
                 <iframe
-                  width="100%"
-                  height="315"
                   [src]="proyecto.medios[proyecto.currentSlide!] | safeUrl"
-                  frameborder="0"
                   allowfullscreen
                 ></iframe>
               </ng-container>
             </ng-container>
           </div>
+
 
           <!-- Botón Derecho -->
           <a
