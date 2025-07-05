@@ -8,9 +8,8 @@ import { Router } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSidenav } from '@angular/material/sidenav';
 import { filter } from 'rxjs';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-menu',
@@ -32,8 +31,9 @@ export class MenuComponent implements OnInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   currentRoute: string = '';
   mostrarSubmenu = false;
+  logoUrl: string = ''; // ← URL del logo dinámico
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private appComponent: AppComponent) {}
 
   ngOnInit() {
     this.router.events
@@ -41,6 +41,25 @@ export class MenuComponent implements OnInit {
       .subscribe((event: any) => {
         this.currentRoute = event.urlAfterRedirects;
       });
+
+    this.actualizarLogo(); // Inicializar logo
+
+    // Escuchar cambios en clase del body
+    const observer = new MutationObserver(() => {
+      this.actualizarLogo();
+    });
+
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  }
+
+  actualizarLogo(): void {
+    const esOscuro = document.body.classList.contains('modo-oscuro');
+    this.logoUrl = esOscuro
+      ? 'assets/logo/LogoPortafolio 2.png'
+      : 'assets/logo/Logo.png';
   }
 
   isActive(route: string): boolean {
@@ -59,7 +78,7 @@ export class MenuComponent implements OnInit {
   getSubLinkClass(path: string): string {
     return this.currentRoute === path ? 'active-link' : '';
   }
-  
+
   cerrarSiClickFuera(event: MouseEvent): void {
     const target = event.target as HTMLElement;
     const clickedInside = target.closest('.custom-sidenav');
@@ -67,5 +86,14 @@ export class MenuComponent implements OnInit {
     if (!clickedInside) {
       this.sidenav.close();
     }
+  }
+
+  cambiarTema(): void {
+    this.appComponent.toggleModoOscuro();
+    this.actualizarLogo(); // Actualiza logo al cambiar tema
+  }
+
+  get esModoOscuro(): boolean {
+    return this.appComponent.modoOscuro;
   }
 }

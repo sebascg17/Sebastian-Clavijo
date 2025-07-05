@@ -1,19 +1,19 @@
 .contacto {
   text-align: center;
-  color: #fff;
+  color: var(--color-text);
   margin-bottom: 2rem;
-  
 }
 
 .contacto h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--color-acento);
 }
 
 .contacto p {
   margin: 0.5rem 0;
   font-size: 1.2rem;
-  color: #ccc;
+  color: var(--color-text-light, #aaa); /* Usa un color más tenue si quieres */
 }
 
 .contacto-botones {
@@ -29,9 +29,9 @@
   justify-content: center;
   gap: 0.6rem;
   padding: 0.8rem;
-  background-color: #2f2f2f;
-  color: #03fa6e;
-  border: 1px solid #03fa6e;
+  background-color: var(--color-card-dark);
+  color: var(--color-acento);
+  border: 1px solid var(--color-acento);
   border-radius: 0.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -43,7 +43,7 @@
 }
 
 .btn-contacto:hover {
-  background-color: #03fa6e;
-  color: #1e1e1e;
-  box-shadow: 0 0 10px #03fa6e;
+  background-color: var(--color-acento);
+  color: var(--color-card-dark);
+  box-shadow: 0 0 10px var(--color-acento);
 }

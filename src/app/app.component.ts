@@ -11,6 +11,24 @@ import { LoaderComponent } from "./shared/loader/loader/loader.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent{
-  
+
+export class AppComponent {
+  modoOscuro: boolean = true;
+
+  constructor() {
+    this.actualizarClaseBody();
+  }
+
+  toggleModoOscuro(): void {
+    this.modoOscuro = !this.modoOscuro;
+    this.actualizarClaseBody();
+  }
+
+  actualizarClaseBody(): void {
+    if (this.modoOscuro) {
+      document.body.classList.add('modo-oscuro');
+    } else {
+      document.body.classList.remove('modo-oscuro');
+    }
+  }
 }

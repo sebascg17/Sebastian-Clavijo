@@ -1,13 +1,12 @@
-
 .skills {
   text-align: center;
 }
 
 .skills h2.hero {
   font-size: 2rem;
-  color: #03fa6e;
+  color: var(--color-acento);
   margin-bottom: 2rem;
-  border-bottom: 2px solid #03fa6e;
+  border-bottom: 2px solid var(--color-acento);
   display: inline-block;
   padding-bottom: 0.5rem;
 }
@@ -20,15 +19,15 @@
 }
 
 .skill-box {
-  background-color: #272727;
+  background-color: var(--color-card);
   padding: 2rem 1.5rem;
   border-radius: 16px;
-  border: 1px solid #03fa6e33;
+  border: 1px solid var(--color-borde);
   box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
   flex: 1 1 300px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  
+  color: var(--color-text);
 }
 
 .skill-box:hover {
@@ -39,6 +38,6 @@
 .skill-box h4 {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.4rem;
-  color: #03fa6e;
+  color: var(--color-acento);
   margin-bottom: 1rem;
 }

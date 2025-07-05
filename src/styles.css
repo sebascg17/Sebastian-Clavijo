@@ -3,12 +3,39 @@
   box-sizing: border-box;
 }
 
+/* VARIABLES */
+:root {
+  --color-bg: #f0f0f0;
+  --color-text: #111;
+  --color-card: #ffffff;
+
+  --color-acento: #00b36b; /* Verde más oscuro y legible en fondo claro */
+  --color-acento-hover: #00e395;
+  
+  --color-borde: #00b36b55;
+  --color-badge-bg: #00b36b11;
+  --color-card-dark: #eeeeee; /* nuevo */
+}
+
+body.modo-oscuro {
+  --color-bg: #111;
+  --color-text: #eaeaea;
+  --color-card: #272727;
+
+  --color-acento: #03fa6e; /* Mantén el verde neón en oscuro si te gusta */
+  --color-acento-hover: #00ffae;
+
+  --color-borde: #03fa6e55;
+  --color-badge-bg: #03fa6e11;
+  --color-card-dark: #2f2f2f; /* nuevo */
+}
+
+
+/* ESTILOS BASE */
 body {
   margin: 0;
-  background-color: #1a1a1a;
-  color: #e0e0e0;
-  /* font-family: 'Consolas', monospace, 'Courier New', monospace; */
-  /* font-family: 'Orbitron', sans-serif; */
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
@@ -19,28 +46,26 @@ body {
   margin: 20px auto;
   margin-top: 80px;
   padding: 0 15px;
-  color: #eee;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* TÍTULOS GENERALES */
-h1, h2, h3, h4{
-  color: #03fa6e;
+/* TÍTULOS */
+h1, h2, h3, h4 {
+  color: var(--color-acento);
   margin-top: 0;
   font-family: 'Orbitron', sans-serif;
   text-align: center;
-  /* font-family: 'Consolas', monospace, 'Courier New', monospace; */
 }
 
-
-
-/* BOTONES ESTILO GAMEDEV */
+/* BOTONES */
 button, .mat-button {
-  background-color: #222;
-  color: #69f0ae;
-  border: 2px solid #69f0ae;
+  background-color: var(--color-card);
+  color: var(--color-acento);
+  border: 2px solid var(--color-acento);
   border-radius: 8px;
   padding: 10px 20px;
   font-weight: 600;
@@ -49,41 +74,37 @@ button, .mat-button {
 }
 
 button:hover, .mat-button:hover {
-  background-color: #03fa6e;
-  color: #121212;
-  box-shadow: 0 0 12px #03fa6e;
+  background-color: var(--color-acento);
+  color: var(--color-dark);
+  box-shadow: 0 0 12px var(--color-acento);
 }
 
-
-/* EFECTOS BRILLANTES EN LETRAS ESPECÍFICAS */
+/* EFECTOS BRILLANTES */
 .glow-text {
-  color: #03fa6e;
+  color: var(--color-acento);
   font-weight: bold;
 }
 
 .glow-text:hover, .glow-text:focus {
-  color: #00ff99;
-  text-shadow: 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 5px #00ff99;
-  font-weight: bold;
-}
-.glow-text-sub :hover{
-  color: #00ff99;
-  text-shadow: 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 1px #00ff99, 0 0 5px #00ff99;
-  font-weight: bold;
+  color: var(--color-hover-text);
+  text-shadow: 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 5px var(--color-hover-text);
 }
 
+.glow-text-sub:hover {
+  color: var(--color-hover-text);
+  text-shadow: 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 5px var(--color-hover-text);
+}
+
+/* SEPARADOR */
 .separador-neon {
   border: none;
   height: 2px;
-  background-color: #03fa6e;
+  background-color: var(--color-acento);
   margin: 30px 0;
-  box-shadow: 0 0 10px #03fa6e;
+  box-shadow: 0 0 10px var(--color-acento);
 }
 
-
-/* Badges */
-
-/* Etiquetas de tecnologías */
+/* BADGES */
 .tecnologias {
   display: flex;
   flex-wrap: wrap;
@@ -93,73 +114,62 @@ button:hover, .mat-button:hover {
 }
 
 .badge {
-  background-color: #03fa6e11;
-  border: 1px solid #03fa6e55;
+  background-color: var(--color-badge-bg);
+  border: 1px solid var(--color-borde);
   padding: 6px 14px;
   border-radius: 20px;
   font-weight: bold;
-  color: #03fa6e;
+  color: var(--color-acento);
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  gap: 8px;
   font-size: 0.95rem;
+  gap: 8px;
   transition: background-color 0.3s;
 }
 
 .badge:hover {
-  background: #03fa6e;
-  color: #121212;
-  box-shadow: 0 0 8px #03fa6e, 0 0 12px #03fa6e;
+  background: var(--color-acento);
+  color: var(--color-dark);
+  box-shadow: 0 0 8px var(--color-acento), 0 0 12px var(--color-acento);
   cursor: default;
 }
 
-
-/* IMÁGENES Y MEDIA */
+/* IMÁGENES */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-/* TARJETAS */
 
-/* MENÚ DESPLEGABLE */
+/* MENÚ MATERIAL */
 .mat-mdc-menu-content {
-    margin: 0;
-    padding: 0 0;
-    outline: 0;
-    background: #222 !important;
+  background: var(--color-card) !important;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #222;
-  color: #03fa6e;
-  border-top: 1px solid #03fa6e;
+  background-color: var(--color-card);
+  color: var(--color-acento);
+  border-top: 1px solid var(--color-acento);
 }
+
 footer p {
   margin: 10px;
   font-size: 1rem;
+  color: var(--color-acento);
 }
 
-/* MEDIA QUERIES: ajustes por tamaño */
-
+/* MEDIA QUERIES */
 @media (min-width: 1024px) {
   .imagenes img {
     flex: 1 1 calc(33.333% - 1rem);
   }
 }
 
-
 @media (max-width: 900px) {
   h1 {
     font-size: 1.8rem;
   }
 }
-
-
-
-
-
-

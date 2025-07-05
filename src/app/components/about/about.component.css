@@ -27,33 +27,34 @@
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #03fa6e;
+  border: 3px solid var(--color-acento);
   display: block;
   margin-bottom: 2rem;
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .perfil-foto:hover {
   transform: scale(1.05);
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 20px rgba(0, 255, 128, 0.6);
+  box-shadow: 0 0 20px rgba(3, 250, 110, 0.6); /* puedes cambiar por color-acento si quieres aún más control */
 }
 
 .perfil-info {
   flex: 1;
   min-width: 300px;
-  color: #fff;
+  color: var(--color-text);
 }
 
 .perfil-nombre {
   font-size: 2rem;
-  color: #03fa6e;
+  color: var(--color-acento);
   margin-bottom: 0.5rem;
   text-align: center;
 }
 
 .perfil-titulo {
   font-size: 1.3rem;
-  color: #69f0ae;
+  color: var(--color-acento);
+  opacity: 0.8;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -62,6 +63,7 @@
   text-align: justify;
   font-size: 1.2rem;
   line-height: 1.6;
+  color: var(--color-text);
 }
 
 /* Experiencia Laboral */
@@ -72,19 +74,19 @@
 
 .experiencia h2 {
   font-size: 2rem;
-  color: #03fa6e;
+  color: var(--color-acento);
   margin-bottom: 2rem;
-  border-bottom: 2px solid #03fa6e;
+  border-bottom: 2px solid var(--color-acento);
   display: inline-block;
   padding-bottom: 0.5rem;
 }
 
 .exp-item {
-  background-color: #272727;
+  background-color: var(--color-card);
   padding: 2rem 1.5rem;
   margin-bottom: 2.5rem;
   border-radius: 16px;
-  border: 1px solid #03fa6e33;
+  border: 1px solid var(--color-borde);
   box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -95,13 +97,14 @@
 }
 
 .exp-item h4 {
-  color: #03fa6e;
+  color: var(--color-acento);
   font-size: 1.3rem;
   margin-bottom: 0.3rem;
 }
 
 .exp-item small {
-  color: #bbb;
+  color: var(--color-text);
+  opacity: 0.7;
   font-style: italic;
   margin-bottom: 1.2rem;
   display: block;
@@ -117,44 +120,42 @@
   margin: 1.5rem 0;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #eee;
+  color: var(--color-text);
   text-align: left;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-
 /* Educación */
 .educacion {
   text-align: center;
   width: 100%;
-  
 }
+
 .educacion-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
   margin-top: 1rem;
-  align-items: start; /* <--- ESTO evita que se estiren */
+  align-items: start;
 }
-
 
 .educacion h2 {
   font-size: 2.2rem;
-  color: #03fa6e;
+  color: var(--color-acento);
   margin-bottom: 2rem;
-  border-bottom: 2px solid #03fa6e;
+  border-bottom: 2px solid var(--color-acento);
   display: inline-block;
   padding-bottom: 0.5rem;
 }
 
 .edu-item {
-  background-color: #272727;
+  background-color: var(--color-card);
   padding: 2rem 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 16px;
-  border: 1px solid #03fa6e33;
+  border: 1px solid var(--color-borde);
   box-shadow: 0 0 12px rgba(3, 250, 110, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -166,14 +167,15 @@
 }
 
 .edu-item h4 {
-  color: #03fa6e;
+  color: var(--color-acento);
   font-size: 1.6rem;
   margin-bottom: 0.3rem;
   font-weight: bold;
 }
 
 .edu-item small {
-  color: #aaa;
+  color: var(--color-text);
+  opacity: 0.7;
   font-style: italic;
   display: block;
   margin-bottom: 1rem;
@@ -183,12 +185,12 @@
 .edu-item p {
   font-size: 1.3rem;
   line-height: 1.6;
-  color: #ddd;
+  color: var(--color-text);
   margin: 0 auto 1.5rem;
   max-width: 700px;
 }
 
-/* Badges más estilizados */
+/* Badges */
 .edu-item .tecnologias {
   display: flex;
   justify-content: center;
@@ -197,26 +199,23 @@
 }
 
 .edu-item .badge {
-  background-color: #03fa6e11;
-  border: 1px solid #03fa6e55;
+  background-color: var(--color-badge-bg);
+  border: 1px solid var(--color-borde);
   padding: 6px 14px;
   border-radius: 20px;
   font-weight: bold;
-  color: #03fa6e;
+  color: var(--color-acento);
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  gap: 8px;
   font-size: 0.95rem;
+  gap: 8px;
   transition: background-color 0.3s;
 }
 
 .edu-item .badge:hover {
-  background: #03fa6e;
-  color: #000;
+  background: var(--color-acento);
+  color: var(--color-dark);
 }
-
-
 
 /* Responsive */
 @media (max-width: 1000px) {

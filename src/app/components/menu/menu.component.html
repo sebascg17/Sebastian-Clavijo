@@ -5,7 +5,7 @@
   </button>
   
   <a class="logo-img" mat-button routerLink="">
-    <img src="assets/logo/LogoPortafolio 2.png" alt="Logo Sebas" width="200" style="margin-right: 10px;" />
+    <img [src]="logoUrl" alt="Logo" id="logo" width="300" style="margin-right: 10px;" />
   </a>
 
   <span class="spacer"></span>
@@ -13,6 +13,8 @@
   <!-- Menú de escritorio -->
    <ng-container>
     <div class="desktop-menu">
+
+
       <a class="glow-text" mat-button [routerLink]="'/'" [ngClass]="{'active-link': isActive('/')}">Inicio</a>
 
       <a class="glow-text" mat-button [matMenuTriggerFor]="portfolioMenu" [routerLink]="'/portafolio'" [ngClass]="{'active-link': currentRoute.startsWith('/portafolio')}">
@@ -29,6 +31,9 @@
       <a class="glow-text" mat-button [routerLink]="'/contacto'" [ngClass]="{'active-link': isActive('/contacto')}">Contacto</a>
     </div>
    </ng-container>
+  <button (click)="cambiarTema()">
+    <i class="fas" [ngClass]="esModoOscuro ? 'fa-sun' : 'fa-moon'"></i>
+  </button>
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container" (click)="cerrarSiClickFuera($event)">
@@ -57,7 +62,7 @@
         <a class="glow-text" mat-button (click)="navigateAndClose('/contacto')">Contacto</a>
       </li>
     </ul>
-  </mat-sidenav>
+  </mat-sidenav>      
 </mat-sidenav-container>
 
 

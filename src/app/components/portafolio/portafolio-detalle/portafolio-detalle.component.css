@@ -1,8 +1,8 @@
 .proyecto-detalle-v4 {
   padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #eaeaea;
-  background-color: #111;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   margin-top: 3rem;
 }
 
@@ -14,7 +14,7 @@
 }
 
 /* Galería */
-.galeria-imagenes {  
+.galeria-imagenes {
   order: 1;
   flex: 1 1 40%;
   display: flex;
@@ -28,17 +28,11 @@
   border-radius: 12px;
   object-fit: cover;
   height: auto;
-  border: 1px solid #03fa6e33;
+  border: 1px solid var(--color-borde);
   background: #000;
 }
 .galeria-imagenes iframe {
   aspect-ratio: 16 / 9;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid #03fa6e33;
-  background: #000;
-  object-fit: cover;
 }
 
 /* Contenido */
@@ -52,24 +46,25 @@
 
 .titulo-proyecto {
   font-size: 2.2rem;
-  color: #03fa6e;
-  text-shadow: 0 0 5px #03fa6e88;
+  color: var(--color-acento);
+  text-shadow: 0 0 5px var(--color-badge-bg);
 }
 
 .bloque {
-  background: #1e1e1e;
-  border: 1px solid #03fa6e22;
+  background: var(--color-card);
+  border: 1px solid var(--color-badge-bg);
   padding: 1.2rem;
   border-radius: 12px;
-  box-shadow: 0 0 10px #03fa6e11;
+  box-shadow: 0 0 10px var(--color-badge-bg);
 }
 
-.bloque p{
+.bloque p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #ddd;
+  color: var(--color-text);
 }
-/* LISTAS (Retos, logros, colaboradores) */
+
+/* LISTAS */
 .lista {
   list-style: none;
   padding: 0;
@@ -80,15 +75,15 @@
   gap: 8px;
 }
 
-
 /* TECNOLOGÍAS */
 .badge-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* <--- centrado horizontal */
+  justify-content: center;
   gap: 10px;
 }
 
+/* ACCIONES */
 .acciones {
   display: flex;
   gap: 1rem;
@@ -98,32 +93,33 @@
 
 .acciones a {
   text-decoration: none;
-  color: #03fa6e;
-  border: 1px solid #03fa6e;
+  color: var(--color-acento);
+  border: 1px solid var(--color-acento);
   padding: 0.6rem 1rem;
   border-radius: 8px;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-weight: bold;
+  background-color: transparent;
   transition: all 0.3s ease;
 }
 
 .acciones a:hover {
-  background-color: #03fa6e;
-  color: #111;
-  box-shadow: 0 0 10px #03fa6e;
+  background-color: var(--color-acento);
+  color: var(--color-card-dark);
+  box-shadow: 0 0 10px var(--color-acento-hover);
 }
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .detalle-layout {
-    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-columns: 1fr;
   }
   .galeria-imagenes {
-    order: 2; /* Mover galería abajo en móviles */
+    order: 2;
   }
-
   .contenido-proyecto {
-    order: 1; /* Mover contenido arriba en móviles */
+    order: 1;
   }
 }
