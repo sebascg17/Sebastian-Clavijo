@@ -4,9 +4,13 @@
 }
 
 /* VARIABLES */
-:root {
+:root {  
+  --color-icono-tema: #00b36b;          /* ícono negro en modo claro */
+  --color-icono-tema-hover: #ffffff; /* hover blanco en modo claro */
+
   --color-bg: #f0f0f0;
   --color-text: #111;
+  --color-hover-text: #ffffff; 
   --color-card: #ffffff;
 
   --color-acento: #00b36b; /* Verde más oscuro y legible en fondo claro */
@@ -18,8 +22,12 @@
 }
 
 body.modo-oscuro {
+  --color-icono-tema: #03fa6e;       /* ícono claro en modo oscuro */
+  --color-icono-tema-hover: #000000; /* hover negro en modo oscuro */
+
   --color-bg: #111;
   --color-text: #eaeaea;
+  --color-hover-text: #111111;
   --color-card: #272727;
 
   --color-acento: #03fa6e; /* Mantén el verde neón en oscuro si te gusta */
@@ -39,6 +47,26 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
+.btn-tema {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icono-tema {
+  font-size: 1.8rem;
+  color: var(--color-icono-tema);
+  transition: color 0.3s ease;
+}
+
+.btn-tema:hover .icono-tema {
+  color: var(--color-icono-tema-hover);
+}
+
 
 /* CONTENEDOR GENERAL */
 .app-container {
@@ -86,13 +114,22 @@ button:hover, .mat-button:hover {
 }
 
 .glow-text:hover, .glow-text:focus {
-  color: var(--color-hover-text);
-  text-shadow: 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 5px var(--color-hover-text);
+  color: var(--color-acento
+  );
+  text-shadow: 0 0 1px var(--color-acento
+  ), 0 0 1px var(--color-acento
+  ), 0 0 1px var(--color-acento
+  ), 0 0 5px var(--color-acento
+  );
 }
 
 .glow-text-sub:hover {
-  color: var(--color-hover-text);
-  text-shadow: 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 1px var(--color-hover-text), 0 0 5px var(--color-hover-text);
+  color: var(--color-acento
+  );
+  text-shadow: 0 0 1px var(--color-acento
+  ), 0 0 1px var(--color-acento
+  ), 0 0 1px var(--color-acento
+  ), 0 0 5px var(--color-hover-text);
 }
 
 /* SEPARADOR */
@@ -129,10 +166,11 @@ button:hover, .mat-button:hover {
 
 .badge:hover {
   background: var(--color-acento);
-  color: var(--color-dark);
+  color: var(--color-hover-text);
   box-shadow: 0 0 8px var(--color-acento), 0 0 12px var(--color-acento);
   cursor: default;
 }
+
 
 /* IMÁGENES */
 img {

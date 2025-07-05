@@ -31,8 +31,8 @@
       <a class="glow-text" mat-button [routerLink]="'/contacto'" [ngClass]="{'active-link': isActive('/contacto')}">Contacto</a>
     </div>
    </ng-container>
-  <button (click)="cambiarTema()">
-    <i class="fas" [ngClass]="esModoOscuro ? 'fa-sun' : 'fa-moon'"></i>
+  <button class="btn-tema" (click)="cambiarTema()">
+    <i class="fas icono-tema" [ngClass]="esModoOscuro ? 'fa-sun' : 'fa-moon'"></i>
   </button>
 </mat-toolbar>
 
