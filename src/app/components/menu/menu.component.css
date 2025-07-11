@@ -142,14 +142,17 @@ details:not([open]) summary::after {
     display: none;
   }
 
+  .mobile-toggle.activo {
+    background-color: var(--color-acento);
+    color: var(--color-card-dark);
+  }
+
   .mobile-toggle {
     display: block;
     margin-left: auto;
     background-color: var(--color-card);
     color: var(--color-acento);
-    border: 1px solid var(--color-acento);
     border-radius: 8px;
-    padding: 8px 12px;
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
   }

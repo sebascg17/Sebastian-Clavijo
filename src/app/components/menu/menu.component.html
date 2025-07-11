@@ -1,23 +1,25 @@
-
 <mat-toolbar class="menu-bar" color="primary">
-  <button mat-icon-button (click)="sidenav.toggle()" class="mobile-toggle" aria-label="Abrir menú">
+  <button mat-icon-button 
+          class="mobile-toggle" 
+          [ngClass]="{ 'menu-open': sidenav.opened }"
+          (click)="toggleSidenav()" 
+          aria-label="Abrir menú">
     <mat-icon>menu</mat-icon>
   </button>
-  
-  <a class="logo-img" mat-button routerLink="">
+
+  <a class="logo-img" mat-button routerLink="/">
     <img [src]="logoUrl" alt="Logo" id="logo" width="300" style="margin-right: 10px;" />
   </a>
 
   <span class="spacer"></span>
 
-  <!-- Menú de escritorio -->
-   <ng-container>
+  <ng-container>
     <div class="desktop-menu">
-
-
       <a class="glow-text" mat-button [routerLink]="'/'" [ngClass]="{'active-link': isActive('/')}">Inicio</a>
 
-      <a class="glow-text" mat-button [matMenuTriggerFor]="portfolioMenu" [routerLink]="'/portafolio'" [ngClass]="{'active-link': currentRoute.startsWith('/portafolio')}">
+      <a class="glow-text" mat-button [matMenuTriggerFor]="portfolioMenu" 
+         [routerLink]="'/portafolio'" 
+         [ngClass]="{'active-link': currentRoute.startsWith('/portafolio')}">
         Portafolio
       </a>
       <mat-menu #portfolioMenu="matMenu" class="mat-menu-bg">
@@ -28,9 +30,11 @@
           Desarrollo Web
         </a>
       </mat-menu>
+
       <a class="glow-text" mat-button [routerLink]="'/contacto'" [ngClass]="{'active-link': isActive('/contacto')}">Contacto</a>
     </div>
-   </ng-container>
+  </ng-container>
+
   <button class="btn-tema" (click)="cambiarTema()">
     <i class="fas icono-tema" [ngClass]="esModoOscuro ? 'fa-sun' : 'fa-moon'"></i>
   </button>
@@ -62,7 +66,5 @@
         <a class="glow-text" mat-button (click)="navigateAndClose('/contacto')">Contacto</a>
       </li>
     </ul>
-  </mat-sidenav>      
+  </mat-sidenav>
 </mat-sidenav-container>
-
-

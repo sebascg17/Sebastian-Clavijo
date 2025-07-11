@@ -31,6 +31,7 @@ export class MenuComponent implements OnInit {
   @ViewChild('sidenav') sidenav!: MatSidenav;
   currentRoute: string = '';
   mostrarSubmenu = false;
+  botonMenuActivo = false;
   logoUrl: string = ''; // ← URL del logo dinámico
 
   constructor(private router: Router, private appComponent: AppComponent) {}
@@ -69,6 +70,7 @@ export class MenuComponent implements OnInit {
   navigateAndClose(route: string) {
     this.router.navigate([route]);
     this.sidenav.close();
+    this.botonMenuActivo = false; // Forzamos que el botón vuelva a estado inactivo
   }
 
   getPortfolioClass(): string {
@@ -91,6 +93,11 @@ export class MenuComponent implements OnInit {
   cambiarTema(): void {
     this.appComponent.toggleModoOscuro();
     this.actualizarLogo(); // Actualiza logo al cambiar tema
+  }
+
+  toggleSidenav() {
+    this.botonMenuActivo = !this.sidenav.opened;
+    this.sidenav.toggle();
   }
 
   get esModoOscuro(): boolean {
