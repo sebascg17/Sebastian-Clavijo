@@ -40,7 +40,7 @@
   padding-top: 64px;
   background-color: var(--color-bg) !important;
   color: var(--color-text);
-  height: 100%;
+  height: auto;
   width: 250px;
   z-index: 1000;
   font-family: 'Orbitron', sans-serif;
