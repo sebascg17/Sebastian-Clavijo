@@ -92,8 +92,9 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .exp-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(3, 250, 110, 0.3);
+  transform: scale(1.02) translateY(-6px);
+  box-shadow: 0 0 15px var(--color-acento);
+  cursor: default;
 }
 
 .exp-item h4 {
@@ -162,8 +163,9 @@
 }
 
 .edu-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 25px rgba(3, 250, 110, 0.3);
+  transform: scale(1.02) translateY(-6px);
+  box-shadow: 0 0 15px var(--color-acento);
+  cursor: default;
 }
 
 .edu-item h4 {

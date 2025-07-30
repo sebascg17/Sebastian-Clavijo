@@ -1,7 +1,9 @@
 // src/app/components/shared/base-proyecto.component.ts
 import { Proyecto } from '../../interfaces/Proyecto';
 
-export abstract class BaseProyectoComponent {
+export abstract class BaseProyectoComponent {  
+  hoveredProyectoId: number | null = null;
+
   esImagen(url: string): boolean {
     return /\.(jpg|jpeg|png|gif|webp)$/i.test(url);
   }
@@ -33,5 +35,5 @@ export abstract class BaseProyectoComponent {
     const total = proyecto.medios?.length ?? 0;
     if (total === 0) return;
     proyecto.currentSlide = (proyecto.currentSlide! + direccion + total) % total;
-  }
+  } 
 }

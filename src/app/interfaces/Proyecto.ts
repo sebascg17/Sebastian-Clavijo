@@ -7,6 +7,7 @@ export interface Proyecto {
     nombre: string;
     icono: string;
   }[];
+  logo?: string[];
   imagenes: string[];
   videoUrl?: string;
   enlaceCodigo: string;

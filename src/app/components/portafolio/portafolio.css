@@ -131,7 +131,11 @@ p {
   justify-content: flex-start;
   height: auto;
   width: 600px;
-  max-width: 100%;
+  max-width: 100%;  
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
 }
 
 .cards-container {
@@ -143,6 +147,7 @@ p {
 .card:hover {
   transform: scale(1.02) translateY(-6px);
   box-shadow: 0 0 15px var(--color-acento);
+  cursor: default;
 }
 
 .card .card-title {

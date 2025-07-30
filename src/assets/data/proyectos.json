@@ -114,6 +114,9 @@
     "titulo": "IE'S Revenge",
     "descripcion": "IE's Revenge es un juego de acción y aventura en 2D protagonizado por Internet Explorer, el icónico navegador. Tras años de ser objeto de burlas por su lentitud, cae en un mundo alterno donde busca demostrar que aún puede ser el mejor navegador, incluso superior a Chrome.",
     "videoUrl": "https://www.youtube.com/watch?v=ag-jfjUJ9gA&ab_channel=sebascg17",
+    "logo": [
+      "assets/juegos/IE´S Revenge/Logo.png"
+    ],
     "imagenes": [
       "assets/juegos/IE´S Revenge/Inicio.png",
       "assets/juegos/IE´S Revenge/Gaming.png",
@@ -155,6 +158,9 @@
     "categoria": "videojuego",
     "titulo": "Abuelo Panelo",
     "descripcion": "Videojuego 3D desarrollado en equipo durante la segunda Game Jam de Generation Colombia. Encarnas al icónico abuelo Panelo, un personaje que debe recolectar caña, procesarla en la máquina, llenar botellas de jarabe y entregarlas antes de que el tiempo se agote. Con mecánicas de corte, baile, interacción con NPCs (como el burro asistente) y manejo de inventario, el juego ofrece un equilibrio entre estrategia, destreza y humor. Se implementó lógica de recolección, estados del jugador, detección de errores y control de flujo para garantizar una experiencia robusta. Ideal para mostrar habilidades técnicas, resolución de bugs complejos y trabajo colaborativo bajo presión.",
+    "logo": [
+      "assets/juegos/Abuelo Panelo/img/logo.jpg"
+    ],
     "imagenes": [
       "assets/juegos/Abuelo Panelo/img/Abuelo-Panelo-Gameplay-GIF.gif",
       "assets/juegos/Abuelo Panelo/img/imagen1.png",
@@ -197,6 +203,9 @@
     "categoria": "videojuego",
     "titulo": "Topoqueado",
     "descripcion": "Videojuego competitivo 3D multijugador en pantalla dividida, desarrollado como proyecto final para Generation Colombia. En este juego, un jugador controla al topo que debe esquivar ataques saltando entre agujeros, mientras el otro jugador usa un martillo para golpearlo. Ambos cuentan con power-ups únicos (visión y clon) que aportan profundidad estratégica. El objetivo es sumar la mayor cantidad de puntos en un minuto: el martillo golpeando al topo y el topo esquivando. En caso de empate, se activa una ronda de muerte súbita para definir al ganador.",
+    "logo": [
+      "assets/juegos/Topoqueado/img/logo.png"
+    ],
     "imagenes": [
       "assets/juegos/Topoqueado/img/topoqueado1.png",
       "assets/juegos/Topoqueado/img/topoqueado2.png",
@@ -205,8 +214,7 @@
     "videoUrl": "https://drive.google.com/file/d/14F3aeQzss7OLR7wQBwSfon-ckhsmLVmE/view?usp=sharing",
     "tecnologias": [
       { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" },
-      { "nombre": "Input System", "icono": "devicon-unity-original" }
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
     ],
     "rol": "Desarrollador de Mecánicas y Power-Ups",
     "lugar": "Generation Colombia",
