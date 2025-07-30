@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Proyecto } from '../../../interfaces/Proyecto';
 import { Habilidad } from '../../../interfaces/Habilidad';
 import { RouterLink } from '@angular/router';
+import { BaseProyectoComponent } from '../../shared/BaseProyectoComponent';
 
 @Component({
   standalone: true,
@@ -13,12 +14,14 @@ import { RouterLink } from '@angular/router';
   templateUrl: './videojuegos.component.html',
   styleUrl: './videojuegos.component.css'
 })
-export class VideojuegosComponent implements OnInit {
+export class VideojuegosComponent extends BaseProyectoComponent implements OnInit {
   juegos: Proyecto[] = [];
   habilidades: Habilidad[] = [];
   @Input() maxLength: number = 250;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    super();
+  }
 
   ngOnInit(): void {
     this.http.get<Proyecto[]>('assets/data/proyectos.json')
@@ -29,7 +32,7 @@ export class VideojuegosComponent implements OnInit {
           .map(juego => {
             let videoUrl = juego.videoUrl;
             if (videoUrl) {
-              videoUrl = this.convertirYoutubeEmbed(videoUrl);
+              videoUrl = this.convertirVideoEmbed(videoUrl);
             }
           return {
             ...juego,
@@ -45,30 +48,5 @@ export class VideojuegosComponent implements OnInit {
       .subscribe(data => {
         this.habilidades = data;
       });
-  }
-
-  cambiarSlide(juego: Proyecto, direccion: number) {
-    const total = juego.medios?.length ?? 0;
-    if (total === 0) return;
-
-    juego.currentSlide = (juego.currentSlide! + direccion + total) % total;
-  }
-
-  esImagen(url: string): boolean {
-    return /\.(jpg|jpeg|png|gif|webp)$/i.test(url);
-  }
-
-  esVideo(url?: string): boolean {
-    if (!url) return false;
-    return url.includes("youtube.com") || url.includes("youtu.be");
-  }
-
-  convertirYoutubeEmbed(url: string): string {
-    const regex = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([\w-]+)/;
-    const match = url.match(regex);
-    if (match && match[1]) {
-      return `https://www.youtube.com/embed/${match[1]}`;
-    }
-    return url;
   }
 }

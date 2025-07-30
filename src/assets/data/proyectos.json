@@ -191,6 +191,46 @@
     "enlaceCodigo": "https://github.com/groverush/Abuelo-Panelo",
     "enlaceDescarga": "https://zinnahmoon.itch.io/abuelo-panelo",
     "destacado": true
+  },
+  {
+    "id": 9,
+    "categoria": "videojuego",
+    "titulo": "Topoqueado",
+    "descripcion": "Videojuego competitivo 3D multijugador en pantalla dividida, desarrollado como proyecto final para Generation Colombia. En este juego, un jugador controla al topo que debe esquivar ataques saltando entre agujeros, mientras el otro jugador usa un martillo para golpearlo. Ambos cuentan con power-ups únicos (visión y clon) que aportan profundidad estratégica. El objetivo es sumar la mayor cantidad de puntos en un minuto: el martillo golpeando al topo y el topo esquivando. En caso de empate, se activa una ronda de muerte súbita para definir al ganador.",
+    "imagenes": [
+      "assets/juegos/Topoqueado/img/topoqueado1.png",
+      "assets/juegos/Topoqueado/img/topoqueado2.png",
+      "assets/juegos/Topoqueado/img/topoqueado3.png"
+    ],
+    "videoUrl": "https://drive.google.com/file/d/14F3aeQzss7OLR7wQBwSfon-ckhsmLVmE/view?usp=sharing",
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" },
+      { "nombre": "Input System", "icono": "devicon-unity-original" }
+    ],
+    "rol": "Desarrollador de Mecánicas y Power-Ups",
+    "lugar": "Generation Colombia",
+    "colaboradores": [
+      "María Alejandra Jiménez",
+      "Hiromi María Fernanda Acosta",
+      "William Alejandro Ardila",
+      "Brayan Julian Monroy",
+      "Juan Sebastián Clavijo"
+    ],
+    "retos": [
+      "Implementar un sistema de power-ups que afectara a cada jugador de forma distinta",
+      "Sincronizar mecánicas de juego en un entorno multijugador local con pantalla dividida",
+      "Asegurar una navegación intuitiva entre agujeros y una detección precisa de golpes"
+    ],
+    "logros": [
+      "Integración de power-ups únicos con efectos diferenciados para martillo y topo",
+      "Gameplay funcional con sistema de puntos, HUD, clonación, visión y muerte súbita",
+      "Animaciones de rebote, rotación y feedback visual para mejorar la experiencia del jugador"
+    ],
+    "problema": "Coordinación entre múltiples scripts (PowerUpManager, Input System, navegación entre agujeros) sin romper el flujo de juego ni generar desincronización entre jugadores",
+    "solucion": "Se estructuraron controladores independientes para el topo y el martillo, conectados a sus respectivos managers, y se desarrolló lógica para garantizar que los clones se posicionaran correctamente sin solaparse con el jugador original.",
+    "enlaceCodigo": "https://github.com/groverush/topoqueado/tree/main",
+    "enlaceDescarga": "https://majim.itch.io/topoqueado-laboratorio-mortal",
+    "destacado": true
   }
-
 ]
