@@ -25,7 +25,9 @@
   border: none;
   color: var(--color-acento);
   cursor: pointer;
-  padding: 0;
+  padding: 1px;
+  height: 24px;  
+  width: 24px;
 }
 
 .submenu {
@@ -78,6 +80,17 @@
   font-weight: bold;
 }
 
+.sidenav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0); /* oscurece ligeramente */
+  z-index: 999; /* menos que el sidenav */
+}
+
+
 /* Botón de menú solo visible en móvil */
 .mobile-toggle {
   display: none;
@@ -128,13 +141,13 @@ details:not([open]) summary::after {
 
 .active-link {
   font-weight: bold;
-  text-shadow: 0 0 5px var(--color-acento);
+  text-shadow: 0 0 3px var(--color-acento);
 }
 
 .active-sub-link {
   font-weight: bold;
   color: var(--color-acento) !important;
-  text-shadow: 0 0 5px var(--color-acento);
+  text-shadow: 0 0 2px var(--color-acento);
 }
 
 @media (max-width: 768px) {

@@ -33,6 +33,8 @@ export class MenuComponent implements OnInit {
   mostrarSubmenu = false;
   botonMenuActivo = false;
   logoUrl: string = ''; // ← URL del logo dinámico
+  isSidenavOpen = false;
+
 
   constructor(private router: Router, private appComponent: AppComponent) {}
 
@@ -80,16 +82,7 @@ export class MenuComponent implements OnInit {
   getSubLinkClass(path: string): string {
     return this.currentRoute === path ? 'active-link' : '';
   }
-
-  cerrarSiClickFuera(event: MouseEvent): void {
-    const target = event.target as HTMLElement;
-    const clickedInside = target.closest('.custom-sidenav');
-
-    if (!clickedInside) {
-      this.sidenav.close();
-    }
-  }
-
+  
   cambiarTema(): void {
     this.appComponent.toggleModoOscuro();
     this.actualizarLogo(); // Actualiza logo al cambiar tema
