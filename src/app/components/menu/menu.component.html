@@ -57,9 +57,9 @@
       <li>
         <div class="menu-item">
           <a class="glow-text" mat-button (click)="navigateAndClose('/portafolio')">Portafolio</a>
-          <button class="arrow-btn" mat-icon-button (click)="mostrarSubmenu = !mostrarSubmenu">
+          <a class="arrow-btn" mat-icon-button (click)="mostrarSubmenu = !mostrarSubmenu">
             <mat-icon>{{ mostrarSubmenu ? 'expand_less' : 'play_arrow' }}</mat-icon>
-          </button>
+          </a>
         </div>
         <ul *ngIf="mostrarSubmenu" class="submenu">
           <li>
