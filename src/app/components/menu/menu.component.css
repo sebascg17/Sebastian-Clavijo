@@ -59,7 +59,6 @@
 
 .sidenav-container {
   z-index: 1000;
-  height: 100vh;
   overflow: hidden;
 }
 
