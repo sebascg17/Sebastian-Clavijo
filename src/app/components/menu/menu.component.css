@@ -39,9 +39,10 @@
 .custom-sidenav {
   padding-top: 64px;
   background-color: var(--color-bg) !important;
-  color: var(--color-text);
-  height: auto;
+  color: var(--color-text);  
   width: 250px;
+  height: 100vh;
+  overflow: hidden;
   z-index: 1000;
   font-family: 'Orbitron', sans-serif;
 }
@@ -51,13 +52,15 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 3px;
+  width: 1px;
   height: 100%;
   background-color: var(--color-acento);
 }
 
 .sidenav-container {
   z-index: 1000;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .sidenav ul {
