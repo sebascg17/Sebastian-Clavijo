@@ -2,7 +2,7 @@
   "nombre": "Juan Sebastián Clavijo Giraldo",
   "titulo": "Game Developer | FullStack Developer",
   "biografia": "Desarrollador de Unity especializado en crear videojuegos 2D y 3D usando C#. Con conocimientos en .NET y Angular. Con experiencia en la programación de mecánicas, la optimización y el diseño de interfaces. Caracterizado por la facilidad para trabajar en equipo, la adaptabilidad, la proactividad, el liderazgo y la orientación al detalle. Creo experiencias interactivas y atractivas, combinando la creatividad y el uso de herramientas tecnológicas.",
-  "foto": "assets/perfil/Juan Sebastian Clavijo.jpg",
+  "foto": "assets/perfil/Juan Sebastian Clavijo.png",
   "habilidades": [
     { "nombre": "Unity", "icono": "devicon-unity-original" },
     { "nombre": "C#", "icono": "devicon-csharp-plain" },
