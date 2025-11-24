@@ -211,7 +211,7 @@
       "assets/juegos/Topoqueado/img/topoqueado2.png",
       "assets/juegos/Topoqueado/img/topoqueado3.png"
     ],
-    "videoUrl": "https://drive.google.com/file/d/14F3aeQzss7OLR7wQBwSfon-ckhsmLVmE/view?usp=sharing",
+    "videoUrl": "",
     "tecnologias": [
       { "nombre": "Unity", "icono": "devicon-unity-original" },
       { "nombre": "C#", "icono": "devicon-csharp-plain" }
