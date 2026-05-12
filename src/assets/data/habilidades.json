@@ -13,7 +13,8 @@
     { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
     { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
     { "nombre": "Express", "icono": "devicon-express-original" },
-    { "nombre": "JWT", "icono": "devicon-jwt-plain" }
+    { "nombre": "JWT", "icono": "devicon-jwt-plain" },
+    { "nombre": "PostgreSQL", "icono": "devicon-postgresql-plain" }
   ],
   "videojuegos": [
     { "nombre": "Unity", "icono": "devicon-unity-original" },
@@ -33,6 +34,8 @@
     { "nombre": "RESTful APIs", "icono": "devicon-rest-api-plain" },
     { "nombre": "OAuth", "icono": "devicon-oauth-plain" },
     { "nombre": "Postman", "icono": "devicon-postman-plain" },
-    { "nombre": "Scrum", "icono": "devicon-scrum-plain" }
+    { "nombre": "Scrum", "icono": "devicon-scrum-plain" },
+    { "nombre": "Docker", "icono": "devicon-docker-plain" },
+    { "nombre": "Android Studio", "icono": "devicon-androidstudio-plain" }
   ]
 }

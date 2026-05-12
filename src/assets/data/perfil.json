@@ -16,9 +16,29 @@
     { "nombre": "SQL Server", "icono": "fas fa-server" },
     { "nombre": "Git", "icono": "devicon-git-plain" },
     { "nombre": "GitHub", "icono": "fab fa-github" },
-    { "nombre": "Vercel", "icono": "devicon-vercel-original" }
+    { "nombre": "Vercel", "icono": "devicon-vercel-original" },
+    { "nombre": "PostgreSQL", "icono": "devicon-postgresql-plain" },
+    { "nombre": "Docker", "icono": "devicon-docker-plain" },
+    { "nombre": "Android Studio", "icono": "devicon-androidstudio-plain" }
   ],
   "experiencia": [
+    {
+      "puesto": "Profesor de Programación y Videojuegos",
+      "empresa": "Kodland",
+      "fechaInicio": "Enero 2016",
+      "fechaFin": "Actualidad",
+      "descripcion": [
+        "🎓 Imparto clases de programación y desarrollo de videojuegos a niños y jóvenes, fomentando el pensamiento lógico y la creatividad técnica.",
+        "🎮 Lidero el aprendizaje de herramientas como Unity, Python y desarrollo web, guiando a los estudiantes en la creación de sus propios proyectos interactivos.",
+        "📱 Desarrollo material educativo y proyectos prácticos (como Survival Shooter Multiplayer) para demostrar conceptos de redes, mecánicas de juego y UI/UX.",
+        "🧠 Adapto metodologías de enseñanza para asegurar que conceptos complejos sean accesibles y motivadores para diferentes grupos de edad."
+      ],
+      "tecnologias": [
+        { "nombre": "Unity", "icono": "devicon-unity-original" },
+        { "nombre": "Python", "icono": "devicon-python-plain" },
+        { "nombre": "JavaScript", "icono": "devicon-javascript-plain" }
+      ]
+    },
     {
       "puesto": "Desarrollador FullStack (Proyecto Independiente)",
       "empresa": "MercAbundy",

@@ -263,5 +263,20 @@
     ],
     "enlaceDemo": "https://mercabundy.vercel.app/",
     "destacado": true
+  },
+  {
+    "id": 11,
+    "categoria": "videojuego",
+    "titulo": "Survival Shooter Multiplayer",
+    "descripcion": "Juego de supervivencia multijugador desarrollado en Unity como recurso educativo. Implementa mecánicas de combate sincronizadas, gestión de sesiones multijugador y una interfaz intuitiva para una experiencia competitiva fluida.",
+    "imagenes": [
+      "https://img.itch.zone/aW1nLzI2OTk3MzI4LnBuZw==/original/Hwcg3B.png"
+    ],
+    "tecnologias": [
+      { "nombre": "Unity", "icono": "devicon-unity-original" },
+      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+    ],
+    "enlaceDescarga": "https://sebascg17.itch.io/survival-shooter-multiplayer",
+    "destacado": true
   }
 ]
