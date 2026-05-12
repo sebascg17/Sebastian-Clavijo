@@ -29,14 +29,13 @@
       "fechaFin": "Actualidad",
       "descripcion": [
         "🎓 Imparto clases de programación y desarrollo de videojuegos a niños y jóvenes, fomentando el pensamiento lógico y la creatividad técnica.",
-        "🎮 Lidero el aprendizaje de herramientas como Unity, Python y desarrollo web, guiando a los estudiantes en la creación de sus propios proyectos interactivos.",
+        "🎮 Lidero el aprendizaje de herramientas como Unity y C#, guiando a los estudiantes en la creación de sus propios proyectos interactivos.",
         "📱 Desarrollo material educativo y proyectos prácticos (como Survival Shooter Multiplayer) para demostrar conceptos de redes, mecánicas de juego y UI/UX.",
         "🧠 Adapto metodologías de enseñanza para asegurar que conceptos complejos sean accesibles y motivadores para diferentes grupos de edad."
       ],
       "tecnologias": [
         { "nombre": "Unity", "icono": "devicon-unity-original" },
-        { "nombre": "Python", "icono": "devicon-python-plain" },
-        { "nombre": "JavaScript", "icono": "devicon-javascript-plain" }
+        { "nombre": "C#", "icono": "devicon-csharp-plain" }
       ]
     },
     {
@@ -48,12 +47,17 @@
         "🚀 Desarrollé una plataforma integral para la gestión de mercados, implementando dashboards personalizados para Administradores, Tenderos y Personal.",
         "🔐 Diseñé e implementé un sistema de autenticación y autorización basado en roles para garantizar el acceso seguro a diferentes niveles de información.",
         "📈 Optimicé la gestión de inventarios y el seguimiento de pedidos en tiempo real, facilitando el control operativo de las ventas.",
-        "🌐 Lideré el despliegue continuo de la aplicación en Vercel, asegurando una disponibilidad constante y alto rendimiento."
+        "🐳 Implementé contenedores Docker para estandarizar el entorno de desarrollo y simplificar el despliegue.",
+        "🔥 Integré Firebase para la gestión eficiente de imágenes y almacenamiento de activos del mercado.",
+        "🌐 Lideré el despliegue continuo de la aplicación en Vercel y Render, asegurando una disponibilidad constante y alto rendimiento con bases de datos PostgreSQL."
       ],
       "tecnologias": [
         { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
         { "nombre": ".NET Core", "icono": "devicon-dotnetcore-plain" },
-        { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
+        { "nombre": "PostgreSQL", "icono": "devicon-postgresql-plain" },
+        { "nombre": "Firebase", "icono": "devicon-firebase-plain" },
+        { "nombre": "Docker", "icono": "devicon-docker-plain" },
+        { "nombre": "Render", "icono": "fas fa-cloud-upload-alt" },
         { "nombre": "Vercel", "icono": "devicon-vercel-original" }
       ]
     },
