@@ -11,9 +11,18 @@
       "assets/juegos/Mokepon/mokeponResultado.png"
     ],
     "tecnologias": [
-      { "nombre": "JavaScript", "icono": "fab fa-js" },
-      { "nombre": "HTML", "icono": "fab fa-html5" },
-      { "nombre": "CSS", "icono": "fab fa-css3-alt" }
+      {
+        "nombre": "JavaScript",
+        "icono": "fab fa-js"
+      },
+      {
+        "nombre": "HTML",
+        "icono": "fab fa-html5"
+      },
+      {
+        "nombre": "CSS",
+        "icono": "fab fa-css3-alt"
+      }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/mokepon",
     "enlaceDescarga": "assets/descargas/Mokepon.zip"
@@ -28,9 +37,18 @@
       "assets/web/CRUD con Node.js y MongoDB/Render.png"
     ],
     "tecnologias": [
-      { "nombre": "Node.js", "icono": "devicon-nodejs-plain" },
-      { "nombre": "Express", "icono": "devicon-express-original" },
-      { "nombre": "MongoDB", "icono": "devicon-mongodb-plain" }
+      {
+        "nombre": "Node.js",
+        "icono": "devicon-nodejs-plain"
+      },
+      {
+        "nombre": "Express",
+        "icono": "devicon-express-original"
+      },
+      {
+        "nombre": "MongoDB",
+        "icono": "devicon-mongodb-plain"
+      }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/curso-node-js",
     "enlaceDemo": "https://rest-api-deploy-fknk.onrender.com/movies"
@@ -50,9 +68,18 @@
       "assets/web/PeliculasApp/peliculas-app-detalle-pelicula.png"
     ],
     "tecnologias": [
-      { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
-      { "nombre": ".NET Core", "icono": "devicon-dot-net-plain" },
-      { "nombre": "SQL Server", "icono": "fas fa-server" }
+      {
+        "nombre": "Angular",
+        "icono": "devicon-angularjs-plain"
+      },
+      {
+        "nombre": ".NET Core",
+        "icono": "devicon-dot-net-plain"
+      },
+      {
+        "nombre": "SQL Server",
+        "icono": "fas fa-server"
+      }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/peliculas-app",
     "destacado": true
@@ -66,8 +93,14 @@
       "assets/juegos/JuegoEstampida/img/JuegoEstampida.png"
     ],
     "tecnologias": [
-      { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+      {
+        "nombre": "Unity",
+        "icono": "devicon-unity-original"
+      },
+      {
+        "nombre": "C#",
+        "icono": "devicon-csharp-plain"
+      }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/Dodge-the-stampede-Game",
     "enlaceDescarga": "https://sebascg17.itch.io/juego-de-la-estampida",
@@ -82,8 +115,14 @@
       "assets/juegos/Flying Game/img/flying-game.png"
     ],
     "tecnologias": [
-      { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+      {
+        "nombre": "Unity",
+        "icono": "devicon-unity-original"
+      },
+      {
+        "nombre": "C#",
+        "icono": "devicon-csharp-plain"
+      }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/FlyingDrivingGame",
     "enlaceDescarga": "https://play.unity.com/es/games/d18b137d-d095-4067-b313-6b2052499940/flying-driving-game",
@@ -101,8 +140,14 @@
       "assets/juegos/Whack the food/game over.png"
     ],
     "tecnologias": [
-      { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+      {
+        "nombre": "Unity",
+        "icono": "devicon-unity-original"
+      },
+      {
+        "nombre": "C#",
+        "icono": "devicon-csharp-plain"
+      }
     ],
     "enlaceCodigo": "https://github.com/sebascg17/Whack-The-Food/blob/main/README.md",
     "enlaceDescarga": "https://sebascg17.itch.io/whack-a-food",
@@ -123,32 +168,37 @@
       "assets/juegos/IE´S Revenge/Game Over.png"
     ],
     "tecnologias": [
-      { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+      {
+        "nombre": "Unity",
+        "icono": "devicon-unity-original"
+      },
+      {
+        "nombre": "C#",
+        "icono": "devicon-csharp-plain"
+      }
     ],
-  "rol": "Desarrollador FullStack en equipo",
-  "lugar": "Generation Colombia",
-  "colaboradores": [
-    "Ana Karen Peña Meza",
-    "Edmundo Rabelo",
-    "Juan David Pérez Restrepo",
-    "Christian García",
-    "Juan Sebastián Clavijo Giraldo"
-  ],
-  "retos": [
-    "Implementar la lógica de cambio de niveles y condiciones de victoria",
-    "Diseñar enemigos con comportamientos variados y jefe final funcional",
-    "Sincronizar animaciones, colisiones, HUD y eventos de juego"
-  ],
-  "logros": [
-    "Sistema completo de enemigos, jefe final, UI y lógica de progresión",
-    "Animaciones integradas con estados del jugador y enemigos",
-    "Uso de power-ups, control de vida, puntaje y Game Over/Win",
-    "Trabajo en equipo efectivo en corto tiempo con división de roles"
-  ],
-  "problema": "La integración de múltiples sistemas en poco tiempo requería planificación clara para evitar errores críticos y lograr una experiencia fluida.",
-  "solucion": "Se estructuró el proyecto por módulos reutilizables, se implementó lógica basada en eventos y se estableció comunicación constante entre miembros para alinear avances técnicos y de diseño.",
-  
+    "rol": "Desarrollador FullStack en equipo",
+    "lugar": "Generation Colombia",
+    "colaboradores": [
+      "Ana Karen Peña Meza",
+      "Edmundo Rabelo",
+      "Juan David Pérez Restrepo",
+      "Christian García",
+      "Juan Sebastián Clavijo Giraldo"
+    ],
+    "retos": [
+      "Implementar la lógica de cambio de niveles y condiciones de victoria",
+      "Diseñar enemigos con comportamientos variados y jefe final funcional",
+      "Sincronizar animaciones, colisiones, HUD y eventos de juego"
+    ],
+    "logros": [
+      "Sistema completo de enemigos, jefe final, UI y lógica de progresión",
+      "Animaciones integradas con estados del jugador y enemigos",
+      "Uso de power-ups, control de vida, puntaje y Game Over/Win",
+      "Trabajo en equipo efectivo en corto tiempo con división de roles"
+    ],
+    "problema": "La integración de múltiples sistemas en poco tiempo requería planificación clara para evitar errores críticos y lograr una experiencia fluida.",
+    "solucion": "Se estructuró el proyecto por módulos reutilizables, se implementó lógica basada en eventos y se estableció comunicación constante entre miembros para alinear avances técnicos y de diseño.",
     "enlaceCodigo": "https://github.com/judperezre/IEs-Revenge",
     "enlaceDescarga": "https://zinnahmoon.itch.io/ies-revenge",
     "destacado": true
@@ -174,12 +224,24 @@
     ],
     "videoUrl": "https://youtu.be/hh_bEAbpm40",
     "tecnologias": [
-      { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+      {
+        "nombre": "Unity",
+        "icono": "devicon-unity-original"
+      },
+      {
+        "nombre": "C#",
+        "icono": "devicon-csharp-plain"
+      }
     ],
     "rol": "Desarrollador Líder",
     "lugar": "Generation Colombia",
-    "colaboradores": ["Ana Peña", "Melina Muñoz", "Andrés Zapata", "Julián Monroy", "Sebastián Clavijo"],
+    "colaboradores": [
+      "Ana Peña",
+      "Melina Muñoz",
+      "Andrés Zapata",
+      "Julián Monroy",
+      "Sebastián Clavijo"
+    ],
     "retos": [
       "Implementar recolección de objetos y estados del jugador",
       "Prevenir errores lógicos al dejar caer botellas o recolectar en condiciones especiales",
@@ -193,7 +255,6 @@
     ],
     "problema": "Complejidad creciente en la gestión de estados del jugador, recolección de botellas y condiciones de entrega",
     "solucion": "Se reestructuraron componentes clave como el PlayerController, se crearon funciones desacopladas y se implementaron validaciones lógicas basadas en eventos y estados",
-
     "enlaceCodigo": "https://github.com/groverush/Abuelo-Panelo",
     "enlaceDescarga": "https://zinnahmoon.itch.io/abuelo-panelo",
     "destacado": true
@@ -213,8 +274,14 @@
     ],
     "videoUrl": "",
     "tecnologias": [
-      { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+      {
+        "nombre": "Unity",
+        "icono": "devicon-unity-original"
+      },
+      {
+        "nombre": "C#",
+        "icono": "devicon-csharp-plain"
+      }
     ],
     "rol": "Desarrollador de Mecánicas y Power-Ups",
     "lugar": "Generation Colombia",
@@ -247,22 +314,40 @@
     "titulo": "MercAbundy",
     "descripcion": "Plataforma web para la gestión integral de inventarios y pedidos en mercados. Implementa dashboards multi-rol, contenedores Docker para estandarización, almacenamiento en Firebase y bases de datos PostgreSQL, desplegada en Render y Vercel.",
     "imagenes": [
-      "assets/web/MercAbundy/login.png",
       "assets/web/MercAbundy/menu-principal.png",
+      "assets/web/MercAbundy/petalle-producto.png",
       "assets/web/MercAbundy/menu-de-opciones.png",
+      "assets/web/MercAbundy/dashboard-personal.png",
       "assets/web/MercAbundy/dashboard-administrativo.png",
       "assets/web/MercAbundy/dashboard-tendero.png",
-      "assets/web/MercAbundy/dashboard-personal.png",
       "assets/web/MercAbundy/vista-de-pedidos.png",
-      "assets/web/MercAbundy/petalle-producto.png"
+      "assets/web/MercAbundy/login.png"
     ],
     "tecnologias": [
-      { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
-      { "nombre": ".NET Core", "icono": "devicon-dotnetcore-plain" },
-      { "nombre": "PostgreSQL", "icono": "devicon-postgresql-plain" },
-      { "nombre": "Firebase", "icono": "devicon-firebase-plain" },
-      { "nombre": "Docker", "icono": "devicon-docker-plain" },
-      { "nombre": "Render", "icono": "fas fa-cloud-upload-alt" }
+      {
+        "nombre": "Angular",
+        "icono": "devicon-angularjs-plain"
+      },
+      {
+        "nombre": ".NET Core",
+        "icono": "devicon-dotnetcore-plain"
+      },
+      {
+        "nombre": "PostgreSQL",
+        "icono": "devicon-postgresql-plain"
+      },
+      {
+        "nombre": "Firebase",
+        "icono": "devicon-firebase-plain"
+      },
+      {
+        "nombre": "Docker",
+        "icono": "devicon-docker-plain"
+      },
+      {
+        "nombre": "Render",
+        "icono": "fas fa-cloud-upload-alt"
+      }
     ],
     "enlaceDemo": "https://mercabundy.vercel.app/",
     "destacado": true
@@ -276,8 +361,14 @@
       "https://img.itch.zone/aW1nLzI2OTk3MzI4LnBuZw==/original/Hwcg3B.png"
     ],
     "tecnologias": [
-      { "nombre": "Unity", "icono": "devicon-unity-original" },
-      { "nombre": "C#", "icono": "devicon-csharp-plain" }
+      {
+        "nombre": "Unity",
+        "icono": "devicon-unity-original"
+      },
+      {
+        "nombre": "C#",
+        "icono": "devicon-csharp-plain"
+      }
     ],
     "enlaceDescarga": "https://sebascg17.itch.io/survival-shooter-multiplayer",
     "destacado": true
