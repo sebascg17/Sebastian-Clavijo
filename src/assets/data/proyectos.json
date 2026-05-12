@@ -314,10 +314,10 @@
     "titulo": "MercAbundy",
     "descripcion": "Plataforma web para la gestión integral de inventarios y pedidos en mercados. Implementa dashboards multi-rol, contenedores Docker para estandarización, almacenamiento en Firebase y bases de datos PostgreSQL, desplegada en Render y Vercel.",
     "imagenes": [
+      "assets/web/MercAbundy/dashboard-personal.png",
       "assets/web/MercAbundy/menu-principal.png",
       "assets/web/MercAbundy/petalle-producto.png",
       "assets/web/MercAbundy/menu-de-opciones.png",
-      "assets/web/MercAbundy/dashboard-personal.png",
       "assets/web/MercAbundy/dashboard-administrativo.png",
       "assets/web/MercAbundy/dashboard-tendero.png",
       "assets/web/MercAbundy/vista-de-pedidos.png",
