@@ -1,7 +1,7 @@
 {
   "nombre": "Juan Sebastián Clavijo Giraldo",
   "titulo": "Game Developer | FullStack Developer",
-  "biografia": "Desarrollador de Unity especializado en crear videojuegos 2D y 3D usando C#. Con conocimientos en .NET y Angular. Con experiencia en la programación de mecánicas, la optimización y el diseño de interfaces. Caracterizado por la facilidad para trabajar en equipo, la adaptabilidad, la proactividad, el liderazgo y la orientación al detalle. Creo experiencias interactivas y atractivas, combinando la creatividad y el uso de herramientas tecnológicas.",
+  "biografia": "Ingeniero de Software y Desarrollador FullStack con amplia experiencia en la creación de aplicaciones web escalables y videojuegos interactivos. Especializado en el ecosistema Angular y .NET Core, he desarrollado proyectos complejos como MercAbundy, implementando sistemas de gestión multi-rol, autenticación segura y despliegue en la nube. Mi enfoque combina la precisión técnica de la ingeniería con la creatividad del desarrollo de videojuegos en Unity, entregando soluciones robustas, optimizadas y centradas en el usuario.",
   "foto": "assets/perfil/Juan Sebastian Clavijo.png",
   "habilidades": [
     { "nombre": "Unity", "icono": "devicon-unity-original" },
@@ -15,9 +15,28 @@
     { "nombre": ".NET", "icono": "devicon-dot-net-plain" },
     { "nombre": "SQL Server", "icono": "fas fa-server" },
     { "nombre": "Git", "icono": "devicon-git-plain" },
-    { "nombre": "GitHub", "icono": "fab fa-github" }
+    { "nombre": "GitHub", "icono": "fab fa-github" },
+    { "nombre": "Vercel", "icono": "devicon-vercel-original" }
   ],
   "experiencia": [
+    {
+      "puesto": "Desarrollador FullStack (Proyecto Independiente)",
+      "empresa": "MercAbundy",
+      "fechaInicio": "Enero 2024",
+      "fechaFin": "Actualidad",
+      "descripcion": [
+        "🚀 Desarrollé una plataforma integral para la gestión de mercados, implementando dashboards personalizados para Administradores, Tenderos y Personal.",
+        "🔐 Diseñé e implementé un sistema de autenticación y autorización basado en roles para garantizar el acceso seguro a diferentes niveles de información.",
+        "📈 Optimicé la gestión de inventarios y el seguimiento de pedidos en tiempo real, facilitando el control operativo de las ventas.",
+        "🌐 Lideré el despliegue continuo de la aplicación en Vercel, asegurando una disponibilidad constante y alto rendimiento."
+      ],
+      "tecnologias": [
+        { "nombre": "Angular", "icono": "devicon-angularjs-plain" },
+        { "nombre": ".NET Core", "icono": "devicon-dotnetcore-plain" },
+        { "nombre": "SQL Server", "icono": "devicon-microsoftsqlserver-plain" },
+        { "nombre": "Vercel", "icono": "devicon-vercel-original" }
+      ]
+    },
     {
       "puesto": "Desarrollador FullStack",
       "empresa": "Sociedad San Vicente de Paul de Medellín",
