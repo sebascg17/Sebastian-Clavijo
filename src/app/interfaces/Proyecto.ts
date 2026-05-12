@@ -10,7 +10,7 @@ export interface Proyecto {
   logo?: string[];
   imagenes: string[];
   videoUrl?: string;
-  enlaceCodigo: string;
+  enlaceCodigo?: string;
   enlaceDescarga?: string;
   enlaceDemo?: string;
   destacado?: boolean;
